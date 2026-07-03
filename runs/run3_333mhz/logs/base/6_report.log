@@ -1,0 +1,83 @@
+OpenROAD 26Q1-2900-gdf79404cd8 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 8 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+read_liberty /OpenROAD-flow-scripts/flow/platforms/nangate45/lib/fakeram45_256x16.lib
+read_db ./results/nangate45/ariane133/base/6_1_fill.odb
+read_sdc ./results/nangate45/ariane133/base/6_1_fill.sdc
+source /OpenROAD-flow-scripts/flow/platforms/nangate45/setRC.tcl
+[WARNING STA-0450] virtual clock vclk_core_clock can not be propagated.
+write_db ./results/nangate45/ariane133/base/6_final.odb
+Deleted 0 routing obstructions
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /OpenROAD-flow-scripts/flow/platforms/nangate45/rcx_patterns.rules ...
+[INFO RCX-0436] RC segment generation ariane (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 839658 rc segments
+[INFO RCX-0439] Coupling Cap extraction ariane ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 4% of 1389351 wires extracted
+[INFO RCX-0442] 11% of 1389351 wires extracted
+[INFO RCX-0442] 19% of 1389351 wires extracted
+[INFO RCX-0442] 31% of 1389351 wires extracted
+[INFO RCX-0442] 39% of 1389351 wires extracted
+[INFO RCX-0442] 48% of 1389351 wires extracted
+[INFO RCX-0442] 55% of 1389351 wires extracted
+[INFO RCX-0442] 63% of 1389351 wires extracted
+[INFO RCX-0442] 72% of 1389351 wires extracted
+[INFO RCX-0442] 82% of 1389351 wires extracted
+[INFO RCX-0442] 90% of 1389351 wires extracted
+[INFO RCX-0442] 96% of 1389351 wires extracted
+[INFO RCX-0442] 100% of 1389351 wires extracted
+[INFO RCX-0045] Extract 193438 nets, 1020456 rsegs, 1020456 caps, 2316663 ccs
+[INFO RCX-0042] 100000 nets finished
+[INFO RCX-0443] 193438 nets finished
+[INFO PSM-0040] All shapes on net VDD are connected.
+########## IR report #################
+Net              : VDD
+Corner           : default
+Total power      : 2.58e-01 W
+Supply voltage   : 1.10e+00 V
+Worstcase voltage: 1.10e+00 V
+Average voltage  : 1.10e+00 V
+Average IR drop  : 7.98e-04 V
+Worstcase IR drop: 4.94e-03 V
+Percentage drop  : 0.45 %
+######################################
+[INFO PSM-0040] All shapes on net VSS are connected.
+########## IR report #################
+Net              : VSS
+Corner           : default
+Total power      : 2.58e-01 W
+Supply voltage   : 0.00e+00 V
+Worstcase voltage: 5.88e-03 V
+Average voltage  : 7.60e-04 V
+Average IR drop  : 7.60e-04 V
+Worstcase IR drop: 5.88e-03 V
+Percentage drop  : 0.53 %
+######################################
+Cell type report:                       Count       Area
+  Macro                                   132  416463.43
+  Fill cell                            265847  612702.27
+  Tap cell                              12784    3400.54
+  Clock buffer                           5071    6022.51
+  Timing Repair Buffer                  15570   15922.23
+  Inverter                              11096    5970.37
+  Clock inverter                         1322    1032.88
+  Sequential cell                       20622  109748.94
+  Multi-Input combinational cell       113559  168991.66
+  Total                                446003 1340254.83
+Report metrics stage 6, finish...
+
+==========================================================================
+finish report_design_area
+--------------------------------------------------------------------------
+Design area 727553 um^2 51% utilization.
+[WARNING GUI-0076] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+[WARNING GUI-0066] Heat map "IR Drop" has not been populated with data.
+[WARNING GUI-0066] Heat map "Routing Congestion" has not been populated with data.
+Elapsed time: 6:51.92[h:]min:sec. CPU time: user 663.75 sys 39.24 (170%). Peak memory: 4067892KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+6_report                         411           3972                  N/A
