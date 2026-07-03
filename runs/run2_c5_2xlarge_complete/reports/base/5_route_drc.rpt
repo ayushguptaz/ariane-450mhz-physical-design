@@ -1,0 +1,57 @@
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net41113 net:i_cache_subsystem.i_nbdcache/net41507
+	bbox = (485.5450, 354.7600) - (485.6850, 354.9000) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net41230 net:i_cache_subsystem.i_nbdcache/net41087
+	bbox = (484.4300, 356.1600) - (484.5700, 356.3000) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net39645 net:i_cache_subsystem.i_nbdcache/net40570
+	bbox = (484.4300, 345.5200) - (484.5700, 345.6600) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net41203 net:i_cache_subsystem.i_nbdcache/net41173
+	bbox = (484.9850, 355.6000) - (485.1250, 355.7400) on Layer metal5
+violation type: Short
+	srcs: net:net1935 net:net1931
+	bbox = (484.9850, 355.2000) - (485.1250, 355.3400) on Layer metal6
+violation type: Short
+	srcs: net:net1935 net:net1924
+	bbox = (484.7050, 355.2000) - (484.8450, 355.3400) on Layer metal6
+violation type: Short
+	srcs: net:net1935 net:net1927
+	bbox = (485.2650, 355.2000) - (485.4050, 355.3400) on Layer metal6
+violation type: Short
+	srcs: net:net1935 net:net1925
+	bbox = (485.5450, 355.2000) - (485.6850, 355.3400) on Layer metal6
+violation type: Short
+	srcs: net:net1931 net:net1924
+	bbox = (484.7050, 344.1200) - (484.8450, 344.2600) on Layer metal6
+violation type: Short
+	srcs: net:net1931 net:net1924
+	bbox = (484.9850, 344.1200) - (485.1250, 344.2600) on Layer metal6
+violation type: Short
+	srcs: net:net1931 net:net1924
+	bbox = (484.7050, 344.1200) - (485.1250, 344.2600) on Layer metal6
+violation type: Short
+	srcs: net:issue_stage_i.i_issue_read_operands/_11138_ net:issue_stage_i.i_issue_read_operands/_11320_
+	bbox = (680.6100, 1173.9350) - (680.6550, 1174.0400) on Layer metal2
+violation type: Short
+	srcs: net:issue_stage_i.i_issue_read_operands/_11138_ net:issue_stage_i.i_issue_read_operands/_11320_
+	bbox = (680.5850, 1173.9350) - (680.6550, 1174.0400) on Layer metal2
+violation type: Short
+	srcs: net:issue_stage_i.i_issue_read_operands/_11138_ net:issue_stage_i.i_issue_read_operands/_11320_
+	bbox = (680.5850, 1173.9350) - (680.6550, 1174.0050) on Layer metal2
+violation type: Short
+	srcs: net:issue_stage_i.i_issue_read_operands/net51477 net:issue_stage_i.i_issue_read_operands/_06977_
+	bbox = (675.4150, 1077.3345) - (675.4850, 1077.3355) on Layer metal3
+violation type: Short
+	srcs: net:issue_stage_i.i_issue_read_operands/net51477 net:issue_stage_i.i_issue_read_operands/_06977_
+	bbox = (675.4150, 1077.3345) - (675.5850, 1077.3355) on Layer metal3
+violation type: Cut Spacing
+	srcs: net:i_cache_subsystem.i_nbdcache/net41143 net:i_cache_subsystem.i_nbdcache/net41173
+	bbox = (489.1850, 355.4600) - (489.3250, 355.6000) on Layer via4
+violation type: Metal Spacing
+	srcs: net:issue_stage_i.i_issue_read_operands/_11138_ net:issue_stage_i.i_issue_read_operands/_11320_
+	bbox = (680.5200, 1173.9000) - (680.5850, 1174.0050) on Layer metal2
+violation type: Metal Spacing
+	srcs: net:issue_stage_i.i_issue_read_operands/_11320_ net:issue_stage_i.i_issue_read_operands/_11547_
+	bbox = (680.5200, 1174.1450) - (680.5850, 1174.1650) on Layer metal2

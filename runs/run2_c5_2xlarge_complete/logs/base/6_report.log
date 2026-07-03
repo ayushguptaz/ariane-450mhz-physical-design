@@ -1,0 +1,87 @@
+OpenROAD 26Q1-2900-gdf79404cd8 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 8 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+read_liberty /OpenROAD-flow-scripts/flow/platforms/nangate45/lib/fakeram45_256x16.lib
+read_db ./results/nangate45/ariane133/base/6_1_fill.odb
+read_sdc ./results/nangate45/ariane133/base/6_1_fill.sdc
+source /OpenROAD-flow-scripts/flow/platforms/nangate45/setRC.tcl
+[WARNING STA-0450] virtual clock vclk_core_clock can not be propagated.
+write_db ./results/nangate45/ariane133/base/6_final.odb
+Deleted 0 routing obstructions
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /OpenROAD-flow-scripts/flow/platforms/nangate45/rcx_patterns.rules ...
+[INFO RCX-0436] RC segment generation ariane (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 903073 rc segments
+[INFO RCX-0439] Coupling Cap extraction ariane ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 4% of 1382918 wires extracted
+[INFO RCX-0442] 10% of 1382918 wires extracted
+[INFO RCX-0442] 16% of 1382918 wires extracted
+[INFO RCX-0442] 23% of 1382918 wires extracted
+[INFO RCX-0442] 31% of 1382918 wires extracted
+[INFO RCX-0442] 40% of 1382918 wires extracted
+[INFO RCX-0442] 48% of 1382918 wires extracted
+[INFO RCX-0442] 52% of 1382918 wires extracted
+[INFO RCX-0442] 58% of 1382918 wires extracted
+[INFO RCX-0442] 65% of 1382918 wires extracted
+[INFO RCX-0442] 71% of 1382918 wires extracted
+[INFO RCX-0442] 78% of 1382918 wires extracted
+[INFO RCX-0442] 85% of 1382918 wires extracted
+[INFO RCX-0442] 90% of 1382918 wires extracted
+[INFO RCX-0442] 97% of 1382918 wires extracted
+[INFO RCX-0442] 100% of 1382918 wires extracted
+[INFO RCX-0045] Extract 204597 nets, 1095030 rsegs, 1095030 caps, 2309569 ccs
+[INFO RCX-0042] 100000 nets finished
+[INFO RCX-0042] 200000 nets finished
+[INFO RCX-0443] 204597 nets finished
+[INFO PSM-0040] All shapes on net VDD are connected.
+########## IR report #################
+Net              : VDD
+Corner           : default
+Total power      : 3.45e-01 W
+Supply voltage   : 1.10e+00 V
+Worstcase voltage: 1.09e+00 V
+Average voltage  : 1.10e+00 V
+Average IR drop  : 6.81e-04 V
+Worstcase IR drop: 9.73e-03 V
+Percentage drop  : 0.88 %
+######################################
+[INFO PSM-0040] All shapes on net VSS are connected.
+########## IR report #################
+Net              : VSS
+Corner           : default
+Total power      : 3.45e-01 W
+Supply voltage   : 0.00e+00 V
+Worstcase voltage: 4.51e-03 V
+Average voltage  : 6.81e-04 V
+Average IR drop  : 6.81e-04 V
+Worstcase IR drop: 4.51e-03 V
+Percentage drop  : 0.41 %
+######################################
+Cell type report:                       Count       Area
+  Macro                                   132  416463.43
+  Fill cell                            379600 1237896.44
+  Tap cell                              14943    3974.84
+  Clock buffer                           5337    6351.81
+  Timing Repair Buffer                  26535   31945.80
+  Inverter                              11096    5972.23
+  Clock inverter                         1341    1084.75
+  Sequential cell                       20622  109784.05
+  Multi-Input combinational cell       113560  168956.28
+  Total                                573166 1982429.64
+Report metrics stage 6, finish...
+
+==========================================================================
+finish report_design_area
+--------------------------------------------------------------------------
+Design area 744533 um^2 36% utilization.
+[WARNING GUI-0076] QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+[WARNING GUI-0066] Heat map "IR Drop" has not been populated with data.
+[WARNING GUI-0066] Heat map "Routing Congestion" has not been populated with data.
+Elapsed time: 7:09.03[h:]min:sec. CPU time: user 681.20 sys 36.85 (167%). Peak memory: 4610160KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+6_report                         429           4502                  N/A
