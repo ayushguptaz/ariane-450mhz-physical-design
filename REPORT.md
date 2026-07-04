@@ -28,28 +28,82 @@ Total wall-clock time: approximately 3 hours (including timing repair iterations
 
 ## Commands Used
 
+### Environment Setup (AWS EC2 c5.2xlarge, Ubuntu 22.04)
+
 ```bash
-# Inside Docker container
+# Install Docker
+sudo apt update && sudo apt install -y docker.io git
+sudo usermod -aG docker ubuntu
+newgrp docker
+
+# Pull the OpenROAD Docker image (pre-built with all tools)
+docker pull openroad/flow-ubuntu22.04-builder:latest
+
+# Clone assignment repo
+git clone https://github.com/ayushguptaz/ariane-450mhz-physical-design.git work
+```
+
+### Run 2: 450 MHz Target (Assignment Spec)
+
+```bash
+docker run -it \
+  -v $(pwd)/work:/work \
+  --memory=15g \
+  openroad/flow-ubuntu22.04-builder:latest \
+  bash
+
+# Inside container:
 export PATH=/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:$PATH
+mkdir -p /OpenROAD-flow-scripts/flow/designs/nangate45/ariane_archgen
+cp /work/flow/config.mk /OpenROAD-flow-scripts/flow/designs/nangate45/ariane_archgen/
 cd /OpenROAD-flow-scripts/flow
 make DESIGN_CONFIG=./designs/nangate45/ariane_archgen/config.mk
 ```
 
-The flow configuration (`config.mk`) and SDC are provided in the `flow/` directory.
+### Run 3: 333 MHz Target (ORFS Reference Settings)
+
+```bash
+# Inside container:
+export PATH=/OpenROAD-flow-scripts/tools/install/OpenROAD/bin:$PATH
+mkdir -p /OpenROAD-flow-scripts/flow/designs/nangate45/ariane_333mhz
+cp /work/flow/config_333mhz.mk /OpenROAD-flow-scripts/flow/designs/nangate45/ariane_333mhz/config.mk
+cd /OpenROAD-flow-scripts/flow
+make DESIGN_CONFIG=./designs/nangate45/ariane_333mhz/config.mk
+```
+
+The flow configurations (`flow/config.mk`, `flow/config_333mhz.mk`) and SDCs (`flow/ariane_450mhz.sdc`, `flow/ariane_333mhz.sdc`) are provided in the `flow/` directory.
+
+## Routed DEF
+
+Compressed routed DEF files are provided for both runs:
+
+- `runs/run2_c5_2xlarge_complete/results/6_final.def.gz` — 450 MHz target (26 MB compressed, 213 MB uncompressed)
+- `runs/run3_333mhz/results/6_final.def.gz` — 333 MHz target (24 MB compressed, 198 MB uncompressed)
+
+Decompress with: `gunzip 6_final.def.gz`
 
 ## Timing Results
 
-| Metric | Value |
-|--------|-------|
-| **Target Clock Period** | 2.222 ns (450 MHz) |
-| **Achieved fmax** | 269.8 MHz (period = 3.71 ns) |
-| **WNS (Worst Negative Slack)** | -1.485 ns |
-| **TNS (Total Negative Slack)** | -4898.9 ns |
-| **Setup Violations** | 6509 endpoints |
-| **Hold Violations** | 0 |
-| **Clock Skew** | 0.181 ns |
+### Run Comparison
 
-**The design does not close timing at 450 MHz.** The achieved frequency is ~270 MHz. This is expected — the OpenROAD-flow-scripts reference for Ariane133 targets 333 MHz (3.0 ns period), and even that is challenging. Pushing to 450 MHz (35% faster) exceeds what the Nangate45 standard cells and this floorplan can deliver without architectural changes.
+| Metric | Run 2 (450 MHz target) | Run 3 (333 MHz target) |
+|--------|----------------------|----------------------|
+| **Target Clock Period** | 2.222 ns (450 MHz) | 3.0 ns (333 MHz) |
+| **Achieved fmax** | 269.8 MHz | 283.2 MHz |
+| **WNS** | -1.485 ns | -0.531 ns |
+| **TNS** | -4898.9 ns | -1121.2 ns |
+| **Setup Violations** | 6509 | 3209 |
+| **Hold Violations** | 0 | 0 |
+| **Clock Skew** | 0.181 ns | 0.198 ns |
+| **Core Utilization** | 36.1% | 51.2% |
+| **Power** | 0.345 W | 0.258 W |
+
+**The design does not close timing at 450 MHz.** The best achieved frequency is ~283 MHz (with the 333 MHz target). This is expected — the OpenROAD-flow-scripts reference for Ariane133 targets 333 MHz (3.0 ns period), and even that does not fully close. The physical limit for this RTL on Nangate45 is approximately 283 MHz.
+
+The 333 MHz run achieves better results because:
+1. Tools optimize more effectively with a realistic slack budget (less wasted effort on impossible paths)
+2. Full 64 detailed route iterations improve post-route timing (vs 4 iterations in the 450 MHz run)
+3. Utilization-based floorplan produces a more compact layout with shorter wires
 
 ### Worst Path
 
