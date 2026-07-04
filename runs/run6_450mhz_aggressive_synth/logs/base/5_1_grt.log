@@ -1,0 +1,1818 @@
+OpenROAD 26Q1-2900-gdf79404cd8 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 8 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+read_liberty /OpenROAD-flow-scripts/flow/platforms/nangate45/lib/fakeram45_256x16.lib
+read_db ./results/nangate45/ariane133/base/4_cts.odb
+read_sdc ./results/nangate45/ariane133/base/4_cts.sdc
+[WARNING STA-0450] virtual clock vclk_core_clock can not be propagated.
+source /OpenROAD-flow-scripts/flow/platforms/nangate45/setRC.tcl
+pin_access
+[INFO DRT-0149] Reading tech and libs.
+
+Units:                2000
+Number of layers:     21
+Number of macros:     136
+Number of vias:       75
+Number of viarulegen: 19
+
+[INFO DRT-0150] Reading design.
+[WARNING DRT-0120] Large net i_cache_subsystem.i_nbdcache/i_miss_handler/_02361_ has 137 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net i_cache_subsystem.i_nbdcache/i_miss_handler/_02369_ has 175 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net i_cache_subsystem.i_nbdcache/i_miss_handler/_02370_ has 176 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net i_cache_subsystem.i_nbdcache/i_miss_handler/_02373_ has 172 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net i_cache_subsystem.i_nbdcache/i_miss_handler/_02376_ has 174 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net i_cache_subsystem.i_nbdcache/i_miss_handler/_02390_ has 175 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net i_cache_subsystem.i_nbdcache/i_miss_handler/_02392_ has 159 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net i_cache_subsystem.i_nbdcache/i_miss_handler/_02403_ has 136 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net issue_stage_i.i_scoreboard/_11359_ has 101 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net issue_stage_i.i_scoreboard/_13897_ has 129 pins which may impact routing performance. Consider optimization.
+[WARNING DRT-0120] Large net net has 132 pins which may impact routing performance. Consider optimization.
+
+Design:                   ariane
+Die area:                 ( 0 0 ) ( 3000000 3000000 )
+Number of track patterns: 20
+Number of DEF vias:       0
+Number of components:     194148
+Number of terminals:      497
+Number of snets:          2
+Number of nets:           205199
+
+[INFO DRT-0167] List of default vias:
+  Layer via2
+    default via: via2_5
+  Layer via3
+    default via: via3_2
+  Layer via4
+    default via: via4_0
+  Layer via5
+    default via: via5_0
+  Layer via6
+    default via: via6_0
+  Layer via7
+    default via: via7_0
+  Layer via8
+    default via: via8_0
+  Layer via9
+    default via: via9_0
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+  Complete 100000 instances.
+[INFO DRT-0164] Number of unique instances = 232.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0018]   Complete 100000 insts.
+[INFO DRT-0024]   Complete active.
+[INFO DRT-0024]   Complete Fr_VIA.
+[INFO DRT-0024]   Complete metal1.
+[INFO DRT-0024]   Complete via1.
+[INFO DRT-0024]   Complete metal2.
+[INFO DRT-0024]   Complete via2.
+[INFO DRT-0024]   Complete metal3.
+[INFO DRT-0024]   Complete via3.
+[INFO DRT-0024]   Complete metal4.
+[INFO DRT-0024]   Complete via4.
+[INFO DRT-0024]   Complete metal5.
+[INFO DRT-0024]   Complete via5.
+[INFO DRT-0024]   Complete metal6.
+[INFO DRT-0024]   Complete via6.
+[INFO DRT-0024]   Complete metal7.
+[INFO DRT-0024]   Complete via7.
+[INFO DRT-0024]   Complete metal8.
+[INFO DRT-0024]   Complete via8.
+[INFO DRT-0024]   Complete metal9.
+[INFO DRT-0024]   Complete via9.
+[INFO DRT-0024]   Complete metal10.
+[INFO DRT-0033] active shape region query size = 0.
+[INFO DRT-0033] FR_VIA shape region query size = 0.
+[INFO DRT-0033] metal1 shape region query size = 3787510.
+[INFO DRT-0033] via1 shape region query size = 71736.
+[INFO DRT-0033] metal2 shape region query size = 47956.
+[INFO DRT-0033] via2 shape region query size = 71736.
+[INFO DRT-0033] metal3 shape region query size = 63664.
+[INFO DRT-0033] via3 shape region query size = 71736.
+[INFO DRT-0033] metal4 shape region query size = 51352.
+[INFO DRT-0033] via4 shape region query size = 69988.
+[INFO DRT-0033] metal5 shape region query size = 30185.
+[INFO DRT-0033] via5 shape region query size = 100480.
+[INFO DRT-0033] metal6 shape region query size = 18422.
+[INFO DRT-0033] via6 shape region query size = 32618.
+[INFO DRT-0033] metal7 shape region query size = 5605.
+[INFO DRT-0033] via7 shape region query size = 0.
+[INFO DRT-0033] metal8 shape region query size = 0.
+[INFO DRT-0033] via8 shape region query size = 0.
+[INFO DRT-0033] metal9 shape region query size = 0.
+[INFO DRT-0033] via9 shape region query size = 0.
+[INFO DRT-0033] metal10 shape region query size = 0.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0076]   Complete 1000 pins.
+[INFO DRT-0076]   Complete 2000 pins.
+[INFO DRT-0078]   Complete 2520 pins.
+[INFO DRT-0079]   Complete 100 unique inst patterns.
+[INFO DRT-0081]   Complete 187 unique inst patterns.
+[INFO DRT-0082]   Complete 10000 groups.
+[INFO DRT-0082]   Complete 20000 groups.
+[INFO DRT-0082]   Complete 30000 groups.
+[INFO DRT-0082]   Complete 40000 groups.
+[INFO DRT-0082]   Complete 50000 groups.
+[INFO DRT-0082]   Complete 60000 groups.
+[INFO DRT-0082]   Complete 70000 groups.
+[INFO DRT-0082]   Complete 80000 groups.
+[INFO DRT-0082]   Complete 90000 groups.
+[INFO DRT-0082]   Complete 100000 groups.
+[INFO DRT-0084]   Complete 125122 groups.
+#scanned instances     = 194148
+#unique  instances     = 210
+#stdCellGenAp          = 7251
+#stdCellValidPlanarAp  = 0
+#stdCellValidViaAp     = 4898
+#stdCellPinNoAp        = 0
+#stdCellPinCnt         = 636112
+#instTermValidViaApCnt = 0
+#macroGenAp            = 1888
+#macroValidPlanarAp    = 1888
+#macroValidViaAp       = 0
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:38:03, elapsed time = 00:04:46, memory = 869.75 (MB), peak = 971.05 (MB)
+Took 290 seconds: pin_access
+global_route -congestion_report_file ./reports/nangate45/ariane133/base/congestion.rpt -allow_congestion -verbose -congestion_iterations 5
+[INFO GRT-0020] Min routing layer: metal2
+[INFO GRT-0021] Max routing layer: metal10
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer metal1  Track-Pitch = 0.1400  line-2-Via Pitch: 0.1350
+[INFO GRT-0088] Layer metal2  Track-Pitch = 0.1900  line-2-Via Pitch: 0.1400
+[INFO GRT-0088] Layer metal3  Track-Pitch = 0.1400  line-2-Via Pitch: 0.1400
+[INFO GRT-0088] Layer metal4  Track-Pitch = 0.2800  line-2-Via Pitch: 0.2800
+[INFO GRT-0088] Layer metal5  Track-Pitch = 0.2800  line-2-Via Pitch: 0.2800
+[INFO GRT-0088] Layer metal6  Track-Pitch = 0.2800  line-2-Via Pitch: 0.2800
+[INFO GRT-0088] Layer metal7  Track-Pitch = 0.8000  line-2-Via Pitch: 0.8000
+[INFO GRT-0088] Layer metal8  Track-Pitch = 0.8000  line-2-Via Pitch: 0.8000
+[INFO GRT-0088] Layer metal9  Track-Pitch = 1.6000  line-2-Via Pitch: 1.6000
+[INFO GRT-0088] Layer metal10 Track-Pitch = 1.6000  line-2-Via Pitch: 1.6000
+[INFO GRT-0003] Macros: 132
+[INFO GRT-0004] Blockages: 12936
+[INFO GRT-0019] Found 3981 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 176
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+metal1     Horizontal          0             0          0.00%
+metal2     Vertical      3270126       1534430          53.08%
+metal3     Horizontal    4432536       2181155          50.79%
+metal4     Vertical      2215457       1564905          29.36%
+metal5     Horizontal    2685890       1890464          29.61%
+metal6     Vertical      2704761       1905262          29.56%
+metal7     Horizontal     860210        604963          29.67%
+metal8     Vertical       983850        707700          28.07%
+metal9     Horizontal     491925        276150          43.86%
+metal10    Vertical       491925        276150          43.86%
+---------------------------------------------------------------
+
+[INFO GRT-0101] Running extra iterations to remove overflow.
+[INFO GRT-0102] Start extra iteration 1/5
+[INFO GRT-0102] Start extra iteration 2/5
+[INFO GRT-0197] Via related to pin nodes: 1157453
+[INFO GRT-0198] Via related Steiner nodes: 36674
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 1537094
+[INFO GRT-0112] Final usage 3D: 7404971
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+metal1               0             0            0.00%             0 /  0 /  0
+metal2         1534430        666363           43.43%             0 /  0 /  0
+metal3         2181155        917629           42.07%             0 /  0 /  0
+metal4         1564905        479964           30.67%             0 /  0 /  0
+metal5         1890464        468494           24.78%             0 /  0 /  0
+metal6         1905262        206584           10.84%             0 /  0 /  0
+metal7          604963         42446            7.02%             0 /  0 /  0
+metal8          707700          6578            0.93%             0 /  0 /  0
+metal9          276150          5331            1.93%             0 /  0 /  0
+metal10         276150           300            0.11%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total         10941179       2793689           25.53%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 9602681 um
+[INFO GRT-0014] Routed nets: 192559
+[INFO GRT-0303] Global routing runtime = 00:01:02
+Took 63 seconds: global_route -congestion_report_file ./reports/nangate45/ariane133/base/congestion.rpt -allow_congestion -verbose -congestion_iterations 5
+[WARNING STA-0450] virtual clock vclk_core_clock can not be propagated.
+estimate_parasitics -global_routing
+Took 9 seconds: estimate_parasitics -global_routing
+Perform buffer insertion and gate resizing...
+repair_design -verbose
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |    207992
+     1000 |     +0.0% |       0 |       0 |             0 |    206992
+     2000 |     +0.0% |       0 |       0 |             0 |    205992
+     3000 |     +0.0% |       0 |       0 |             0 |    204992
+     4000 |     +0.0% |       0 |       0 |             0 |    203992
+     5000 |     +0.0% |       0 |       0 |             0 |    202992
+     6000 |     +0.0% |       0 |       0 |             0 |    201992
+     7000 |     +0.0% |       0 |       0 |             0 |    200992
+     8000 |     +0.0% |       0 |       0 |             0 |    199992
+     9000 |     +0.0% |       0 |       0 |             0 |    198992
+    10000 |     +0.0% |       0 |       0 |             0 |    197992
+    11000 |     +0.0% |       0 |       0 |             0 |    196992
+    12000 |     +0.0% |       0 |       0 |             0 |    195992
+    13000 |     +0.0% |       0 |       0 |             0 |    194992
+    14000 |     +0.0% |       0 |       1 |             1 |    193992
+    15000 |     +0.0% |       0 |       1 |             1 |    192992
+    16000 |     +0.0% |       0 |       1 |             1 |    191992
+    17000 |     +0.0% |       0 |       1 |             1 |    190992
+    18000 |     +0.0% |       0 |       1 |             1 |    189992
+    19000 |     +0.0% |       0 |       3 |             3 |    188992
+    20000 |     +0.0% |       0 |       3 |             3 |    187992
+    21000 |     +0.0% |       0 |       3 |             3 |    186992
+    22000 |     +0.0% |       0 |       3 |             3 |    185992
+    23000 |     +0.0% |       0 |       3 |             3 |    184992
+    24000 |     +0.0% |       0 |       3 |             3 |    183992
+    25000 |     +0.0% |       0 |       3 |             3 |    182992
+    26000 |     +0.0% |       0 |       3 |             3 |    181992
+    27000 |     +0.0% |       0 |       3 |             3 |    180992
+[WARNING RSZ-0104] Net ex_stage_i/_19560_ only has one pin. Check if it is intended to be dangling.
+    28000 |     +0.0% |       0 |       3 |             3 |    179992
+    29000 |     +0.0% |       0 |       3 |             3 |    178992
+[WARNING RSZ-0104] Net ex_stage_i/_19561_ only has one pin. Check if it is intended to be dangling.
+    30000 |     +0.0% |       0 |       3 |             3 |    177992
+    31000 |     +0.0% |       0 |       3 |             5 |    176992
+    32000 |     +0.0% |       0 |       4 |             7 |    175992
+    33000 |     +0.0% |       0 |       4 |             8 |    174992
+    34000 |     +0.0% |       0 |       4 |             8 |    173992
+    35000 |     +0.0% |       0 |       5 |             9 |    172992
+    36000 |     +0.0% |       0 |       5 |             9 |    171992
+    37000 |     +0.0% |       0 |       5 |             9 |    170992
+    38000 |     +0.0% |       0 |       5 |             9 |    169992
+    39000 |     +0.0% |       0 |       7 |            11 |    168992
+    40000 |     +0.0% |       0 |       7 |            11 |    167992
+    41000 |     +0.0% |       0 |       7 |            11 |    166992
+    42000 |     +0.0% |       0 |       7 |            11 |    165992
+    43000 |     +0.0% |       0 |       7 |            11 |    164992
+    44000 |     +0.0% |       0 |       7 |            11 |    163992
+    45000 |     +0.0% |       0 |       7 |            11 |    162992
+    46000 |     +0.0% |       0 |       7 |            11 |    161992
+    47000 |     +0.0% |       0 |       8 |            12 |    160992
+    48000 |     +0.0% |       0 |       8 |            12 |    159992
+    49000 |     +0.0% |       0 |       8 |            12 |    158992
+    50000 |     +0.0% |       0 |       8 |            12 |    157992
+    51000 |     +0.0% |       0 |       8 |            12 |    156992
+[WARNING RSZ-0104] Net i_frontend/_30991_ only has one pin. Check if it is intended to be dangling.
+    52000 |     +0.0% |       0 |       8 |            12 |    155992
+    53000 |     +0.0% |       0 |       8 |            12 |    154992
+    54000 |     +0.0% |       0 |       8 |            12 |    153992
+    55000 |     +0.0% |       0 |       8 |            12 |    152992
+    56000 |     +0.0% |       0 |       8 |            12 |    151992
+    57000 |     +0.0% |       0 |       8 |            12 |    150992
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11532_ only has one pin. Check if it is intended to be dangling.
+    58000 |     +0.0% |       0 |       8 |            12 |    149992
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11599_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11533_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11531_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11530_ only has one pin. Check if it is intended to be dangling.
+    59000 |     +0.0% |       0 |       8 |            12 |    148992
+    60000 |     +0.0% |       0 |       8 |            13 |    147992
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11600_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11598_ only has one pin. Check if it is intended to be dangling.
+    61000 |     +0.0% |       0 |       8 |            13 |    146992
+    62000 |     +0.0% |       0 |       8 |            13 |    145992
+    63000 |     +0.0% |       0 |       8 |            13 |    144992
+    64000 |     +0.0% |       0 |       8 |            13 |    143992
+    65000 |     +0.0% |       0 |       8 |            13 |    142992
+    66000 |     +0.0% |       0 |       8 |            13 |    141992
+    67000 |     +0.0% |       0 |       8 |            13 |    140992
+    68000 |     +0.0% |       0 |       8 |            13 |    139992
+    69000 |     +0.0% |       0 |       8 |            13 |    138992
+    70000 |     +0.0% |       0 |       8 |            13 |    137992
+    71000 |     +0.0% |       0 |       8 |            13 |    136992
+    72000 |     +0.0% |       0 |       8 |            13 |    135992
+    73000 |     +0.0% |       0 |       8 |            14 |    134992
+    74000 |     +0.0% |       0 |       9 |            15 |    133992
+    75000 |     +0.0% |       0 |       9 |            15 |    132992
+    76000 |     +0.0% |       0 |       9 |            15 |    131992
+    77000 |     +0.0% |       0 |      10 |            17 |    130992
+    78000 |     +0.0% |       0 |      10 |            17 |    129992
+    79000 |     +0.0% |       0 |      10 |            17 |    128992
+    80000 |     +0.0% |       0 |      10 |            17 |    127992
+    81000 |     +0.0% |       0 |      10 |            17 |    126992
+    82000 |     +0.0% |       0 |      11 |            18 |    125992
+    83000 |     +0.0% |       0 |      11 |            18 |    124992
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11560_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11558_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11535_ only has one pin. Check if it is intended to be dangling.
+    84000 |     +0.0% |       0 |      11 |            18 |    123992
+    85000 |     +0.0% |       0 |      12 |            19 |    122992
+    86000 |     +0.0% |       0 |      12 |            19 |    121992
+    87000 |     +0.0% |       0 |      12 |            19 |    120992
+    88000 |     +0.0% |       0 |      13 |            20 |    119992
+    89000 |     +0.0% |       0 |      13 |            20 |    118992
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11597_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11593_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11592_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11591_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11590_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11589_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11584_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11582_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11581_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11575_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11574_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11573_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11570_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11567_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11566_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11565_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11557_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11552_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11551_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11550_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11549_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11544_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11543_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11534_ only has one pin. Check if it is intended to be dangling.
+    90000 |     +0.0% |       0 |      13 |            20 |    117992
+    91000 |     +0.0% |       0 |      15 |            22 |    116992
+    92000 |     +0.0% |       0 |      15 |            22 |    115992
+    93000 |     +0.0% |       0 |      15 |            22 |    114992
+    94000 |     +0.0% |       0 |      15 |            22 |    113992
+    95000 |     +0.0% |       0 |      18 |            26 |    112992
+    96000 |     +0.0% |       0 |      18 |            26 |    111992
+    97000 |     +0.0% |       0 |      19 |            27 |    110992
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11596_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11594_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11583_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11579_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11577_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11576_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11568_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11562_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11559_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11555_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11542_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11541_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11536_ only has one pin. Check if it is intended to be dangling.
+    98000 |     +0.0% |       0 |      19 |            27 |    109992
+    99000 |     +0.0% |       0 |      19 |            27 |    108992
+   100000 |     +0.0% |       0 |      19 |            27 |    107992
+   101000 |     +0.0% |       0 |      19 |            27 |    106992
+   102000 |     +0.0% |       0 |      19 |            27 |    105992
+   103000 |     +0.0% |       0 |      20 |            28 |    104992
+   104000 |     +0.0% |       0 |      20 |            28 |    103992
+   105000 |     +0.0% |       0 |      20 |            28 |    102992
+   106000 |     +0.0% |       0 |      20 |            28 |    101992
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11595_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11587_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11586_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11585_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11580_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11578_ only has one pin. Check if it is intended to be dangling.
+   107000 |     +0.0% |       0 |      20 |            28 |    100992
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11572_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11571_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11569_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11564_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11563_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11561_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11554_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11553_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11548_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11547_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11546_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11540_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11538_ only has one pin. Check if it is intended to be dangling.
+   108000 |     +0.0% |       0 |      20 |            28 |     99992
+   109000 |     +0.0% |       0 |      20 |            28 |     98992
+   110000 |     +0.0% |       0 |      20 |            28 |     97992
+[WARNING RSZ-0104] Net ex_stage_i/_19688_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19686_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19682_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19680_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19616_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19615_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19614_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19613_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19612_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19611_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19610_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19609_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19606_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19605_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19604_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19603_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19602_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19601_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19600_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19599_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19598_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19597_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19596_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19595_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19594_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19593_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19592_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19591_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19590_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19589_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19588_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19586_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19585_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19584_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19582_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19580_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19578_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19490_ only has one pin. Check if it is intended to be dangling.
+   111000 |     +0.0% |       0 |      20 |            28 |     96992
+   112000 |     +0.0% |       0 |      20 |            28 |     95992
+   113000 |     +0.0% |       0 |      20 |            28 |     94992
+[WARNING RSZ-0104] Net i_frontend/_30985_ only has one pin. Check if it is intended to be dangling.
+   114000 |     +0.0% |       0 |      20 |            28 |     93992
+   115000 |     +0.0% |       0 |      20 |            28 |     92992
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11588_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11556_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11545_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11539_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_cache_subsystem.i_nbdcache/i_miss_handler/_11537_ only has one pin. Check if it is intended to be dangling.
+   116000 |     +0.0% |       0 |      20 |            28 |     91992
+   117000 |     +0.0% |       0 |      20 |            28 |     90992
+   118000 |     +0.0% |       0 |      20 |            28 |     89992
+[WARNING RSZ-0104] Net ex_stage_i/_19696_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19695_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19690_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19687_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19685_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19684_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19683_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19681_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19679_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19662_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19661_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19660_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19659_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19656_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19655_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19654_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19653_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19652_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19651_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19650_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19649_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19638_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19636_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19635_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19634_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19632_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19628_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19627_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19626_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19624_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19623_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19622_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19620_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19619_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19618_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19617_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19608_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19607_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19587_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19583_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19581_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19579_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19577_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19576_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19575_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19574_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19573_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19572_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19571_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19570_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19569_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19568_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19567_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19566_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19565_ only has one pin. Check if it is intended to be dangling.
+   119000 |     +0.0% |       0 |      20 |            28 |     88992
+   120000 |     +0.0% |       0 |      20 |            28 |     87992
+   121000 |     +0.0% |       0 |      20 |            28 |     86992
+   122000 |     +0.0% |       0 |      20 |            28 |     85992
+   123000 |     +0.0% |       0 |      20 |            28 |     84992
+   124000 |     +0.0% |       0 |      22 |            30 |     83992
+[WARNING RSZ-0104] Net ex_stage_i/_19689_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19678_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19677_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19676_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19675_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19674_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19673_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19672_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19671_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19670_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19669_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19668_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19667_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19666_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19665_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19664_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19663_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19658_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19657_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19648_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19647_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19646_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19645_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19644_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19643_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19642_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19641_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19640_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19639_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19637_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19633_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19631_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19630_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19629_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19625_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19621_ only has one pin. Check if it is intended to be dangling.
+   125000 |     +0.0% |       0 |      22 |            30 |     82992
+   126000 |     +0.0% |       0 |      22 |            30 |     81992
+   127000 |     +0.0% |       0 |      22 |            30 |     80992
+   128000 |     +0.0% |       0 |      22 |            30 |     79992
+   129000 |     +0.0% |       0 |      22 |            30 |     78992
+   130000 |     +0.0% |       0 |      22 |            30 |     77992
+   131000 |     +0.0% |       0 |      22 |            30 |     76992
+   132000 |     +0.0% |       0 |      22 |            30 |     75992
+   133000 |     +0.0% |       0 |      22 |            30 |     74992
+   134000 |     +0.0% |       0 |      22 |            30 |     73992
+   135000 |     +0.0% |       0 |      22 |            30 |     72992
+   136000 |     +0.0% |       0 |      22 |            30 |     71992
+   137000 |     +0.0% |       0 |      22 |            30 |     70992
+   138000 |     +0.0% |       0 |      22 |            30 |     69992
+   139000 |     +0.0% |       0 |      22 |            30 |     68992
+   140000 |     +0.0% |       0 |      22 |            30 |     67992
+   141000 |     +0.0% |       0 |      22 |            30 |     66992
+   142000 |     +0.0% |       0 |      22 |            30 |     65992
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29731_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29723_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29721_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29718_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_frontend/_31007_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_frontend/_31006_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_frontend/_30986_ only has one pin. Check if it is intended to be dangling.
+   143000 |     +0.0% |       0 |      22 |            30 |     64992
+   144000 |     +0.0% |       0 |      22 |            30 |     63992
+[WARNING RSZ-0104] Net ex_stage_i/_19491_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19477_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19475_ only has one pin. Check if it is intended to be dangling.
+   145000 |     +0.0% |       0 |      22 |            30 |     62992
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29730_ only has one pin. Check if it is intended to be dangling.
+   146000 |     +0.0% |       0 |      22 |            30 |     61992
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29728_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29727_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29724_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29722_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29720_ only has one pin. Check if it is intended to be dangling.
+   147000 |     +0.0% |       0 |      22 |            30 |     60992
+[WARNING RSZ-0104] Net i_frontend/_31003_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_frontend/_31001_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_frontend/_31000_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_frontend/_30997_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_frontend/_30995_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_frontend/_30994_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_frontend/_30990_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_frontend/_30989_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net i_frontend/_30988_ only has one pin. Check if it is intended to be dangling.
+   148000 |     +0.0% |       0 |      22 |            30 |     59992
+   149000 |     +0.0% |       0 |      22 |            30 |     58992
+[WARNING RSZ-0104] Net ex_stage_i/lsu_i.i_mmu/_11131_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/lsu_i.i_mmu/_11130_ only has one pin. Check if it is intended to be dangling.
+   150000 |     +0.0% |       0 |      22 |            30 |     57992
+[WARNING RSZ-0104] Net ex_stage_i/_19694_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19693_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19692_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19489_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19488_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19487_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19485_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19484_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19483_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19481_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19480_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net ex_stage_i/_19479_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _05334_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _05333_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _05332_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _05330_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _05329_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net _05328_ only has one pin. Check if it is intended to be dangling.
+   151000 |     +0.0% |       0 |      22 |            30 |     56992
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28357_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28445_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29118_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29117_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28444_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29116_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29115_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29114_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29113_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29112_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29111_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29110_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29109_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29108_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29107_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28443_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29106_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29105_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29104_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29103_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29102_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29101_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29100_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29099_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29098_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29097_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28442_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29096_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29095_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29094_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29093_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29092_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29091_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29090_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29089_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29088_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29087_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28441_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29086_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29085_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29084_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29083_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29082_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29081_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29080_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29079_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29078_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29077_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28440_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29076_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29075_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29074_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29073_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29072_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29071_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29070_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29069_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29068_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29067_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28439_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29066_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29065_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29064_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29063_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29062_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29061_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29060_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29059_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29058_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29057_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28438_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29056_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29055_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29054_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29053_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29052_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29051_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28437_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29050_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29049_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29048_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29047_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29046_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29045_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29044_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29043_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29042_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29041_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28436_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29040_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29039_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29038_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29037_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29036_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29035_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29034_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29033_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29032_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29031_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28356_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28435_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29030_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29029_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29028_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29027_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29026_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29025_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29024_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29023_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29022_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29021_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28434_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29020_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29019_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29018_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29017_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29016_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29015_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29014_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29013_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29012_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29011_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28433_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29010_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29009_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29008_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29007_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29006_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29005_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29004_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29003_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29002_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29001_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28432_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_29000_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28999_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28998_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28997_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28996_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28995_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28994_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28993_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28992_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28991_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28431_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28990_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28989_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28988_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28987_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28986_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28985_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28984_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28983_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28982_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28981_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28430_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28980_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28979_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28978_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28977_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28976_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28975_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28974_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28973_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28972_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28971_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28429_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28970_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28969_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28968_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28967_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28966_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28965_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28964_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28963_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28962_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28961_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28428_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28960_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28959_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28958_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28957_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28956_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28955_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28954_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28953_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28952_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28951_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28427_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28950_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28949_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28948_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28947_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28946_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28945_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28944_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28943_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28942_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28941_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28426_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28940_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28939_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28938_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28937_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28936_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28935_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28934_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28933_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28932_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28931_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28355_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28425_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28930_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28929_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28928_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28927_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28926_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28925_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28924_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28923_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28424_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28922_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28921_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28920_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28919_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28918_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28917_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28916_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28915_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28914_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28913_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28423_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28912_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28911_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28910_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28909_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28908_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28907_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28906_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28905_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28904_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28903_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28422_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28902_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28901_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28900_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28899_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28898_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28897_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28896_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28895_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28894_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28893_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28421_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28892_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28891_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28890_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28889_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28888_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28887_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28886_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28885_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28884_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28883_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28420_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28882_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28881_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28880_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28879_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28878_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28877_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28876_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28875_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28874_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28873_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28419_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28872_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28871_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28870_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28869_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28868_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28867_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28866_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28865_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28864_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28863_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28418_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27313_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27311_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27309_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27308_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27307_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27306_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28417_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27304_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27303_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27301_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27300_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27298_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27296_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27294_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27293_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27291_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27290_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28416_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27288_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27287_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27285_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27284_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27282_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27281_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27279_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27278_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27276_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27275_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28354_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27273_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27271_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27269_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27268_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27266_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27265_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27263_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27262_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27260_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27259_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27257_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27256_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27254_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27253_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27251_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27250_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27248_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27246_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27244_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_26984_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28415_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_26986_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_26987_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_26989_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_26990_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_26992_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_26993_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_26995_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_26996_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_26998_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_26999_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28414_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27001_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27002_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27004_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27006_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27008_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27009_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27012_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27015_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27019_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28413_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28862_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27033_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27035_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27037_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27039_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28412_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27041_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27043_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27046_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27047_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27050_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27051_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27053_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27054_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27057_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28411_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28410_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28861_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28860_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28859_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28858_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28857_ only has one pin. Check if it is intended to be dangling.
+   152000 |     +0.0% |       0 |      22 |            30 |     55992
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28856_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28855_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28854_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28853_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28409_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28852_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28851_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28850_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28849_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28848_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28847_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28846_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28845_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28844_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28843_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28408_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28842_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28841_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28840_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28839_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28838_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28837_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28836_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28835_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28834_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28833_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28353_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28407_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28832_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28831_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28830_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28829_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28828_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28827_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28826_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28825_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28824_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28823_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28406_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28822_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28821_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28820_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28819_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28818_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28817_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28816_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28815_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28814_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28813_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28405_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28812_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28811_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28810_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28809_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28808_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28807_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28806_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28805_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28804_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28803_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28404_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28802_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28801_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28800_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28799_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28798_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28797_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28403_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28796_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28795_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28794_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28793_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28792_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28791_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28790_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28789_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28788_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28787_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28402_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28786_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28785_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28784_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28783_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28782_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28781_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28780_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28779_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28778_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28777_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28401_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28776_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28775_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28774_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28773_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28772_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28771_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28770_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28769_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28768_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28767_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28400_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28766_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28765_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28764_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28763_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28762_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28761_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28760_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28759_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28758_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28757_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28399_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28756_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28755_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28754_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28753_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28752_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28751_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28750_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28749_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28748_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28747_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28398_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28746_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28745_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28744_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28743_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28742_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28741_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28740_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28739_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28738_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28737_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28352_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28397_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28736_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28735_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28734_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28733_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28732_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28731_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28730_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28729_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28728_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28727_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28396_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28726_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28725_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28724_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28723_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28722_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28721_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28720_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28719_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28718_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28717_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28395_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28716_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28715_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28714_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28713_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28712_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28711_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28710_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28709_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28708_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28707_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28394_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28706_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28705_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28704_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28703_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28702_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28701_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28700_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28699_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28698_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28697_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28393_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28696_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28695_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28694_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28693_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28692_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28691_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28690_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28689_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28688_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28687_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28392_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28686_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28685_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28684_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28683_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28682_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28681_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28680_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28679_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28678_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28677_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28391_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28676_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28675_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28674_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28673_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28672_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28671_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28670_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28669_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28390_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28668_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28667_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28666_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28665_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28664_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28663_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28662_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28661_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28660_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28659_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28389_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28658_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28657_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28656_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28655_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28654_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28653_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28652_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28651_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28650_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28649_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28388_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28648_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28647_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28646_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28645_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28644_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28643_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28642_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28641_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28640_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28639_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28387_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28638_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28637_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28636_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28635_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28634_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28633_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28632_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28631_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28630_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28629_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28386_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28628_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28627_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28626_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28625_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28624_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28623_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28622_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28621_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28620_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28619_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28385_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28618_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28617_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28616_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28615_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28614_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28613_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28612_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28611_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28610_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28609_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28384_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28608_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28607_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28606_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27111_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27113_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27114_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28383_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27115_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27116_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27117_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27118_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27119_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27120_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27121_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27122_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27123_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27124_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28382_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27125_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27126_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27127_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27128_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27129_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27130_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27131_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27132_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27133_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27134_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28381_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27135_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27136_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27137_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27138_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27139_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27140_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27141_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27142_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27143_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27145_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28380_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27146_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27147_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27148_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27149_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27150_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27151_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27152_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27153_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27154_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27155_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28379_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27156_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27157_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27158_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27159_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27160_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27162_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27163_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27164_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27165_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27166_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28378_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27167_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27168_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27169_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27170_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27171_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27172_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27173_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27174_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27175_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27176_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28377_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27177_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27179_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27183_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27071_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27222_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27461_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_28376_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27184_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27342_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27319_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27097_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27210_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_26958_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27503_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27441_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27590_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27335_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27327_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27185_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27005_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27093_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net issue_stage_i.i_scoreboard/_27102_ only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] message limit (1000) reached. This message will no longer print.
+   153000 |     +0.0% |       0 |      22 |            30 |     54992
+   154000 |     +0.0% |       0 |      22 |            30 |     53992
+   155000 |     +0.0% |       0 |      22 |            30 |     52992
+   156000 |     +0.0% |       0 |      22 |            30 |     51992
+   157000 |     +0.0% |       0 |      22 |            30 |     50992
+   158000 |     +0.0% |       0 |      22 |            30 |     49992
+   159000 |     +0.0% |       0 |      22 |            30 |     48992
+   160000 |     +0.0% |       0 |      22 |            30 |     47992
+   161000 |     +0.0% |       0 |      22 |            30 |     46992
+   162000 |     +0.0% |       0 |      22 |            30 |     45992
+   163000 |     +0.0% |       0 |      22 |            30 |     44992
+   164000 |     +0.0% |       0 |      22 |            30 |     43992
+   165000 |     +0.0% |       0 |      22 |            30 |     42992
+   166000 |     +0.0% |       0 |      22 |            30 |     41992
+   167000 |     +0.0% |       0 |      22 |            30 |     40992
+   168000 |     +0.0% |       0 |      22 |            30 |     39992
+   169000 |     +0.0% |       0 |      22 |            30 |     38992
+   170000 |     +0.0% |       0 |      22 |            30 |     37992
+   171000 |     +0.0% |       0 |      22 |            30 |     36992
+   172000 |     +0.0% |       0 |      22 |            30 |     35992
+   173000 |     +0.0% |       0 |      22 |            30 |     34992
+   174000 |     +0.0% |       0 |      22 |            30 |     33992
+   175000 |     +0.0% |       0 |      22 |            30 |     32992
+   176000 |     +0.0% |       0 |      22 |            30 |     31992
+   177000 |     +0.0% |       0 |      22 |            30 |     30992
+   178000 |     +0.0% |       0 |      22 |            30 |     29992
+   179000 |     +0.0% |       0 |      22 |            30 |     28992
+   180000 |     +0.0% |       0 |      22 |            30 |     27992
+   181000 |     +0.0% |       0 |      22 |            30 |     26992
+   182000 |     +0.0% |       0 |      22 |            30 |     25992
+   183000 |     +0.0% |       0 |      22 |            30 |     24992
+   184000 |     +0.0% |       0 |      22 |            30 |     23992
+   185000 |     +0.0% |       0 |      22 |            30 |     22992
+   186000 |     +0.0% |       0 |      22 |            30 |     21992
+   187000 |     +0.0% |       0 |      22 |            30 |     20992
+   188000 |     +0.0% |       0 |      22 |            30 |     19992
+   189000 |     +0.0% |       0 |      22 |            30 |     18992
+   190000 |     +0.0% |       0 |      22 |            30 |     17992
+   191000 |     +0.0% |       0 |      22 |            30 |     16992
+   192000 |     +0.0% |       0 |      22 |            30 |     15992
+   193000 |     +0.0% |       0 |      22 |            30 |     14992
+   194000 |     +0.0% |       0 |      22 |            30 |     13992
+   195000 |     +0.0% |       0 |      22 |            30 |     12992
+   196000 |     +0.0% |       0 |      22 |            30 |     11992
+   197000 |     +0.0% |       0 |      22 |            30 |     10992
+   198000 |     +0.0% |       0 |      22 |            30 |      9992
+   199000 |     +0.0% |       0 |      22 |            30 |      8992
+   200000 |     +0.0% |       0 |      22 |            30 |      7992
+   201000 |     +0.0% |       0 |      22 |            30 |      6992
+   202000 |     +0.0% |       0 |      22 |            30 |      5992
+   203000 |     +0.0% |       0 |      22 |            30 |      4992
+   204000 |     +0.0% |       0 |      22 |            30 |      3992
+   205000 |     +0.0% |       0 |      23 |            31 |      2992
+   206000 |     +0.0% |       0 |      23 |            31 |      1992
+   207000 |     +0.0% |       0 |      23 |            31 |       992
+    final |     +0.0% |       0 |      23 |            31 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 7 slew violations.
+[INFO RSZ-0036] Found 25 capacitance violations.
+[INFO RSZ-0038] Inserted 23 buffers in 31 nets.
+Took 152 seconds: repair_design -verbose
+global_route -start_incremental
+detailed_placement
+[INFO DPL-0005] Max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+Movements Summary
+---------------------------------------
+Total cells:                  179076
+Diamond Move Success:         179076 (100.00%)
+Diamond Move Failure:              0
+Rip-up and replace Success:        0 (  0.00% of diamond failures)
+Rip-up and replace Failure:        0
+Total Placement Failures:          0
+---------------------------------------
+Placement Analysis
+---------------------------------
+total displacement          6.7 u
+average displacement        0.0 u
+max displacement            1.4 u
+original HPWL         7177897.9 u
+legalized HPWL        7177901.0 u
+delta HPWL                    0 %
+
+global_route -end_incremental -congestion_report_file ./reports/nangate45/ariane133/base/congestion_post_repair_design.rpt
+Repair setup and hold violations...
+estimate_parasitics -global_routing
+Took 9 seconds: estimate_parasitics -global_routing
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0094] Found 5518 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 5518 out of 5518 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |   StTNS    |   EnTNS    |  Viol  |  Worst  
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            |            | Endpts | St/EnPt 
+------------------------------------------------------------------------------------------------------------------------------
+       0* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.500 |     -619.0 |    -4577.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+      10* |       0 |       0 |        1 |      0 |     8 |    +0.0% |   -1.533 |     -630.4 |    -4711.1 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+      20* |       0 |       3 |        2 |      0 |    14 |    +0.0% |   -1.514 |     -628.0 |    -4629.9 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+      30* |       0 |       8 |        4 |      0 |    17 |    +0.0% |   -1.499 |     -625.6 |    -4572.0 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+      40* |       0 |      10 |        4 |      0 |    25 |    +0.0% |   -1.502 |     -630.8 |    -4576.4 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+      50* |       0 |      16 |        4 |      0 |    29 |    +0.0% |   -1.505 |     -634.6 |    -4590.0 |   5518 | issue_stage_i.i_scoreboard/mem_q\[157\]$_DFF_PN0_/D
+      52* |       0 |       0 |        0 |      0 |     1 |    +0.0% |   -1.492 |     -611.9 |    -4548.7 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+      60* |       0 |       2 |        3 |      0 |     4 |    +0.0% |   -1.498 |     -611.2 |    -4576.8 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+      70* |       0 |       8 |        5 |      0 |     6 |    +0.0% |   -1.513 |     -610.6 |    -4650.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+      80* |       0 |      14 |        7 |      0 |     8 |    +0.0% |   -1.516 |     -616.4 |    -4649.0 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+      90* |       0 |      19 |        8 |      0 |    12 |    +0.0% |   -1.513 |     -614.6 |    -4638.4 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     100* |       0 |      23 |       11 |      0 |    15 |    +0.0% |   -1.531 |     -629.5 |    -4692.8 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     104* |       0 |       0 |        2 |      0 |     1 |    +0.0% |   -1.491 |     -611.1 |    -4545.9 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     110* |       0 |       3 |        4 |      0 |     1 |    +0.0% |   -1.502 |     -617.6 |    -4579.5 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     120* |       0 |       9 |        6 |      0 |     3 |    +0.0% |   -1.496 |     -614.2 |    -4572.4 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     130* |       0 |      15 |        8 |      0 |     5 |    +0.0% |   -1.508 |     -614.6 |    -4621.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     140* |       0 |      21 |       11 |      0 |     7 |    +0.0% |   -1.507 |     -617.0 |    -4599.8 |   5518 | issue_stage_i.i_scoreboard/mem_q\[170\]$_DFF_PN0_/D
+     150* |       0 |      28 |       12 |      0 |     9 |    +0.0% |   -1.535 |     -620.5 |    -4714.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[170\]$_DFF_PN0_/D
+     159* |       0 |       3 |        3 |      0 |     1 |    +0.0% |   -1.489 |     -610.4 |    -4537.8 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     160* |       0 |       3 |        3 |      0 |     1 |    +0.0% |   -1.489 |     -610.4 |    -4537.8 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     170* |       0 |       7 |        7 |      0 |     3 |    +0.0% |   -1.511 |     -617.3 |    -4630.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     180* |       0 |      13 |        9 |      0 |     6 |    +0.0% |   -1.516 |     -617.4 |    -4649.8 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     190* |       1 |      19 |       12 |      0 |     7 |    +0.0% |   -1.494 |     -609.0 |    -4558.0 |   5518 | issue_stage_i.i_scoreboard/mem_q\[170\]$_DFF_PN0_/D
+     200* |       1 |      23 |       12 |      0 |    13 |    +0.0% |   -1.496 |     -608.6 |    -4568.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[170\]$_DFF_PN0_/D
+     210* |       1 |      25 |       14 |      0 |    19 |    +0.0% |   -1.501 |     -617.2 |    -4576.3 |   5518 | issue_stage_i.i_scoreboard/mem_q\[170\]$_DFF_PN0_/D
+     210* |       0 |       3 |        3 |      0 |     1 |    +0.0% |   -1.489 |     -610.4 |    -4537.8 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     220* |       0 |       8 |        6 |      0 |     2 |    +0.0% |   -1.496 |     -613.8 |    -4571.3 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     230* |       4 |       9 |       10 |      0 |     3 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     240* |       9 |       9 |       15 |      0 |     3 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     250* |      14 |       9 |       20 |      0 |     3 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     260* |      19 |       9 |       25 |      0 |     3 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     270* |      24 |       9 |       30 |      0 |     3 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     274* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.3 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     280* |       1 |      12 |        8 |      0 |     4 |    +0.0% |   -1.500 |     -616.3 |    -4574.8 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     290* |       1 |      14 |       16 |      2 |     7 |    +0.0% |   -1.501 |     -617.0 |    -4575.0 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     300* |       3 |      20 |       18 |      2 |     7 |    +0.0% |   -1.503 |     -618.5 |    -4575.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     310* |       8 |      20 |       23 |      2 |     7 |    +0.0% |   -1.503 |     -618.5 |    -4575.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     320* |      13 |      20 |       28 |      2 |     7 |    +0.0% |   -1.503 |     -618.5 |    -4575.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     325* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     330* |       1 |      10 |       11 |      0 |     4 |    +0.0% |   -1.500 |     -616.3 |    -4574.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     340* |       2 |      16 |       15 |      2 |     4 |    +0.0% |   -1.490 |     -611.4 |    -4535.3 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     350* |       7 |      16 |       20 |      2 |     4 |    +0.0% |   -1.490 |     -611.4 |    -4535.3 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     360* |      12 |      16 |       25 |      2 |     4 |    +0.0% |   -1.490 |     -611.4 |    -4535.3 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     370* |      17 |      16 |       30 |      2 |     4 |    +0.0% |   -1.490 |     -611.4 |    -4535.3 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     376* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     380* |       2 |       9 |        8 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     390* |       7 |       9 |       13 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     400* |      12 |       9 |       18 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     410* |      17 |       9 |       23 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     420* |      22 |       9 |       28 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     427* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     430* |       1 |       9 |        8 |      0 |     4 |    +0.0% |   -1.499 |     -615.9 |    -4575.1 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     440* |       6 |       9 |       13 |      0 |     4 |    +0.0% |   -1.499 |     -615.9 |    -4575.1 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     450* |      11 |       9 |       18 |      0 |     4 |    +0.0% |   -1.499 |     -615.9 |    -4575.1 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     460* |      16 |       9 |       23 |      0 |     4 |    +0.0% |   -1.499 |     -615.9 |    -4575.1 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     470* |      21 |       9 |       28 |      0 |     4 |    +0.0% |   -1.499 |     -615.9 |    -4575.1 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     478* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     480* |       1 |       9 |        8 |      0 |     3 |    +0.0% |   -1.499 |     -615.9 |    -4575.1 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     490* |       1 |      14 |       15 |      2 |     4 |    +0.0% |   -1.501 |     -617.0 |    -4575.3 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     500* |       6 |      15 |       19 |      2 |     4 |    +0.0% |   -1.490 |     -611.4 |    -4535.3 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     510* |      11 |      15 |       24 |      2 |     4 |    +0.0% |   -1.490 |     -611.4 |    -4535.3 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     520* |      16 |      15 |       29 |      2 |     4 |    +0.0% |   -1.490 |     -611.4 |    -4535.3 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     529* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     530* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     540* |       5 |       9 |       12 |      0 |     4 |    +0.0% |   -1.499 |     -615.9 |    -4575.1 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     550* |      10 |       9 |       17 |      0 |     4 |    +0.0% |   -1.499 |     -615.9 |    -4575.1 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     560* |      15 |       9 |       22 |      0 |     4 |    +0.0% |   -1.499 |     -615.9 |    -4575.1 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     570* |      20 |       9 |       27 |      0 |     4 |    +0.0% |   -1.499 |     -615.9 |    -4575.1 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     580* |      25 |       9 |       32 |      0 |     4 |    +0.0% |   -1.499 |     -615.9 |    -4575.1 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     580* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     590* |       5 |       9 |       11 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     600* |      10 |       9 |       16 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     610* |      15 |       9 |       21 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     620* |      20 |       9 |       26 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     630* |      25 |       9 |       31 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     631* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     640* |       3 |      11 |       10 |      0 |     4 |    +0.0% |   -1.502 |     -618.2 |    -4575.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     650* |       8 |      11 |       15 |      0 |     4 |    +0.0% |   -1.502 |     -618.2 |    -4575.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     660* |      13 |      11 |       20 |      0 |     4 |    +0.0% |   -1.502 |     -618.2 |    -4575.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     670* |      18 |      11 |       25 |      0 |     4 |    +0.0% |   -1.502 |     -618.2 |    -4575.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     680* |      23 |      11 |       30 |      0 |     4 |    +0.0% |   -1.502 |     -618.2 |    -4575.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     682* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     690* |       4 |       9 |       10 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     700* |       9 |       9 |       15 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     710* |      14 |       9 |       20 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     720* |      19 |       9 |       25 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     730* |      24 |       9 |       30 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     733* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     740* |       1 |      13 |        8 |      0 |     4 |    +0.0% |   -1.500 |     -616.3 |    -4574.8 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     750* |       3 |      18 |       12 |      1 |     4 |    +0.0% |   -1.490 |     -611.4 |    -4535.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     760* |       8 |      18 |       17 |      1 |     4 |    +0.0% |   -1.490 |     -611.4 |    -4535.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     770* |      13 |      18 |       22 |      1 |     4 |    +0.0% |   -1.490 |     -611.4 |    -4535.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     780* |      18 |      18 |       27 |      1 |     4 |    +0.0% |   -1.490 |     -611.4 |    -4535.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     784* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     790* |       3 |       9 |        9 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     800* |       8 |       9 |       14 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     810* |      13 |       9 |       19 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     820* |      18 |       9 |       24 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     830* |      23 |       9 |       29 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     835* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     840* |       2 |       9 |        9 |      0 |     4 |    +0.0% |   -1.499 |     -615.9 |    -4575.1 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     850* |       7 |       9 |       14 |      0 |     4 |    +0.0% |   -1.499 |     -615.9 |    -4575.1 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     860* |      12 |       9 |       19 |      0 |     4 |    +0.0% |   -1.499 |     -615.9 |    -4575.1 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     870* |      17 |       9 |       24 |      0 |     4 |    +0.0% |   -1.499 |     -615.9 |    -4575.1 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     880* |      22 |       9 |       29 |      0 |     4 |    +0.0% |   -1.499 |     -615.9 |    -4575.1 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     886* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     890* |       1 |      10 |        8 |      0 |     4 |    +0.0% |   -1.501 |     -616.8 |    -4575.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     900* |       6 |      10 |       13 |      0 |     4 |    +0.0% |   -1.501 |     -616.8 |    -4575.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     910* |      11 |      10 |       18 |      0 |     4 |    +0.0% |   -1.501 |     -616.8 |    -4575.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     920* |      16 |      10 |       23 |      0 |     4 |    +0.0% |   -1.501 |     -616.8 |    -4575.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     930* |      21 |      10 |       28 |      0 |     4 |    +0.0% |   -1.501 |     -616.8 |    -4575.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     937* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     940* |       1 |      10 |        8 |      0 |     3 |    +0.0% |   -1.500 |     -616.3 |    -4574.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     950* |       1 |      15 |       15 |      2 |     4 |    +0.0% |   -1.503 |     -618.5 |    -4575.8 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     960* |       6 |      16 |       19 |      2 |     4 |    +0.0% |   -1.490 |     -611.4 |    -4535.3 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     970* |      11 |      16 |       24 |      2 |     4 |    +0.0% |   -1.490 |     -611.4 |    -4535.3 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     980* |      16 |      16 |       29 |      2 |     4 |    +0.0% |   -1.490 |     -611.4 |    -4535.3 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     988* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+     990* |       1 |       9 |        8 |      0 |     3 |    +0.0% |   -1.499 |     -615.9 |    -4575.1 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1000* |       6 |       9 |       12 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1010* |      11 |       9 |       17 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1020* |      16 |       9 |       22 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1030* |      21 |       9 |       27 |      0 |     4 |    +0.0% |   -1.487 |     -608.7 |    -4534.6 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1039* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1040* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1050* |       1 |      13 |       15 |      2 |     4 |    +0.0% |   -1.501 |     -617.0 |    -4575.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1060* |       5 |      15 |       19 |      2 |     4 |    +0.0% |   -1.503 |     -618.5 |    -4575.8 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1070* |      10 |      15 |       24 |      2 |     4 |    +0.0% |   -1.503 |     -618.5 |    -4575.8 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1080* |      15 |      15 |       29 |      2 |     4 |    +0.0% |   -1.503 |     -618.5 |    -4575.8 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1090* |      20 |      15 |       34 |      2 |     4 |    +0.0% |   -1.503 |     -618.5 |    -4575.8 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1090* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1100* |       1 |      12 |       15 |      2 |     4 |    +0.0% |   -1.501 |     -617.0 |    -4575.3 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1100* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1110* |       1 |      12 |       15 |      2 |     4 |    +0.0% |   -1.501 |     -617.0 |    -4575.3 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1120* |       4 |      16 |       18 |      2 |     4 |    +0.0% |   -1.503 |     -618.5 |    -4575.8 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1130* |       9 |      16 |       23 |      2 |     4 |    +0.0% |   -1.503 |     -618.5 |    -4575.8 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1140* |      14 |      16 |       28 |      2 |     4 |    +0.0% |   -1.503 |     -618.5 |    -4575.8 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1150* |      19 |      16 |       33 |      2 |     4 |    +0.0% |   -1.503 |     -618.5 |    -4575.8 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1151* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1160* |       1 |      14 |        8 |      0 |     5 |    +0.0% |   -1.501 |     -617.0 |    -4574.7 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1170* |       2 |      18 |       16 |      2 |     5 |    +0.0% |   -1.503 |     -618.5 |    -4575.8 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1180* |       7 |      18 |       21 |      2 |     5 |    +0.0% |   -1.503 |     -618.5 |    -4575.8 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1190* |      12 |      18 |       26 |      2 |     5 |    +0.0% |   -1.503 |     -618.5 |    -4575.8 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1200* |      17 |      18 |       31 |      2 |     5 |    +0.0% |   -1.503 |     -618.5 |    -4575.8 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1200* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1200* |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5518 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1200+ |       1 |       9 |        7 |      0 |     3 |    +0.0% |   -1.487 |     -608.6 |    -4534.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1202+ |       1 |      10 |        7 |      0 |     3 |    +0.0% |   -1.485 |     -608.5 |    -4527.5 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1203+ |       1 |      10 |        7 |      0 |     3 |    +0.0% |   -1.485 |     -608.5 |    -4527.5 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1204+ |       1 |      10 |        7 |      0 |     3 |    +0.0% |   -1.485 |     -608.5 |    -4527.5 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1207+ |       1 |      11 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.4 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1209+ |       1 |      12 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.4 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1210+ |       1 |      12 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.4 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1210+ |       1 |      12 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.4 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1211+ |       1 |      12 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.4 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1212+ |       1 |      12 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.4 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1213+ |       1 |      12 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.4 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1214+ |       1 |      12 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.4 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1215+ |       1 |      12 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.4 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1217+ |       1 |      13 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.4 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1218+ |       1 |      13 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.4 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1219+ |       1 |      13 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.4 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1220+ |       1 |      13 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.4 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1223+ |       1 |      16 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1224+ |       1 |      16 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1225+ |       1 |      16 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1230+ |       1 |      20 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1230+ |       1 |      20 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1231+ |       1 |      20 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1232+ |       1 |      20 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1233+ |       1 |      20 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1234+ |       1 |      20 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1235+ |       1 |      20 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1236+ |       1 |      20 |        7 |      0 |     4 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1238+ |       1 |      20 |        7 |      0 |     5 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1239+ |       1 |      20 |        7 |      0 |     5 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1240+ |       1 |      20 |        7 |      0 |     5 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1240+ |       1 |      20 |        7 |      0 |     5 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1242+ |       1 |      20 |        7 |      0 |     6 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1243+ |       1 |      20 |        7 |      0 |     6 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1244+ |       1 |      20 |        7 |      0 |     6 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1245+ |       1 |      20 |        7 |      0 |     6 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1247+ |       1 |      20 |        7 |      0 |     7 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1249+ |       1 |      21 |        7 |      0 |     7 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1250+ |       1 |      21 |        7 |      0 |     7 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1251+ |       1 |      21 |        7 |      0 |     8 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1253+ |       1 |      22 |        7 |      0 |     8 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1255+ |       1 |      22 |        7 |      0 |     9 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1257+ |       1 |      22 |        7 |      0 |    10 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1259+ |       1 |      22 |        7 |      0 |    11 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1260+ |       1 |      22 |        7 |      0 |    11 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1261+ |       1 |      22 |        7 |      0 |    12 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1262+ |       1 |      22 |        7 |      0 |    12 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1263+ |       1 |      22 |        7 |      0 |    12 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1264+ |       1 |      22 |        7 |      0 |    12 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1265+ |       1 |      22 |        7 |      0 |    12 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1266+ |       1 |      22 |        7 |      0 |    12 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1268+ |       1 |      22 |        7 |      0 |    13 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1269+ |       1 |      22 |        7 |      0 |    13 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1270+ |       1 |      22 |        7 |      0 |    13 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1270+ |       1 |      22 |        7 |      0 |    13 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1272+ |       1 |      22 |        7 |      0 |    14 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1273+ |       1 |      22 |        7 |      0 |    14 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1274+ |       1 |      22 |        7 |      0 |    14 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1275+ |       1 |      22 |        7 |      0 |    14 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1276+ |       1 |      22 |        7 |      0 |    14 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1277+ |       1 |      22 |        7 |      0 |    14 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1278+ |       1 |      22 |        7 |      0 |    14 |    +0.0% |   -1.483 |     -608.4 |    -4520.3 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1280+ |       1 |      22 |        7 |      0 |    15 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1280+ |       1 |      22 |        7 |      0 |    15 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1282+ |       1 |      22 |        7 |      0 |    16 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1284+ |       1 |      22 |        7 |      0 |    17 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1286+ |       1 |      22 |        7 |      0 |    18 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1290+ |       1 |      25 |        7 |      0 |    18 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1291+ |       1 |      25 |        7 |      0 |    19 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1293+ |       1 |      26 |        7 |      0 |    19 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1294+ |       1 |      26 |        7 |      0 |    19 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1295+ |       1 |      26 |        7 |      0 |    19 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1297+ |       1 |      26 |        7 |      0 |    20 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1299+ |       1 |      26 |        7 |      0 |    21 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1300+ |       1 |      26 |        7 |      0 |    21 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1301+ |       1 |      26 |        7 |      0 |    21 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1304+ |       1 |      28 |        7 |      0 |    21 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1306+ |       1 |      28 |        7 |      0 |    22 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1307+ |       1 |      28 |        7 |      0 |    22 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1310+ |       1 |      29 |        7 |      0 |    23 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1310+ |       1 |      29 |        7 |      0 |    23 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1311+ |       1 |      29 |        7 |      0 |    23 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1312+ |       1 |      29 |        7 |      0 |    23 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1313+ |       1 |      29 |        7 |      0 |    23 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1315+ |       1 |      29 |        7 |      0 |    24 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1316+ |       1 |      29 |        7 |      0 |    24 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1317+ |       1 |      29 |        7 |      0 |    24 |    +0.0% |   -1.483 |     -608.4 |    -4520.2 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1319+ |       1 |      29 |        7 |      0 |    25 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1320+ |       1 |      29 |        7 |      0 |    25 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1320+ |       1 |      29 |        7 |      0 |    25 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1321+ |       1 |      29 |        7 |      0 |    25 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1323+ |       1 |      30 |        7 |      0 |    25 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1324+ |       1 |      30 |        7 |      0 |    25 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1327+ |       1 |      32 |        7 |      0 |    25 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1328+ |       1 |      32 |        7 |      0 |    25 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1330+ |       1 |      33 |        7 |      0 |    25 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1330+ |       1 |      33 |        7 |      0 |    25 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1331+ |       1 |      33 |        7 |      0 |    25 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1332+ |       1 |      33 |        7 |      0 |    25 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1333+ |       1 |      33 |        7 |      0 |    25 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1334+ |       1 |      33 |        7 |      0 |    25 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1335+ |       1 |      33 |        7 |      0 |    25 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1337+ |       1 |      33 |        7 |      0 |    26 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1340+ |       1 |      34 |        7 |      0 |    27 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1342+ |       1 |      36 |        7 |      0 |    27 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1344+ |       1 |      36 |        7 |      0 |    28 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1346+ |       1 |      36 |        7 |      0 |    29 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1347+ |       1 |      36 |        7 |      0 |    29 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1348+ |       1 |      36 |        7 |      0 |    29 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1350+ |       1 |      36 |        7 |      0 |    30 |    +0.0% |   -1.483 |     -608.4 |    -4520.1 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1352+ |       1 |      38 |        7 |      0 |    30 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1355+ |       1 |      39 |        7 |      0 |    31 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1356+ |       1 |      39 |        7 |      0 |    31 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1358+ |       1 |      40 |        7 |      0 |    31 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1359+ |       1 |      40 |        7 |      0 |    31 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1360+ |       1 |      40 |        7 |      0 |    31 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1360+ |       1 |      40 |        7 |      0 |    31 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1361+ |       1 |      40 |        7 |      0 |    31 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1362+ |       1 |      40 |        7 |      0 |    31 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1364+ |       1 |      41 |        7 |      0 |    31 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1365+ |       1 |      41 |        7 |      0 |    31 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1368+ |       1 |      42 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1369+ |       1 |      42 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1370+ |       1 |      42 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1370+ |       1 |      42 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1372+ |       1 |      43 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1373+ |       1 |      43 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1374+ |       1 |      43 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1375+ |       1 |      43 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1376+ |       1 |      43 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1377+ |       1 |      43 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1378+ |       1 |      43 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1380+ |       1 |      44 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1382+ |       1 |      46 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1385+ |       1 |      48 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1390+ |       1 |      52 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1390+ |       1 |      52 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1394+ |       1 |      55 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1395+ |       1 |      55 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1396+ |       1 |      55 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1397+ |       1 |      55 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1398+ |       1 |      55 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1399+ |       1 |      55 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    1400+ |       1 |      55 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5515 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+    final |       1 |      55 |        7 |      0 |    32 |    +0.0% |   -1.483 |     -608.4 |    -4520.0 |   5506 | issue_stage_i.i_scoreboard/mem_q\[195\]$_DFF_PN0_/D
+------------------------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0059] Removed 1 buffers.
+[INFO RSZ-0040] Inserted 7 buffers.
+[INFO RSZ-0051] Resized 55 instances: 55 up, 0 up match, 0 down, 0 VT
+[INFO RSZ-0043] Swapped pins on 32 instances.
+[WARNING RSZ-0062] Unable to repair all setup violations.
+[INFO RSZ-0046] Found 92 endpoints with hold violations.
+Iteration | Resized | Buffers | Cloned Gates |   Area   |   WNS   |   TNS   | Endpoint
+--------------------------------------------------------------------------------------
+        0 |       0 |       0 |            0 |    +0.0% |  -0.034 |  -1.180 | csr_regfile_i/mtvec_q[59]$_DFF_PN0_/D
+       10 |       0 |       8 |            0 |    +0.0% |  -0.027 |  -0.869 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+       20 |       0 |      17 |            0 |    +0.0% |  -0.019 |  -0.625 | csr_regfile_i/mtvec_q[8]$_DFF_PN0_/D
+       30 |       0 |      25 |            0 |    +0.0% |  -0.016 |  -0.417 | csr_regfile_i/mtvec_q[28]$_DFF_PN0_/D
+       40 |       0 |      30 |            0 |    +0.0% |  -0.013 |  -0.306 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[109]$_DFFE_PN0P_/D
+       50 |       0 |      37 |            0 |    +0.0% |  -0.009 |  -0.202 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[112]$_DFFE_PN0P_/D
+       60 |       0 |      43 |            0 |    +0.0% |  -0.008 |  -0.132 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.N317$_DFFE_PN0P_/D
+       70 |       0 |      53 |            0 |    +0.0% |  -0.005 |  -0.057 | i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_2/wd_in[10]
+       80 |       0 |      58 |            0 |    +0.0% |  -0.004 |  -0.017 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[95]$_DFFE_PN0P_/D
+       90 |       0 |      62 |            0 |    +0.0% |  -0.002 |  -0.004 | csr_regfile_i/mtvec_q[1]$_DFF_PN0_/D
+    final |       0 |      65 |            0 |    +0.0% |   0.000 |   0.000 | i_cache_subsystem.i_stream_arbiter_ar.i_arbiter.lock_q$_DFF_PN0_/D
+--------------------------------------------------------------------------------------
+[INFO RSZ-0032] Inserted 65 hold buffers.
+Took 1175 seconds: repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -verbose
+global_route -start_incremental
+detailed_placement
+[INFO DPL-0005] Max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+Movements Summary
+---------------------------------------
+Total cells:                  179147
+Diamond Move Success:         179147 (100.00%)
+Diamond Move Failure:              0
+Rip-up and replace Success:        0 (  0.00% of diamond failures)
+Rip-up and replace Failure:        0
+Total Placement Failures:          0
+---------------------------------------
+Placement Analysis
+---------------------------------
+total displacement         87.0 u
+average displacement        0.0 u
+max displacement            2.9 u
+original HPWL         7177960.7 u
+legalized HPWL        7178041.3 u
+delta HPWL                    0 %
+
+global_route -end_incremental -congestion_report_file ./reports/nangate45/ariane133/base/congestion_post_repair_timing.rpt
+global_route -start_incremental
+global_route -end_incremental -congestion_report_file ./reports/nangate45/ariane133/base/congestion_post_recover_power.rpt
+Repair antennas...
+[WARNING GRT-0246] No diode with LEF class CORE ANTENNACELL found.
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+Estimate parasitics...
+estimate_parasitics -global_routing
+Took 10 seconds: estimate_parasitics -global_routing
+Report metrics stage 5, global route...
+
+==========================================================================
+global route report_design_area
+--------------------------------------------------------------------------
+Design area 746262 um^2 36% utilization.
+[INFO FLW-0007] clock core_clock period 2.222000
+[WARNING FLW-0010] more than one clock found. Skipping sdc update.
+[INFO FLW-0011] Path endpoint path count 62799
+write_db ./results/nangate45/ariane133/base/5_1_grt.odb
+write_sdc -no_timestamp ./results/nangate45/ariane133/base/5_1_grt.sdc
+Elapsed time: 31:06.37[h:]min:sec. CPU time: user 6548.70 sys 383.50 (371%). Peak memory: 4280792KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+5_1_grt                         1866           4180 2a8ea41e6b70bf184eed

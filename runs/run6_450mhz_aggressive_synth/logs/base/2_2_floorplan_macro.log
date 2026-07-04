@@ -1,0 +1,32 @@
+OpenROAD 26Q1-2900-gdf79404cd8 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 8 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+read_liberty /OpenROAD-flow-scripts/flow/platforms/nangate45/lib/fakeram45_256x16.lib
+read_db ./results/nangate45/ariane133/base/2_1_floorplan.odb
+read_sdc ./results/nangate45/ariane133/base/2_1_floorplan.sdc
+source /OpenROAD-flow-scripts/flow/platforms/nangate45/setRC.tcl
+[INFO GPL-0022] Initialize gpl and calculate uniform density.
+Placement density is 0.3639999932050705, computed from PLACE_DENSITY_LB_ADDON  0.05    and lower bound 0.3199999928474426
+rtl_macro_placer -max_num_level 1 -max_num_inst 80000 -min_num_inst 8000 -max_num_macro 30 -min_num_macro 10 -halo_width 10 -halo_height 10 -min_ar 0.33 -area_weight 0.1 -wirelength_weight 100.0 -outline_weight 100.0 -boundary_weight 50.0 -notch_weight 50.0 -report_directory ./objects/nangate45/ariane133/base/rtlmp -fence_lx 0.0 -fence_ly 0.0 -fence_ux 0.0 -fence_uy 0.0 -target_util 0.3639999932050705
+Die Area: (0.00, 0.00) (1500.00, 1500.00),  Floorplan Area: (10.07, 12.60) (1447.99, 1447.60)
+	Number of std cell instances: 162768
+	Area of std cell instances: 297150.73
+	Number of macros: 132
+	Area of macros: 416463.43
+	Default halo (L, B, R, T): (10.00, 10.00, 10.00, 10.00)
+	Area of macros with halos: 781601.83
+	Area of std cell instances + Area of macros: 713614.16
+	Floorplan area: 2063415.20
+	Design Utilization: 0.35
+	Floorplan Utilization: 0.18
+	Manufacturing Grid: 10
+
+Took 14 seconds: rtl_macro_placer -max_num_level 1 -max_num_inst 80000 -min_num_inst 8000 -max_num_macro 30 -min_num_macro 10 -halo_width 10 -halo_height 10 -min_ar 0.33 -area_weight 0.1 -wirelength_weight 100.0 -outline_weight 100.0 -boundary_weight 50.0 -notch_weight 50.0 -report_directory ./objects/nangate45/ariane133/base/rtlmp -fence_lx 0.0 -fence_ly 0.0 -fence_ux 0.0 -fence_uy 0.0 -target_util 0.3639999932050705
+Design area 713614 um^2 35% utilization.
+write_db ./results/nangate45/ariane133/base/2_2_floorplan_macro.odb
+Elapsed time: 0:17.75[h:]min:sec. CPU time: user 91.45 sys 0.49 (517%). Peak memory: 844428KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_2_floorplan_macro               17            824 1732da7790e89d196c4e

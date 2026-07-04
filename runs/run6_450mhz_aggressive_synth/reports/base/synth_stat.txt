@@ -1,0 +1,1061 @@
+
+23. Printing statistics.
+
+=== SyncSpRamBeNx64_00000008_00000100_0_2 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       11        - wires
+      151        - wire bits
+       10        - public wires
+      150        - public wire bits
+        8        - ports
+      148        - port bits
+        7  12621.7 cells
+        2    1.064   INV_X1
+        1    0.532   LOGIC1_X1
+        4 1.26E+04   fakeram45_256x16
+
+   Chip area for module '\SyncSpRamBeNx64_00000008_00000100_0_2': 12621.700000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== SyncSpRamBeNx64_00000008_00000100_0_2_d44 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       16        - wires
+      116        - wire bits
+       14        - public wires
+      114        - public wire bits
+        8        - ports
+      108        - port bits
+        7 9.47E+03 cells
+        2    1.064   INV_X1
+        1    0.532   LOGIC0_X1
+        1    0.532   LOGIC1_X1
+        3 9.47E+03   fakeram45_256x16
+
+   Chip area for module '\SyncSpRamBeNx64_00000008_00000100_0_2_d44': 9467.206000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== SyncSpRamBeNx64_00000008_00000100_0_2_d45 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       15        - wires
+      117        - wire bits
+       13        - public wires
+      115        - public wire bits
+        8        - ports
+      110        - port bits
+        7 9.47E+03 cells
+        2    1.064   INV_X1
+        1    0.532   LOGIC0_X1
+        1    0.532   LOGIC1_X1
+        3 9.47E+03   fakeram45_256x16
+
+   Chip area for module '\SyncSpRamBeNx64_00000008_00000100_0_2_d45': 9467.206000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== ariane ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+    12464        - wires
+    12949        - wire bits
+     7127        - public wires
+     7612        - public wire bits
+       10        - ports
+      495        - port bits
+     6148  9290.05 cells
+      341  362.824   AND2_X1
+        5     6.65   AND2_X2
+        1    2.394   AND2_X4
+       37    49.21   AND3_X1
+        4    6.384   AND3_X2
+        1    2.926   AND3_X4
+       20    31.92   AND4_X1
+        2    3.724   AND4_X2
+       10    23.94   AOI211_X2
+        3    8.778   AOI211_X4
+      476  506.464   AOI21_X1
+       13   24.206   AOI21_X2
+        4   13.832   AOI21_X4
+       59   94.164   AOI221_X1
+        5    14.63   AOI221_X2
+        4   13.832   AOI221_X4
+       34   72.352   AOI222_X1
+      122   162.26   AOI22_X1
+        5    11.97   AOI22_X2
+        1    4.522   AOI22_X4
+      323  257.754   BUF_X1
+       64   68.096   BUF_X2
+       37   68.894   BUF_X4
+        8   27.664   BUF_X8
+       69   55.062   CLKBUF_X1
+        1    1.064   CLKBUF_X2
+      506  2691.92   DFFR_X1
+        1    4.256   FA_X1
+        9    23.94   HA_X1
+      517  275.044   INV_X1
+        2    1.596   INV_X2
+        1    0.532   LOGIC0_X1
+        1    0.532   LOGIC1_X1
+      780  1452.36   MUX2_X1
+        1    2.394   MUX2_X2
+      621  495.558   NAND2_X1
+        3     3.99   NAND2_X2
+        1    2.394   NAND2_X4
+      344  366.016   NAND3_X1
+        3    5.586   NAND3_X2
+       45    59.85   NAND4_X1
+        3    7.182   NAND4_X2
+        1    4.788   NAND4_X4
+      370   295.26   NOR2_X1
+        3     3.99   NOR2_X2
+        2    4.788   NOR2_X4
+      133  141.512   NOR3_X1
+        9   16.758   NOR3_X2
+        2    7.448   NOR3_X4
+       65    86.45   NOR4_X1
+        4    9.576   NOR4_X2
+        8   38.304   NOR4_X4
+       15    35.91   OAI211_X2
+      581  618.184   OAI21_X1
+       17   31.654   OAI21_X2
+        4   13.832   OAI21_X4
+       44   70.224   OAI221_X1
+        6   17.556   OAI221_X2
+        1    3.458   OAI221_X4
+        4    8.512   OAI222_X1
+        5    18.62   OAI222_X2
+        2    7.448   OAI222_X4
+       94   125.02   OAI22_X1
+        2    4.788   OAI22_X2
+       13   24.206   OAI33_X1
+       50     53.2   OR2_X1
+        4     5.32   OR2_X2
+        1    2.394   OR2_X4
+       25    33.25   OR3_X1
+        1    1.596   OR3_X2
+        1    2.926   OR3_X4
+        6    9.576   OR4_X1
+        4    7.448   OR4_X2
+        2    6.916   OR4_X4
+      179  285.684   XNOR2_X1
+        3    4.788   XOR2_X1
+       19        - submodules
+        8        -   SyncSpRamBeNx64_00000008_00000100_0_2
+        4        -   SyncSpRamBeNx64_00000008_00000100_0_2_d45
+        1        -   csr_regfile_0000000000000000_1
+        1        -   ex_stage
+        1        -   frontend_0000000000000000
+        1        -   issue_read_operands
+        1        -   perf_counters
+        1        -   scoreboard_00000008_00000004
+        1        -   std_nbdcache_0000000080000000
+
+   Chip area for module '\ariane': 9290.050000
+     of which used for sequential elements: 2691.920000 (28.98%)
+
+=== csr_regfile_0000000000000000_1 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+     9442        - wires
+    11069        - wire bits
+     1698        - public wires
+     3325        - public wire bits
+       48        - ports
+     1675        - port bits
+     8727 1.52E+04 cells
+      233  247.912   AND2_X1
+        2     2.66   AND2_X2
+       97   129.01   AND3_X1
+       59   94.164   AND4_X1
+        4    7.448   AND4_X2
+        2    6.916   AND4_X4
+       15    35.91   AOI211_X2
+        1    2.926   AOI211_X4
+      534  568.176   AOI21_X1
+        9   16.758   AOI21_X2
+      252  402.192   AOI221_X1
+        6   17.556   AOI221_X2
+       25     53.2   AOI222_X1
+        1    3.724   AOI222_X2
+      170    226.1   AOI22_X1
+        5    11.97   AOI22_X2
+      527  420.546   BUF_X1
+      182  193.648   BUF_X2
+       34   63.308   BUF_X4
+        1    3.458   BUF_X8
+       98   78.204   CLKBUF_X1
+        3    3.192   CLKBUF_X2
+     1125     5985   DFFR_X1
+        7    37.24   DFFS_X1
+        1    4.256   FA_X1
+        6    15.96   HA_X1
+      535   284.62   INV_X1
+        1    0.798   INV_X2
+        1    0.532   LOGIC0_X1
+        1    0.532   LOGIC1_X1
+     1089 2.03E+03   MUX2_X1
+        2    4.788   MUX2_X2
+      622  496.356   NAND2_X1
+        5     6.65   NAND2_X2
+      355   377.72   NAND3_X1
+        7   13.034   NAND3_X2
+        2    6.916   NAND3_X4
+      135   179.55   NAND4_X1
+        4    9.576   NAND4_X2
+      577  460.446   NOR2_X1
+       14    18.62   NOR2_X2
+      186  197.904   NOR3_X1
+       15    27.93   NOR3_X2
+        6   22.344   NOR3_X4
+       92   122.36   NOR4_X1
+       14   33.516   NOR4_X2
+        8   38.304   NOR4_X4
+       16   38.304   OAI211_X2
+      549  584.136   OAI21_X1
+        6   11.172   OAI21_X2
+      267  426.132   OAI221_X1
+        1    2.926   OAI221_X2
+       43   91.504   OAI222_X1
+      204   271.32   OAI22_X1
+        2    4.788   OAI22_X2
+        1    4.522   OAI22_X4
+       21   39.102   OAI33_X1
+      148  157.472   OR2_X1
+        2     2.66   OR2_X2
+       60     79.8   OR3_X1
+        2    3.192   OR3_X2
+       26   41.496   OR4_X1
+        6   11.172   OR4_X2
+        1    3.458   OR4_X4
+      181  288.876   XNOR2_X1
+        1     2.66   XNOR2_X2
+      120   191.52   XOR2_X1
+
+   Chip area for module '\csr_regfile_0000000000000000_1': 15217.860000
+     of which used for sequential elements: 6022.240000 (39.57%)
+
+=== ex_stage ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+    22542        - wires
+    24902        - wire bits
+     2843        - public wires
+     5203        - public wire bits
+       61        - ports
+     2421        - port bits
+    20448 3.56E+04 cells
+      499  530.936   AND2_X1
+      118   156.94   AND3_X1
+       53   84.588   AND4_X1
+        1    1.862   AND4_X2
+       61  146.034   AOI211_X2
+        1    2.926   AOI211_X4
+     1242 1.32E+03   AOI21_X1
+        4    7.448   AOI21_X2
+        1    3.458   AOI21_X4
+      377  601.692   AOI221_X1
+        5    14.63   AOI221_X2
+       11   23.408   AOI222_X1
+      373   496.09   AOI22_X1
+     1861 1.49E+03   BUF_X1
+       88   93.632   BUF_X2
+       10    18.62   BUF_X4
+      233  185.934   CLKBUF_X1
+     2555  13592.6   DFFR_X1
+        1     2.66   DLL_X1
+        6   25.536   FA_X1
+      552  1468.32   HA_X1
+     1376  732.032   INV_X1
+        1    0.532   LOGIC0_X1
+        1    0.532   LOGIC1_X1
+     3487 6.49E+03   MUX2_X1
+     1645  1312.71   NAND2_X1
+      678  721.392   NAND3_X1
+        1    1.862   NAND3_X2
+      205   272.65   NAND4_X1
+        1    4.788   NAND4_X4
+     1133  904.134   NOR2_X1
+        7     9.31   NOR2_X2
+        1    2.394   NOR2_X4
+      349  371.336   NOR3_X1
+        6   11.172   NOR3_X2
+      130    172.9   NOR4_X1
+        6   14.364   NOR4_X2
+        2    9.576   NOR4_X4
+       45   107.73   OAI211_X2
+     1677 1.78E+03   OAI21_X1
+        4    7.448   OAI21_X2
+      248  395.808   OAI221_X1
+        6   12.768   OAI222_X1
+      179   238.07   OAI22_X1
+       36   67.032   OAI33_X1
+      229  243.656   OR2_X1
+        2     2.66   OR2_X2
+      119   158.27   OR3_X1
+       47   75.012   OR4_X1
+        4    7.448   OR4_X2
+        1    3.458   OR4_X4
+      534  852.264   XNOR2_X1
+      236  376.656   XOR2_X1
+        2        - submodules
+        1        -   mmu_16_16_00000001
+        1        -   multiplier
+
+   Chip area for module '\ex_stage': 35630.966000
+     of which used for sequential elements: 13592.600000 (38.15%)
+
+=== frontend_0000000000000000 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+    37358        - wires
+    38201        - wire bits
+     6348        - public wires
+     7191        - public wire bits
+       19        - ports
+      862        - port bits
+    31081 6.51E+04 cells
+      318  338.352   AND2_X1
+      163   216.79   AND3_X1
+        1    1.596   AND3_X2
+      111  177.156   AND4_X1
+        2    3.724   AND4_X2
+       76  181.944   AOI211_X2
+        1    2.926   AOI211_X4
+     1926 2.05E+03   AOI21_X1
+        9   16.758   AOI21_X2
+        1    3.458   AOI21_X4
+      606  967.176   AOI221_X1
+        9   26.334   AOI221_X2
+        2    6.916   AOI221_X4
+       62  131.936   AOI222_X1
+      611   812.63   AOI22_X1
+        3    7.182   AOI22_X2
+     1935  1544.13   BUF_X1
+        1     6.65   BUF_X16
+      178  189.392   BUF_X2
+       34   63.308   BUF_X4
+        7   24.206   BUF_X8
+      775   618.45   CLKBUF_X1
+        1    1.064   CLKBUF_X2
+     6258 3.33E+04   DFFR_X1
+        2    10.64   DFFS_X1
+        8   34.048   FA_X1
+      225    598.5   HA_X1
+     1219  648.508   INV_X1
+        5     3.99   INV_X2
+        1     1.33   INV_X4
+        1    0.532   LOGIC0_X1
+     6401 1.19E+04   MUX2_X1
+     1949 1.56E+03   NAND2_X1
+        3     3.99   NAND2_X2
+      908  966.112   NAND3_X1
+        3    5.586   NAND3_X2
+      267   355.11   NAND4_X1
+        5    11.97   NAND4_X2
+        1    4.788   NAND4_X4
+     1409 1.12E+03   NOR2_X1
+       14    18.62   NOR2_X2
+      474  504.336   NOR3_X1
+        8   14.896   NOR3_X2
+        1    3.724   NOR3_X4
+      200      266   NOR4_X1
+       16   38.304   NOR4_X2
+        3   14.364   NOR4_X4
+       77  184.338   OAI211_X2
+        1    4.522   OAI211_X4
+     2130  2266.32   OAI21_X1
+        5     9.31   OAI21_X2
+        1    3.458   OAI21_X4
+      597  952.812   OAI221_X1
+       77  163.856   OAI222_X1
+      846  1125.18   OAI22_X1
+        2    4.788   OAI22_X2
+      129  240.198   OAI33_X1
+      283  301.112   OR2_X1
+        2     2.66   OR2_X2
+      176   234.08   OR3_X1
+       91  145.236   OR4_X1
+        3    5.586   OR4_X2
+        1    3.458   OR4_X4
+      270   430.92   XNOR2_X1
+      177  282.492   XOR2_X1
+
+   Chip area for module '\frontend_0000000000000000': 65147.922000
+     of which used for sequential elements: 33303.200000 (51.12%)
+
+=== issue_read_operands ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+    15625        - wires
+    17122        - wire bits
+     2159        - public wires
+     3656        - public wire bits
+       36        - ports
+     1533        - port bits
+    13624 2.85E+04 cells
+       86   91.504   AND2_X1
+        3     3.99   AND2_X2
+       46    61.18   AND3_X1
+        3    4.788   AND3_X2
+        1    2.926   AND3_X4
+       10    15.96   AND4_X1
+        1    1.862   AND4_X2
+        3    7.182   AOI211_X2
+      390   414.96   AOI21_X1
+       32   59.584   AOI21_X2
+        2    6.916   AOI21_X4
+      140   223.44   AOI221_X1
+        8   23.408   AOI221_X2
+        2    6.916   AOI221_X4
+       12   25.536   AOI222_X1
+        1    3.724   AOI222_X2
+      147   195.51   AOI22_X1
+        6   14.364   AOI22_X2
+      721  575.358   BUF_X1
+       12     79.8   BUF_X16
+      245   260.68   BUF_X2
+       70   130.34   BUF_X4
+       17   58.786   BUF_X8
+      516  411.768   CLKBUF_X1
+        4    4.256   CLKBUF_X2
+     2334 1.24E+04   DFFR_X1
+      349  185.668   INV_X1
+        4    3.192   INV_X2
+        5     6.65   INV_X4
+     4109 7.65E+03   MUX2_X1
+      442  352.716   NAND2_X1
+       12    15.96   NAND2_X2
+        2    4.788   NAND2_X4
+      180   191.52   NAND3_X1
+        9   16.758   NAND3_X2
+        1    3.458   NAND3_X4
+       86   114.38   NAND4_X1
+        7   16.758   NAND4_X2
+        2    9.576   NAND4_X4
+      343  273.714   NOR2_X1
+       16    21.28   NOR2_X2
+        4    9.576   NOR2_X4
+      264  280.896   NOR3_X1
+       15    27.93   NOR3_X2
+        4   14.896   NOR3_X4
+      284   377.72   NOR4_X1
+       10    23.94   NOR4_X2
+        9   43.092   NOR4_X4
+       12   28.728   OAI211_X2
+        1    4.522   OAI211_X4
+      410   436.24   OAI21_X1
+        2    6.916   OAI21_X4
+      312  497.952   OAI221_X1
+       31   90.706   OAI221_X2
+      152  323.456   OAI222_X1
+     1435  1908.55   OAI22_X1
+       30    71.82   OAI22_X2
+        1    4.522   OAI22_X4
+       58  107.996   OAI33_X1
+       72   76.608   OR2_X1
+        5     6.65   OR2_X2
+        1    2.394   OR2_X4
+       35    46.55   OR3_X1
+        1    1.596   OR3_X2
+        3    8.778   OR3_X4
+       71  113.316   OR4_X1
+        5     9.31   OR4_X2
+        6    9.576   XNOR2_X1
+        1     2.66   XNOR2_X2
+       11   17.556   XOR2_X1
+
+   Chip area for module '\issue_read_operands': 28523.446000
+     of which used for sequential elements: 12416.880000 (43.53%)
+
+=== miss_handler_NR_PORTS3 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+    12391        - wires
+    15771        - wire bits
+      788        - public wires
+     4168        - public wire bits
+       29        - ports
+     3409        - port bits
+    12536 1.84E+04 cells
+      476  506.464   AND2_X1
+        3     3.99   AND2_X2
+       29    38.57   AND3_X1
+       12   19.152   AND4_X1
+        3    5.586   AND4_X2
+       12   28.728   AOI211_X2
+     1144 1.22E+03   AOI21_X1
+        3    5.586   AOI21_X2
+        2    6.916   AOI21_X4
+      464  740.544   AOI221_X1
+        6   17.556   AOI221_X2
+        1    3.458   AOI221_X4
+       48  102.144   AOI222_X1
+        1    3.724   AOI222_X2
+        1    3.724   AOI222_X4
+      814  1082.62   AOI22_X1
+        5    11.97   AOI22_X2
+        1    4.522   AOI22_X4
+     1304 1.04E+03   BUF_X1
+       44   46.816   BUF_X2
+       12   22.344   BUF_X4
+        3   10.374   BUF_X8
+      264  210.672   CLKBUF_X1
+      742  3947.44   DFFR_X1
+        3    15.96   DFFS_X1
+        3     7.98   DLH_X1
+        1    4.256   FA_X1
+      203   539.98   HA_X1
+      475    252.7   INV_X1
+        4    3.192   INV_X2
+        1    0.532   LOGIC0_X1
+        1    0.532   LOGIC1_X1
+     2011 3.74E+03   MUX2_X1
+        6   14.364   MUX2_X2
+      804  641.592   NAND2_X1
+        3     3.99   NAND2_X2
+        1    2.394   NAND2_X4
+      265   281.96   NAND3_X1
+       66    87.78   NAND4_X1
+        5    11.97   NAND4_X2
+        2    9.576   NAND4_X4
+     1119  892.962   NOR2_X1
+        8    10.64   NOR2_X2
+      139  147.896   NOR3_X1
+        2    3.724   NOR3_X2
+        3   11.172   NOR3_X4
+       47    62.51   NOR4_X1
+        3    7.182   NOR4_X2
+        2    9.576   NOR4_X4
+       11   26.334   OAI211_X2
+      970  1032.08   OAI21_X1
+        1    1.862   OAI21_X2
+        1    3.458   OAI21_X4
+      332  529.872   OAI221_X1
+        8   17.024   OAI222_X1
+      181   240.73   OAI22_X1
+       12   22.344   OAI33_X1
+       90    95.76   OR2_X1
+        1    2.394   OR2_X4
+       29    38.57   OR3_X1
+        2    3.192   OR3_X2
+        2    5.852   OR3_X4
+        3    4.788   OR4_X1
+        4   13.832   OR4_X4
+      237  378.252   XNOR2_X1
+        2     5.32   XNOR2_X2
+       79  126.084   XOR2_X1
+
+   Chip area for module '\miss_handler_NR_PORTS3': 18397.358000
+     of which used for sequential elements: 3963.400000 (21.54%)
+
+=== mmu_16_16_00000001 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+    14040        - wires
+    14922        - wire bits
+     2906        - public wires
+     3788        - public wire bits
+       26        - ports
+      908        - port bits
+    11613  27158.6 cells
+      144  153.216   AND2_X1
+       71    94.43   AND3_X1
+       30    47.88   AND4_X1
+       51  122.094   AOI211_X2
+        1    2.926   AOI211_X4
+      448  476.672   AOI21_X1
+        1    3.458   AOI21_X4
+      179  285.684   AOI221_X1
+        2    5.852   AOI221_X2
+       14   29.792   AOI222_X1
+      259   344.47   AOI22_X1
+      739  589.722   BUF_X1
+        2     13.3   BUF_X16
+      125      133   BUF_X2
+       45    83.79   BUF_X4
+        5    17.29   BUF_X8
+      329  262.542   CLKBUF_X1
+        1    1.064   CLKBUF_X2
+     2891 1.54E+04   DFFR_X1
+       35     93.1   HA_X1
+      628  334.096   INV_X1
+        1    0.532   LOGIC0_X1
+        1    0.532   LOGIC1_X1
+     2527 4.71E+03   MUX2_X1
+      370   295.26   NAND2_X1
+      152  161.728   NAND3_X1
+      148   196.84   NAND4_X1
+        1    2.394   NAND4_X2
+      207  165.186   NOR2_X1
+        1     1.33   NOR2_X2
+      191  203.224   NOR3_X1
+        6   11.172   NOR3_X2
+       22   81.928   NOR3_X4
+      149   198.17   NOR4_X1
+        9   21.546   NOR4_X2
+        1    4.788   NOR4_X4
+       11   26.334   OAI211_X2
+      390   414.96   OAI21_X1
+        2    3.724   OAI21_X2
+        1    3.458   OAI21_X4
+      309  493.164   OAI221_X1
+        1    2.128   OAI222_X1
+       52    69.16   OAI22_X1
+        3    5.586   OAI33_X1
+      120   127.68   OR2_X1
+       51    67.83   OR3_X1
+        2    3.192   OR3_X2
+       15    23.94   OR4_X1
+        3    5.586   OR4_X2
+        2    6.916   OR4_X4
+      314  501.144   XNOR2_X1
+      551  879.396   XOR2_X1
+
+   Chip area for module '\mmu_16_16_00000001': 27158.600000
+     of which used for sequential elements: 15380.120000 (56.63%)
+
+=== multiplier ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+    21008        - wires
+    21207        - wire bits
+      275        - public wires
+      474        - public wire bits
+       11        - ports
+      210        - port bits
+    16014 2.93E+04 cells
+     1157 1.23E+03   AND2_X1
+       15    19.95   AND3_X1
+        2    3.192   AND3_X2
+        9   14.364   AND4_X1
+        9   21.546   AOI211_X2
+      211  224.504   AOI21_X1
+       17   31.654   AOI21_X2
+       10    15.96   AOI221_X1
+        8   23.408   AOI221_X2
+        1    3.458   AOI221_X4
+        4     5.32   AOI22_X1
+        2    4.788   AOI22_X2
+      985   786.03   BUF_X1
+       34   36.176   BUF_X2
+       14   26.068   BUF_X4
+        4    3.192   CLKBUF_X1
+        5     5.32   CLKBUF_X2
+      136   723.52   DFFR_X1
+        3    15.96   DFFS_X1
+     4468  1.9E+04   FA_X1
+      445   1183.7   HA_X1
+     4575   2433.9   INV_X1
+        1    0.532   LOGIC1_X1
+       37   68.894   MUX2_X1
+     3160  2521.68   NAND2_X1
+        2     2.66   NAND2_X2
+        2    4.788   NAND2_X4
+       50     53.2   NAND3_X1
+        5     9.31   NAND3_X2
+       27    35.91   NAND4_X1
+        2    9.576   NAND4_X4
+      116   92.568   NOR2_X1
+        2     2.66   NOR2_X2
+        1    2.394   NOR2_X4
+       46   48.944   NOR3_X1
+        5     9.31   NOR3_X2
+        1    3.724   NOR3_X4
+       15    19.95   NOR4_X1
+        2    4.788   NOR4_X2
+        1    4.788   NOR4_X4
+        6   14.364   OAI211_X2
+      161  171.304   OAI21_X1
+        6   11.172   OAI21_X2
+        1    3.458   OAI21_X4
+       49   78.204   OAI221_X1
+        4   11.704   OAI221_X2
+        3     3.99   OAI22_X1
+        1    2.394   OAI22_X2
+       33   35.112   OR2_X1
+        2     2.66   OR2_X2
+        1    2.394   OR2_X4
+        7     9.31   OR3_X1
+        4    6.384   OR4_X1
+        1    1.862   OR4_X2
+        2    6.916   OR4_X4
+      110   175.56   XNOR2_X1
+       34   54.264   XOR2_X1
+
+   Chip area for module '\multiplier': 29315.594000
+     of which used for sequential elements: 739.480000 (2.52%)
+
+=== perf_counters ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+     7577        - wires
+     8692        - wire bits
+     1810        - public wires
+     2925        - public wire bits
+       18        - ports
+     1133        - port bits
+     6713 1.24E+04 cells
+      108  114.912   AND2_X1
+      123   163.59   AND3_X1
+        1    1.596   AND3_X2
+      104  165.984   AND4_X1
+        2    3.724   AND4_X2
+      131  139.384   AOI21_X1
+       54   86.184   AOI221_X1
+       38   80.864   AOI222_X1
+      137   182.21   AOI22_X1
+      600    478.8   BUF_X1
+       72   76.608   BUF_X2
+       16   29.792   BUF_X4
+       93   74.214   CLKBUF_X1
+       21   22.344   CLKBUF_X2
+      896  4766.72   DFFR_X1
+       14    37.24   HA_X1
+      238  126.616   INV_X1
+        1    0.798   INV_X2
+     1034 1.93E+03   MUX2_X1
+      373  297.654   NAND2_X1
+        2     2.66   NAND2_X2
+      314  334.096   NAND3_X1
+        8   14.896   NAND3_X2
+        1    3.458   NAND3_X4
+      301   400.33   NAND4_X1
+       28   67.032   NAND4_X2
+        4   19.152   NAND4_X4
+      254  202.692   NOR2_X1
+        2     2.66   NOR2_X2
+      222  236.208   NOR3_X1
+        8   14.896   NOR3_X2
+        2    7.448   NOR3_X4
+      224   297.92   NOR4_X1
+       28   67.032   NOR4_X2
+       19   90.972   NOR4_X4
+        1    2.394   OAI211_X2
+      124  131.936   OAI21_X1
+      102  162.792   OAI221_X1
+       58    77.14   OAI22_X1
+        3    5.586   OAI33_X1
+       46   48.944   OR2_X1
+        2     2.66   OR2_X2
+       11    14.63   OR3_X1
+        3    4.788   OR3_X2
+        9   14.364   OR4_X1
+        4    7.448   OR4_X2
+      526  839.496   XNOR2_X1
+      351  560.196   XOR2_X1
+
+   Chip area for module '\perf_counters': 12408.368000
+     of which used for sequential elements: 4766.720000 (38.42%)
+
+=== scoreboard_00000008_00000004 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+    34783        - wires
+    37806        - wire bits
+     5050        - public wires
+     8073        - public wire bits
+       30        - ports
+     3053        - port bits
+    33564 5.42E+04 cells
+      121  128.744   AND2_X1
+        3     3.99   AND2_X2
+       53    70.49   AND3_X1
+       35    55.86   AND4_X1
+        3   10.374   AND4_X4
+       18   43.092   AOI211_X2
+        1    2.926   AOI211_X4
+     3043 3.24E+03   AOI21_X1
+        1    1.862   AOI21_X2
+        2    6.916   AOI21_X4
+     1801 2.87E+03   AOI221_X1
+       43  125.818   AOI221_X2
+        1    3.458   AOI221_X4
+       29   61.712   AOI222_X1
+       61  227.164   AOI222_X2
+      228   303.24   AOI22_X1
+     3814 3.04E+03   BUF_X1
+      268  285.152   BUF_X2
+      104  193.648   BUF_X4
+        3   10.374   BUF_X8
+     1118  892.164   CLKBUF_X1
+       27   28.728   CLKBUF_X2
+        1     1.33   CLKBUF_X3
+     2913 1.55E+04   DFFR_X1
+        1    4.256   FA_X1
+       17    45.22   HA_X1
+      725    385.7   INV_X1
+        5     3.99   INV_X2
+        1    0.532   LOGIC0_X1
+     8505 1.58E+04   MUX2_X1
+     1705  1360.59   NAND2_X1
+        3     3.99   NAND2_X2
+      581  618.184   NAND3_X1
+        1    1.862   NAND3_X2
+        1    3.458   NAND3_X4
+       78   103.74   NAND4_X1
+        1    2.394   NAND4_X2
+        3   14.364   NAND4_X4
+     3187 2.54E+03   NOR2_X1
+       13    17.29   NOR2_X2
+        2    4.788   NOR2_X4
+      804  855.456   NOR3_X1
+        9   16.758   NOR3_X2
+       46    61.18   NOR4_X1
+        5    11.97   NOR4_X2
+        4   19.152   NOR4_X4
+       14   33.516   OAI211_X2
+        5    22.61   OAI211_X4
+     2005  2133.32   OAI21_X1
+        3    5.586   OAI21_X2
+        1    3.458   OAI21_X4
+      148  236.208   OAI221_X1
+        1    2.926   OAI221_X2
+       10    21.28   OAI222_X1
+     1189  1581.37   OAI22_X1
+        3    7.182   OAI22_X2
+       24   44.688   OAI33_X1
+      174  185.136   OR2_X1
+        2     2.66   OR2_X2
+      391   520.03   OR3_X1
+       10    15.96   OR4_X1
+        5     9.31   OR4_X2
+      113  180.348   XNOR2_X1
+       78  124.488   XOR2_X1
+
+   Chip area for module '\scoreboard_00000008_00000004': 54154.408000
+     of which used for sequential elements: 15497.160000 (28.62%)
+
+=== std_nbdcache_0000000080000000 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+     6098        - wires
+     7610        - wire bits
+     3077        - public wires
+     4589        - public wire bits
+       14        - ports
+     1526        - port bits
+     3998 5.85E+03 cells
+      397  422.408   AND2_X1
+        1     1.33   AND2_X2
+        8    10.64   AND3_X1
+        1    1.596   AND3_X2
+        5     7.98   AND4_X1
+        1    1.862   AND4_X2
+        1    2.394   AOI211_X2
+      306  325.584   AOI21_X1
+        1    1.862   AOI21_X2
+        9   14.364   AOI221_X1
+        2    5.852   AOI221_X2
+       80    106.4   AOI22_X1
+      244  194.712   BUF_X1
+       46   48.944   BUF_X2
+       13   24.206   BUF_X4
+        1    3.458   BUF_X8
+       35    27.93   CLKBUF_X1
+        1    1.064   CLKBUF_X2
+        2     2.66   CLKBUF_X3
+      408  2170.56   DFFR_X1
+      501  266.532   INV_X1
+        3    2.394   INV_X2
+        1     1.33   INV_X4
+        1    0.532   LOGIC0_X1
+      224  417.088   MUX2_X1
+        8   19.152   MUX2_X2
+      578  461.244   NAND2_X1
+      222  236.208   NAND3_X1
+        1    1.862   NAND3_X2
+       13    17.29   NAND4_X1
+        1    2.394   NAND4_X2
+      143  114.114   NOR2_X1
+        2     2.66   NOR2_X2
+       22   23.408   NOR3_X1
+        6   11.172   NOR3_X2
+       32    42.56   NOR4_X1
+        3    7.182   NOR4_X2
+        1    2.394   OAI211_X2
+      334  355.376   OAI21_X1
+       91  145.236   OAI221_X1
+       43   91.504   OAI222_X1
+      105   139.65   OAI22_X1
+        2    3.724   OAI33_X1
+       82   87.248   OR2_X1
+        2     2.66   OR2_X2
+        1    2.394   OR2_X4
+        7     9.31   OR3_X1
+        6    9.576   OR4_X1
+        1    1.862   OR4_X2
+       25        - submodules
+       16        -   SyncSpRamBeNx64_00000008_00000100_0_2
+        8        -   SyncSpRamBeNx64_00000008_00000100_0_2_d44
+        1        -   miss_handler_NR_PORTS3
+
+   Chip area for module '\std_nbdcache_0000000080000000': 5853.862000
+     of which used for sequential elements: 2170.560000 (37.08%)
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        |        +-Area including submodules.
+        |        | 
+   164718 7.18E+05 ariane
+        7  12621.7 SyncSpRamBeNx64_00000008_00000100_0_2
+        7 9.47E+03 SyncSpRamBeNx64_00000008_00000100_0_2_d45
+     8727 1.52E+04 csr_regfile_0000000000000000_1
+    20448 3.56E+04 ex_stage
+    11613  27158.6   mmu_16_16_00000001
+    16014 2.93E+04   multiplier
+    31081 6.51E+04 frontend_0000000000000000
+    13624 2.85E+04 issue_read_operands
+     6713 1.24E+04 perf_counters
+    33564 5.42E+04 scoreboard_00000008_00000004
+     3998 5.85E+03 std_nbdcache_0000000080000000
+        7  12621.7   SyncSpRamBeNx64_00000008_00000100_0_2
+        7 9.47E+03   SyncSpRamBeNx64_00000008_00000100_0_2_d44
+    12536 1.84E+04   miss_handler_NR_PORTS3
+
+        +----------Count including submodules.
+        |        +-Area including submodules.
+        |        | 
+   193780        - wires
+   215271        - wire bits
+    34485        - public wires
+    55976        - public wire bits
+      590        - ports
+    22081        - port bits
+        -        - memories
+        -        - memory bits
+        -        - processes
+   164718 7.18E+05 cells
+     3880  4128.32   AND2_X1
+       17    22.61   AND2_X2
+        1    2.394   AND2_X4
+      760   1010.8   AND3_X1
+       12   19.152   AND3_X2
+        2    5.852   AND3_X4
+      448  715.008   AND4_X1
+       16   29.792   AND4_X2
+        5    17.29   AND4_X4
+      256  612.864   AOI211_X2
+        8   23.408   AOI211_X4
+     9851 1.05E+04   AOI21_X1
+       89  165.718   AOI21_X2
+       13   44.954   AOI21_X4
+     3951 6.31E+03   AOI221_X1
+       94  275.044   AOI221_X2
+       11   38.038   AOI221_X4
+      273  580.944   AOI222_X1
+       64  238.336   AOI222_X2
+        1    3.724   AOI222_X4
+     2945  3916.85   AOI22_X1
+       26   62.244   AOI22_X2
+        2    9.044   AOI22_X4
+    13053 1.04E+04   BUF_X1
+       15    99.75   BUF_X16
+     1346 1.43E+03   BUF_X2
+      389  724.318   BUF_X4
+       45   155.61   BUF_X8
+     3534 2.82E+03   CLKBUF_X1
+       64   68.096   CLKBUF_X2
+        3     3.99   CLKBUF_X3
+    20764  1.1E+05   DFFR_X1
+       15     79.8   DFFS_X1
+        3     7.98   DLH_X1
+        1     2.66   DLL_X1
+     4486 1.91E+04   FA_X1
+     1506  4005.96   HA_X1
+    11210  5963.72   INV_X1
+       25    19.95   INV_X2
+        7     9.31   INV_X4
+       20    10.64   LOGIC0_X1
+       42   22.344   LOGIC1_X1
+    30204 5.62E+04   MUX2_X1
+       17   40.698   MUX2_X2
+    12269 9.79E+03   NAND2_X1
+       33    43.89   NAND2_X2
+        6   14.364   NAND2_X4
+     4049 4.31E+03   NAND3_X1
+       38   70.756   NAND3_X2
+        5    17.29   NAND3_X4
+     1371  1823.43   NAND4_X1
+       55   131.67   NAND4_X2
+       16   76.608   NAND4_X4
+     8858 7.07E+03   NOR2_X1
+       82   109.06   NOR2_X2
+       10    23.94   NOR2_X4
+     2830  3011.12   NOR3_X1
+       89  165.718   NOR3_X2
+       41  152.684   NOR3_X4
+     1284  1707.72   NOR4_X1
+      100    239.4   NOR4_X2
+       57  272.916   NOR4_X4
+      209  500.346   OAI211_X2
+        7   31.654   OAI211_X4
+     9331 9.93E+03   OAI21_X1
+       44   81.928   OAI21_X2
+       11   38.038   OAI21_X4
+     2499 3.99E+03   OAI221_X1
+       43  125.818   OAI221_X2
+        1    3.458   OAI221_X4
+      344  732.032   OAI222_X1
+        5    18.62   OAI222_X2
+        2    7.448   OAI222_X4
+     4346  5780.18   OAI22_X1
+       40    95.76   OAI22_X2
+        2    9.044   OAI22_X4
+      301  560.462   OAI33_X1
+     1327 1.41E+03   OR2_X1
+       23    30.59   OR2_X2
+        5    11.97   OR2_X4
+      911  1211.63   OR3_X1
+       11   17.556   OR3_X2
+        6   17.556   OR3_X4
+      288  459.648   OR4_X1
+       36   67.032   OR4_X2
+       13   44.954   OR4_X4
+     2470  3942.12   XNOR2_X1
+        4    10.64   XNOR2_X2
+     1640  2617.44   XOR2_X1
+      132 4.16E+05   fakeram45_256x16
+       19 7.08E+05 submodules
+        8 3.03E+05   SyncSpRamBeNx64_00000008_00000100_0_2
+        4 3.79E+04   SyncSpRamBeNx64_00000008_00000100_0_2_d45
+        1 1.52E+04   csr_regfile_0000000000000000_1
+        1 9.21E+04   ex_stage
+        1 6.51E+04   frontend_0000000000000000
+        1 2.85E+04   issue_read_operands
+        1 1.24E+04   perf_counters
+        1 5.42E+04   scoreboard_00000008_00000004
+        1 3.02E+05   std_nbdcache_0000000080000000
+
+   Chip area for top module '\ariane': 717625.706000
+     of which used for sequential elements: 110544.280000 (15.40%)
+
