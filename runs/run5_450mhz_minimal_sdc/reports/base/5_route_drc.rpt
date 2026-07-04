@@ -1,0 +1,111 @@
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net39568 net:i_cache_subsystem.i_nbdcache/net39556
+	bbox = (483.3050, 345.5200) - (483.4450, 345.6600) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net39568 net:i_cache_subsystem.i_nbdcache/net39556
+	bbox = (483.8650, 345.5200) - (484.0050, 345.6600) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net39568 net:i_cache_subsystem.i_nbdcache/net39556
+	bbox = (483.3050, 345.5200) - (484.0050, 345.6600) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net39556 net:i_cache_subsystem.i_nbdcache/net39586
+	bbox = (483.8650, 345.8000) - (484.0050, 345.9400) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net38298 net:i_cache_subsystem.i_nbdcache/net40151
+	bbox = (465.3850, 354.4800) - (465.5250, 354.6200) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net40535 net:i_cache_subsystem.i_nbdcache/net40151
+	bbox = (465.3850, 354.7600) - (465.5250, 354.9000) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net40151 net:i_cache_subsystem.i_nbdcache/net40121
+	bbox = (465.3850, 355.0400) - (465.5250, 355.1800) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net40060 net:i_cache_subsystem.i_nbdcache/net40121
+	bbox = (463.7050, 355.3200) - (463.8450, 355.4600) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net40310 net:i_cache_subsystem.i_nbdcache/net40121
+	bbox = (463.7050, 355.6000) - (463.8450, 355.7400) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net39620 net:i_cache_subsystem.i_nbdcache/net39674
+	bbox = (484.9850, 350.0000) - (485.1250, 350.1400) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net39674 net:i_cache_subsystem.i_nbdcache/sram_block_1__data_sram.genblk1_1__i_ram/net39506
+	bbox = (484.9850, 350.2800) - (485.1250, 350.4200) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net39568 net:i_cache_subsystem.i_nbdcache/net39586
+	bbox = (485.2650, 345.5200) - (485.4050, 345.6600) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net40362 net:i_cache_subsystem.i_nbdcache/net39586
+	bbox = (486.9450, 345.5200) - (487.0850, 345.6600) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net39568 net:i_cache_subsystem.i_nbdcache/net39586
+	bbox = (485.5450, 345.5200) - (485.6850, 345.6600) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net39568 net:i_cache_subsystem.i_nbdcache/net39586
+	bbox = (485.2650, 345.5200) - (485.6850, 345.6600) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net39620 net:i_cache_subsystem.i_nbdcache/sram_block_1__data_sram.genblk1_1__i_ram/net39506
+	bbox = (485.2650, 350.0000) - (485.4050, 350.1400) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net39568 net:i_cache_subsystem.i_nbdcache/net39556
+	bbox = (486.3850, 346.0800) - (486.5250, 346.2200) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net39602 net:i_cache_subsystem.i_nbdcache/net39452
+	bbox = (484.4300, 349.1600) - (484.5700, 349.5800) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net39602 net:i_cache_subsystem.i_nbdcache/net39452
+	bbox = (484.4300, 349.1600) - (484.5700, 349.3000) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net39602 net:i_cache_subsystem.i_nbdcache/net39452
+	bbox = (484.4300, 349.4400) - (484.5700, 349.5800) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net39659 net:net1937
+	bbox = (484.7050, 345.6000) - (484.8450, 345.7400) on Layer metal6
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net39659 net:net1937
+	bbox = (484.9850, 345.6000) - (485.1250, 345.7400) on Layer metal6
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net39659 net:net1927
+	bbox = (484.9850, 351.2000) - (485.1250, 351.3400) on Layer metal6
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net39659 net:net1937
+	bbox = (484.7050, 345.6000) - (485.1250, 345.7400) on Layer metal6
+violation type: Short
+	srcs: net:net1937 net:net1927
+	bbox = (484.7050, 351.2000) - (484.8450, 351.3400) on Layer metal6
+violation type: Short
+	srcs: net:net1937 net:net1935
+	bbox = (484.4250, 353.3300) - (484.5650, 353.4700) on Layer metal6
+violation type: Short
+	srcs: net:net1928 net:net1927
+	bbox = (485.2650, 351.2000) - (485.4050, 351.3400) on Layer metal6
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net40362 net:i_cache_subsystem.i_nbdcache/net39574
+	bbox = (484.7050, 344.9600) - (484.8450, 345.1000) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net40362 net:i_cache_subsystem.i_nbdcache/net39574
+	bbox = (484.4300, 344.9600) - (484.8450, 345.1000) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net40362 net:i_cache_subsystem.i_nbdcache/net39574
+	bbox = (484.4300, 344.9600) - (484.5700, 345.1000) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net40236 net:i_cache_subsystem.i_nbdcache/net40060
+	bbox = (481.3450, 355.8800) - (481.4850, 356.0200) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net40236 net:i_cache_subsystem.i_nbdcache/net40060
+	bbox = (481.0650, 355.8800) - (481.4850, 356.0200) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net40236 net:i_cache_subsystem.i_nbdcache/net40060
+	bbox = (481.0650, 355.8800) - (481.2050, 356.0200) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net40454 net:i_cache_subsystem.i_nbdcache/net40310
+	bbox = (464.8250, 356.1600) - (464.9650, 356.3000) on Layer metal5
+violation type: Short
+	srcs: net:i_cache_subsystem.i_nbdcache/net40236 net:i_cache_subsystem.i_nbdcache/net40310
+	bbox = (464.8250, 355.8800) - (464.9650, 356.0200) on Layer metal5
+violation type: Metal Spacing
+	srcs: net:i_cache_subsystem.i_nbdcache/net40362 net:i_cache_subsystem.i_nbdcache/net39574
+	bbox = (484.5700, 345.2400) - (484.7050, 345.3800) on Layer metal5
+violation type: Metal Spacing
+	srcs: net:i_cache_subsystem.i_nbdcache/net40362 net:i_cache_subsystem.i_nbdcache/net39574
+	bbox = (484.5700, 344.9600) - (484.7050, 345.3800) on Layer metal5
