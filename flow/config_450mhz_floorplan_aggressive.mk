@@ -35,8 +35,7 @@ export GLOBAL_ROUTE_ARGS = -allow_congestion -verbose -congestion_iterations 10
 # Full detailed route
 export DETAILED_ROUTE_ARGS = -droute_end_iter 64
 
-# Target lower utilization for timing
-export CORE_UTILIZATION = 25
+# Target lower utilization for timing (CORE_UTILIZATION conflicts with explicit CORE_AREA, using density only)
 export PLACE_DENSITY = 0.25
 export PLACE_DENSITY_LB_ADDON = 0.05
 export TNS_END_PERCENT = 100
