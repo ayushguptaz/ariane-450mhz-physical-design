@@ -32,9 +32,9 @@ export ADDITIONAL_IO_CONSTRAINTS = /work/constraints/clock_placement.tcl
 export MIN_ROUTING_LAYER = metal2
 export MAX_ROUTING_LAYER = metal10
 
-# Routing optimization
-export GLOBAL_ROUTE_ARGS = -allow_congestion -verbose -congestion_iterations 10
-export DETAILED_ROUTE_ARGS = -droute_end_iter 16  # Reduced from 64 for faster run
+# Routing optimization (FAST validation mode)
+export GLOBAL_ROUTE_ARGS = -allow_congestion -verbose -congestion_iterations 5
+export DETAILED_ROUTE_ARGS = -droute_end_iter 4  # Fast validation (was 64 in slow runs)
 
 # AGGRESSIVE SYNTHESIS FOR TIMING
 export ABC_AREA = 0                    # Timing-only optimization
