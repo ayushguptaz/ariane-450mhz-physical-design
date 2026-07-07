@@ -1,64 +1,99 @@
-# Run 7 — macro placement along the RED-LINE ring (fixes non-uniform macros)
+# Run 7 (fixed) — REAL macro placement: C-shape per annotated image.
 #
-# Annotated image intent: the 132 SRAM macros must sit ON a uniform rectangular
-# RING (the red line), NOT in the lopsided blobs seen in run5. Keeping macros on
-# an even perimeter ring — with equal count/pitch on all four sides — makes the
-# clock-sink cloud symmetric about the die center, which is the precondition for
-# a BALANCED clock tree (low, uniform insertion delay to every corner).
+#   -----   <- top band of macros
+#        |  <- right column of macros
+#   -----   <- bottom band of macros
 #
-# Strategy:
-#   - Define the red-line rectangle = the logic-core keep-clear window (center).
-#   - Place macros uniformly OUTSIDE that rectangle, hugging the red line.
-#   - Equal macros per side => symmetric sink distribution => balanced CTS.
+# Left edge stays macro-free (I/O pins live at left:500-1000) and ALL standard
+# cell logic is enclosed inside the C. Unlike the previous version of this file
+# (which computed coordinates but never placed anything), this script issues an
+# explicit `place_macro` for every SRAM and locks it so the automatic macro
+# placer (rtl_macro_placer) cannot move it.
 
-# Die / core (assignment spec: 1500 x 1500)
+# Core box (assignment spec: die 1500x1500, core 10 12 1448 1448)
 set core_lx 10.0
 set core_ly 12.0
 set core_ux 1448.0
 set core_uy 1448.0
 
-# RED-LINE rectangle: the central logic keep-clear region.
-# Macros are banished outside this box; std cells (scoreboard/issue) live inside.
-set red_lx 300.0
-set red_ly 250.0
-set red_ux 1150.0
-set red_uy 1200.0
+set edge_margin 30.0  ;# gap from core edge to macro bodies
+set gap         24.0  ;# clearance between adjacent macro bodies (> 2x 10um halo)
+set band_x0    150.0  ;# top/bottom bands start here; x < 150 stays open near pins
 
-# fakeram45_256x16 ~= 50um x 60um
-set macro_w 50.0
-set macro_h 60.0
-set pitch   34.0
-set margin  30.0
+# 4 rows/band x 12 macros = 48 top + 48 bottom; remaining 36 fill exactly
+# 3 right columns -> thin right wall, max center area for logic
+set top_rows 4
+set bot_rows 4
 
-# 132 macros / 4 sides = 33 per side  -> UNIFORM ring
-set per_side 33
+set block [ord::get_db_block]
+set tech  [ord::get_db_tech]
+set dbu   [$tech getDbUnitsPerMicron]
 
-# --- TOP band (between red_uy and core_uy), macros laid left->right ---
-set y_top [expr $core_uy - $macro_h - $margin]
-for {set i 0} {$i < $per_side} {incr i} {
-    set x [expr $core_lx + $margin + $i * $pitch]
-    # guidance: even top band, no clustering
+# Collect all macro instances (sorted so related SRAM blocks stay adjacent)
+set names {}
+foreach inst [$block getInsts] {
+    if {[[$inst getMaster] isBlock]} {
+        lappend names [$inst getName]
+    }
+}
+set names [lsort $names]
+set n [llength $names]
+if {$n == 0} {
+    puts "Run7 macro placement: no macros found, nothing to do"
+    return
 }
 
-# --- BOTTOM band (between core_ly and red_ly) ---
-set y_bot [expr $core_ly + $margin]
-for {set i 0} {$i < $per_side} {incr i} {
-    set x [expr $core_lx + $margin + $i * $pitch]
+# Macro dimensions from the actual master (fakeram45_256x16)
+set m0 [[$block findInst [lindex $names 0]] getMaster]
+set mw [expr {[$m0 getWidth]  / double($dbu)}]
+set mh [expr {[$m0 getHeight] / double($dbu)}]
+set px [expr {$mw + $gap}]
+set py [expr {$mh + $gap}]
+
+set x0 $band_x0
+set x1 [expr {$core_ux - $edge_margin}]
+set per_row [expr {int(($x1 - $x0 - $mw) / $px) + 1}]
+
+proc r7_place {name x y} {
+    place_macro -macro_name $name -location [list $x $y] -orientation R0
+    set inst [[ord::get_db_block] findInst $name]
+    $inst setPlacementStatus LOCKED
 }
 
-# --- LEFT band (between core_lx and red_lx) ---
-# NOTE: leave the LEFT-MIDDLE open (y 500..1000) for the centered clock port.
-set x_left [expr $core_lx + $margin]
-for {set i 0} {$i < $per_side} {incr i} {
-    set y [expr $core_ly + $margin + $i * $pitch]
+set idx 0
+
+# --- TOP band (rows grow downward from the top edge) ---
+for {set r 0} {$r < $top_rows && $idx < $n} {incr r} {
+    set y [expr {$core_uy - $edge_margin - $mh - $r * $py}]
+    for {set c 0} {$c < $per_row && $idx < $n} {incr c} {
+        r7_place [lindex $names $idx] [expr {$x0 + $c * $px}] $y
+        incr idx
+    }
 }
 
-# --- RIGHT band (between red_ux and core_ux) ---
-set x_right [expr $core_ux - $macro_w - $margin]
-for {set i 0} {$i < $per_side} {incr i} {
-    set y [expr $core_ly + $margin + $i * $pitch]
+# --- BOTTOM band (rows grow upward from the bottom edge) ---
+for {set r 0} {$r < $bot_rows && $idx < $n} {incr r} {
+    set y [expr {$core_ly + $edge_margin + $r * $py}]
+    for {set c 0} {$c < $per_row && $idx < $n} {incr c} {
+        r7_place [lindex $names $idx] [expr {$x0 + $c * $px}] $y
+        incr idx
+    }
 }
 
-# CENTER (the red-line box) kept CLEAR for standard-cell logic, so the clock
-# sinks form a symmetric cloud around the centered clock entry point.
-puts "Run7: 132 macros on uniform red-line ring (33/side), center clear -> balanced CTS"
+# --- RIGHT columns: remaining macros fill columns from the right edge inward,
+#     vertically between the two bands ---
+set y_bot [expr {$core_ly + $edge_margin + $bot_rows * $py + $gap}]
+set y_top [expr {$core_uy - $edge_margin - $top_rows * $py - $gap}]
+set rows_right [expr {int(($y_top - $y_bot - $mh) / $py) + 1}]
+set col 0
+while {$idx < $n} {
+    set x [expr {$core_ux - $edge_margin - $mw - $col * $px}]
+    for {set r 0} {$r < $rows_right && $idx < $n} {incr r} {
+        r7_place [lindex $names $idx] $x [expr {$y_bot + $r * $py}]
+        incr idx
+    }
+    incr col
+}
+
+puts "Run7 macro placement: $n macros placed in C-shape (top ${top_rows} rows,\
+bottom ${bot_rows} rows, right ${col} cols), left edge open, logic enclosed"

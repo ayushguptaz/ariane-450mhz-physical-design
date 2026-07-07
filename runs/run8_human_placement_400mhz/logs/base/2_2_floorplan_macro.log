@@ -1,0 +1,287 @@
+OpenROAD 26Q1-2900-gdf79404cd8 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 8 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+read_liberty /OpenROAD-flow-scripts/flow/platforms/nangate45/lib/fakeram45_256x16.lib
+read_db ./results/nangate45/ariane133/base/2_1_floorplan.odb
+read_sdc ./results/nangate45/ariane133/base/2_1_floorplan.sdc
+source /OpenROAD-flow-scripts/flow/platforms/nangate45/setRC.tcl
+source /work/runs/run8_human_placement_400mhz/constraints/macro_placement.tcl
+Run8 macro classify: icache_tag=12 icache_data=32 dcache_tag=24 dcache_data=64 total=132
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (27.320um, 1377.495um), (105.030um, 1418.095um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (125.030um, 1377.495um), (202.740um, 1418.095um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (202.740um, 1377.495um), (280.450um, 1418.095um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_3 placed. Bounding box (300.450um, 1377.495um), (378.160um, 1418.095um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_0__data_sram.genblk1_1__i_ram/macro_mem_0 placed. Bounding box (378.160um, 1377.495um), (455.870um, 1418.095um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_0__data_sram.genblk1_1__i_ram/macro_mem_1 placed. Bounding box (475.870um, 1377.495um), (553.580um, 1418.095um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_0__data_sram.genblk1_1__i_ram/macro_mem_2 placed. Bounding box (553.580um, 1377.495um), (631.290um, 1418.095um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_0__data_sram.genblk1_1__i_ram/macro_mem_3 placed. Bounding box (651.290um, 1377.495um), (729.000um, 1418.095um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_1__data_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (729.000um, 1377.495um), (806.710um, 1418.095um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_1__data_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (826.710um, 1377.495um), (904.420um, 1418.095um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_1__data_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (904.420um, 1377.495um), (982.130um, 1418.095um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_1__data_sram.genblk1_0__i_ram/macro_mem_3 placed. Bounding box (1002.130um, 1377.495um), (1079.840um, 1418.095um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_0 placed. Bounding box (1079.840um, 1377.495um), (1157.550um, 1418.095um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_1 placed. Bounding box (1177.550um, 1377.495um), (1255.260um, 1418.095um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2 placed. Bounding box (1255.260um, 1377.495um), (1332.970um, 1418.095um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_3 placed. Bounding box (1352.970um, 1377.495um), (1430.680um, 1418.095um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (27.320um, 1331.855um), (105.030um, 1372.455um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (125.030um, 1331.855um), (202.740um, 1372.455um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (202.740um, 1331.855um), (280.450um, 1372.455um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3 placed. Bounding box (300.450um, 1331.855um), (378.160um, 1372.455um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_0 placed. Bounding box (378.160um, 1331.855um), (455.870um, 1372.455um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_1 placed. Bounding box (475.870um, 1331.855um), (553.580um, 1372.455um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_2 placed. Bounding box (553.580um, 1331.855um), (631.290um, 1372.455um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_3 placed. Bounding box (651.290um, 1331.855um), (729.000um, 1372.455um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (729.000um, 1331.855um), (806.710um, 1372.455um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (826.710um, 1331.855um), (904.420um, 1372.455um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (904.420um, 1331.855um), (982.130um, 1372.455um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_3 placed. Bounding box (1002.130um, 1331.855um), (1079.840um, 1372.455um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_3__data_sram.genblk1_1__i_ram/macro_mem_0 placed. Bounding box (1079.840um, 1331.855um), (1157.550um, 1372.455um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_3__data_sram.genblk1_1__i_ram/macro_mem_1 placed. Bounding box (1177.550um, 1331.855um), (1255.260um, 1372.455um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_3__data_sram.genblk1_1__i_ram/macro_mem_2 placed. Bounding box (1255.260um, 1331.855um), (1332.970um, 1372.455um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_3__data_sram.genblk1_1__i_ram/macro_mem_3 placed. Bounding box (1352.970um, 1331.855um), (1430.680um, 1372.455um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_4__data_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (27.320um, 42.035um), (105.030um, 82.635um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_4__data_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (125.030um, 42.035um), (202.740um, 82.635um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_4__data_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (202.740um, 42.035um), (280.450um, 82.635um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_4__data_sram.genblk1_0__i_ram/macro_mem_3 placed. Bounding box (300.450um, 42.035um), (378.160um, 82.635um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_4__data_sram.genblk1_1__i_ram/macro_mem_0 placed. Bounding box (378.160um, 42.035um), (455.870um, 82.635um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_4__data_sram.genblk1_1__i_ram/macro_mem_1 placed. Bounding box (475.870um, 42.035um), (553.580um, 82.635um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_4__data_sram.genblk1_1__i_ram/macro_mem_2 placed. Bounding box (553.580um, 42.035um), (631.290um, 82.635um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_4__data_sram.genblk1_1__i_ram/macro_mem_3 placed. Bounding box (651.290um, 42.035um), (729.000um, 82.635um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_5__data_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (729.000um, 42.035um), (806.710um, 82.635um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_5__data_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (826.710um, 42.035um), (904.420um, 82.635um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_5__data_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (904.420um, 42.035um), (982.130um, 82.635um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_5__data_sram.genblk1_0__i_ram/macro_mem_3 placed. Bounding box (1002.130um, 42.035um), (1079.840um, 82.635um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_5__data_sram.genblk1_1__i_ram/macro_mem_0 placed. Bounding box (1079.840um, 42.035um), (1157.550um, 82.635um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_5__data_sram.genblk1_1__i_ram/macro_mem_1 placed. Bounding box (1177.550um, 42.035um), (1255.260um, 82.635um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_5__data_sram.genblk1_1__i_ram/macro_mem_2 placed. Bounding box (1255.260um, 42.035um), (1332.970um, 82.635um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_5__data_sram.genblk1_1__i_ram/macro_mem_3 placed. Bounding box (1352.970um, 42.035um), (1430.680um, 82.635um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_6__data_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (27.320um, 87.675um), (105.030um, 128.275um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_6__data_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (125.030um, 87.675um), (202.740um, 128.275um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_6__data_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (202.740um, 87.675um), (280.450um, 128.275um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_6__data_sram.genblk1_0__i_ram/macro_mem_3 placed. Bounding box (300.450um, 87.675um), (378.160um, 128.275um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_6__data_sram.genblk1_1__i_ram/macro_mem_0 placed. Bounding box (378.160um, 87.675um), (455.870um, 128.275um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_6__data_sram.genblk1_1__i_ram/macro_mem_1 placed. Bounding box (475.870um, 87.675um), (553.580um, 128.275um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_6__data_sram.genblk1_1__i_ram/macro_mem_2 placed. Bounding box (553.580um, 87.675um), (631.290um, 128.275um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_6__data_sram.genblk1_1__i_ram/macro_mem_3 placed. Bounding box (651.290um, 87.675um), (729.000um, 128.275um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_7__data_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (729.000um, 87.675um), (806.710um, 128.275um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_7__data_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (826.710um, 87.675um), (904.420um, 128.275um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_7__data_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (904.420um, 87.675um), (982.130um, 128.275um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_7__data_sram.genblk1_0__i_ram/macro_mem_3 placed. Bounding box (1002.130um, 87.675um), (1079.840um, 128.275um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_7__data_sram.genblk1_1__i_ram/macro_mem_0 placed. Bounding box (1079.840um, 87.675um), (1157.550um, 128.275um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_7__data_sram.genblk1_1__i_ram/macro_mem_1 placed. Bounding box (1177.550um, 87.675um), (1255.260um, 128.275um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_7__data_sram.genblk1_1__i_ram/macro_mem_2 placed. Bounding box (1255.260um, 87.675um), (1332.970um, 128.275um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_7__data_sram.genblk1_1__i_ram/macro_mem_3 placed. Bounding box (1352.970um, 87.675um), (1430.680um, 128.275um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_0__tag_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (25.000um, 1261.295um), (102.710um, 1301.895um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_0__tag_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (122.710um, 1261.295um), (200.420um, 1301.895um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_0__tag_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (200.420um, 1261.295um), (278.130um, 1301.895um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_1__tag_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (25.000um, 1215.655um), (102.710um, 1256.255um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_1__tag_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (122.710um, 1215.655um), (200.420um, 1256.255um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_1__tag_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (200.420um, 1215.655um), (278.130um, 1256.255um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_2__tag_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (25.000um, 1170.015um), (102.710um, 1210.615um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_2__tag_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (122.710um, 1170.015um), (200.420um, 1210.615um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_2__tag_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (200.420um, 1170.015um), (278.130um, 1210.615um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_3__tag_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (25.000um, 1124.515um), (102.710um, 1165.115um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_3__tag_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (122.710um, 1124.515um), (200.420um, 1165.115um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_3__tag_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (200.420um, 1124.515um), (278.130um, 1165.115um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_4__tag_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (25.000um, 158.235um), (102.710um, 198.835um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_4__tag_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (122.710um, 158.235um), (200.420um, 198.835um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_4__tag_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (200.420um, 158.235um), (278.130um, 198.835um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_5__tag_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (25.000um, 203.875um), (102.710um, 244.475um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_5__tag_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (122.710um, 203.875um), (200.420um, 244.475um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_5__tag_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (200.420um, 203.875um), (278.130um, 244.475um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_6__tag_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (25.000um, 249.515um), (102.710um, 290.115um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_6__tag_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (122.710um, 249.515um), (200.420um, 290.115um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_6__tag_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (200.420um, 249.515um), (278.130um, 290.115um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_7__tag_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (25.000um, 295.015um), (102.710um, 335.615um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_7__tag_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (122.710um, 295.015um), (200.420um, 335.615um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_nbdcache/sram_block_7__tag_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (200.420um, 295.015um), (278.130um, 335.615um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (1067.160um, 937.755um), (1144.870um, 978.355um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (1164.870um, 937.755um), (1242.580um, 978.355um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (1242.580um, 937.755um), (1320.290um, 978.355um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_3 placed. Bounding box (1340.290um, 937.755um), (1418.000um, 978.355um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_1__i_ram/macro_mem_0 placed. Bounding box (1067.160um, 892.115um), (1144.870um, 932.715um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_1__i_ram/macro_mem_1 placed. Bounding box (1164.870um, 892.115um), (1242.580um, 932.715um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_1__i_ram/macro_mem_2 placed. Bounding box (1242.580um, 892.115um), (1320.290um, 932.715um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_1__i_ram/macro_mem_3 placed. Bounding box (1340.290um, 892.115um), (1418.000um, 932.715um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (1067.160um, 846.615um), (1144.870um, 887.215um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (1164.870um, 846.615um), (1242.580um, 887.215um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (1242.580um, 846.615um), (1320.290um, 887.215um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_0__i_ram/macro_mem_3 placed. Bounding box (1340.290um, 846.615um), (1418.000um, 887.215um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_0 placed. Bounding box (1067.160um, 800.975um), (1144.870um, 841.575um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_1 placed. Bounding box (1164.870um, 800.975um), (1242.580um, 841.575um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2 placed. Bounding box (1242.580um, 800.975um), (1320.290um, 841.575um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_3 placed. Bounding box (1340.290um, 800.975um), (1418.000um, 841.575um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_0__tag_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (1067.160um, 755.335um), (1144.870um, 795.935um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_0__tag_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (1164.870um, 755.335um), (1242.580um, 795.935um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_0__tag_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (1242.580um, 755.335um), (1320.290um, 795.935um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_1__tag_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (1340.290um, 755.335um), (1418.000um, 795.935um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_1__tag_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (1067.160um, 709.835um), (1144.870um, 750.435um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_1__tag_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (1164.870um, 709.835um), (1242.580um, 750.435um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_2__tag_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (1242.580um, 709.835um), (1320.290um, 750.435um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_2__tag_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (1340.290um, 709.835um), (1418.000um, 750.435um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_2__tag_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (1067.160um, 664.195um), (1144.870um, 704.795um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_3__tag_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (1164.870um, 664.195um), (1242.580um, 704.795um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_3__tag_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (1242.580um, 664.195um), (1320.290um, 704.795um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_3__tag_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (1340.290um, 664.195um), (1418.000um, 704.795um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (1067.160um, 618.555um), (1144.870um, 659.155um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (1164.870um, 618.555um), (1242.580um, 659.155um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (1242.580um, 618.555um), (1320.290um, 659.155um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3 placed. Bounding box (1340.290um, 618.555um), (1418.000um, 659.155um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_0 placed. Bounding box (1067.160um, 572.915um), (1144.870um, 613.515um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_1 placed. Bounding box (1164.870um, 572.915um), (1242.580um, 613.515um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_2 placed. Bounding box (1242.580um, 572.915um), (1320.290um, 613.515um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_3 placed. Bounding box (1340.290um, 572.915um), (1418.000um, 613.515um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_0 placed. Bounding box (1067.160um, 527.415um), (1144.870um, 568.015um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_1 placed. Bounding box (1164.870um, 527.415um), (1242.580um, 568.015um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_2 placed. Bounding box (1242.580um, 527.415um), (1320.290um, 568.015um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_3 placed. Bounding box (1340.290um, 527.415um), (1418.000um, 568.015um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_1__i_ram/macro_mem_0 placed. Bounding box (1067.160um, 481.775um), (1144.870um, 522.375um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_1__i_ram/macro_mem_1 placed. Bounding box (1164.870um, 481.775um), (1242.580um, 522.375um). Orientation R0
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_1__i_ram/macro_mem_2 placed. Bounding box (1242.580um, 481.775um), (1320.290um, 522.375um). Orientation MY
+[INFO MPL-0035] Macro i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_1__i_ram/macro_mem_3 placed. Bounding box (1340.290um, 481.775um), (1418.000um, 522.375um). Orientation R0
+Run8 human macro placement done: 132 macros LOCKED (dcache data top/bottom 16x2 each, dcache tags corners 4x3 each, icache right-center)
+[INFO GPL-0022] Initialize gpl and calculate uniform density.
+Placement density is 0.49700000643730163, computed from PLACE_DENSITY_LB_ADDON  0.10 and lower bound 0.4300000071525574
+rtl_macro_placer -max_num_level 1 -max_num_inst 80000 -min_num_inst 8000 -max_num_macro 30 -min_num_macro 10 -halo_width 5 -halo_height 5 -min_ar 0.33 -area_weight 0.1 -wirelength_weight 100.0 -outline_weight 100.0 -boundary_weight 50.0 -notch_weight 50.0 -report_directory ./objects/nangate45/ariane133/base/rtlmp -fence_lx 0.0 -fence_ly 0.0 -fence_ux 0.0 -fence_uy 0.0 -target_util 0.49700000643730163
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_1__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_1__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_1__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_1__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_0__tag_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_0__tag_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_0__tag_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_0__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_1__tag_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_1__tag_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_1__tag_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_2__tag_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_2__tag_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_2__tag_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_1__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_1__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_1__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_1__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_3__tag_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_3__tag_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_icache.sram_block_3__tag_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_0__data_sram.genblk1_1__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_0__data_sram.genblk1_1__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_0__data_sram.genblk1_1__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_0__data_sram.genblk1_1__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_0__tag_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_0__tag_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_0__tag_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_1__data_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_1__data_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_1__data_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_1__data_sram.genblk1_0__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_1__tag_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_1__tag_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_1__tag_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_2__tag_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_2__tag_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_2__tag_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_3__data_sram.genblk1_1__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_3__data_sram.genblk1_1__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_3__data_sram.genblk1_1__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_3__data_sram.genblk1_1__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_3__tag_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_3__tag_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_3__tag_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_4__data_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_4__data_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_4__data_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_4__data_sram.genblk1_0__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_4__data_sram.genblk1_1__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_4__data_sram.genblk1_1__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_4__data_sram.genblk1_1__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_4__data_sram.genblk1_1__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_4__tag_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_4__tag_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_4__tag_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_5__data_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_5__data_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_5__data_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_5__data_sram.genblk1_0__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_5__data_sram.genblk1_1__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_5__data_sram.genblk1_1__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_5__data_sram.genblk1_1__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_5__data_sram.genblk1_1__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_5__tag_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_5__tag_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_5__tag_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_6__data_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_6__data_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_6__data_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_6__data_sram.genblk1_0__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_6__data_sram.genblk1_1__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_6__data_sram.genblk1_1__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_6__data_sram.genblk1_1__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_6__data_sram.genblk1_1__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_6__tag_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_6__tag_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_6__tag_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_7__data_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_7__data_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_7__data_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_7__data_sram.genblk1_0__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_7__data_sram.genblk1_1__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_7__data_sram.genblk1_1__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_7__data_sram.genblk1_1__i_ram/macro_mem_2.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_7__data_sram.genblk1_1__i_ram/macro_mem_3.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_7__tag_sram.genblk1_0__i_ram/macro_mem_0.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_7__tag_sram.genblk1_0__i_ram/macro_mem_1.
+[INFO MPL-0062] Found fixed macro i_cache_subsystem.i_nbdcache/sram_block_7__tag_sram.genblk1_0__i_ram/macro_mem_2.
+[INFO MPL-0017] No unfixed macros.
+[INFO MPL-0013] Skipping macro placement.
+Design area 713614 um^2 35% utilization.
+write_db ./results/nangate45/ariane133/base/2_2_floorplan_macro.odb
+Elapsed time: 0:03.63[h:]min:sec. CPU time: user 3.81 sys 0.45 (117%). Peak memory: 765664KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+2_2_floorplan_macro                3            747 8df3be91df4fccce6bc4

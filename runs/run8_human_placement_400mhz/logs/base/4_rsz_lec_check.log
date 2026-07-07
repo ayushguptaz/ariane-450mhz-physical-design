@@ -1,0 +1,26 @@
+[2026-07-07 16:54:29.881] [miter_logger] [info] MiterStrategy::run starting
+[2026-07-07 16:54:29.881] [miter_logger] [info] Collecting POs for design 0: ariane
+
+[2026-07-07 16:54:30.688] [miter_logger] [info] Collected 67812 POs for design 0
+
+[2026-07-07 16:54:30.694] [miter_logger] [info] Collecting POs for design 1: ariane
+
+[2026-07-07 16:54:31.502] [miter_logger] [info] Collected 67812 POs for design 1
+
+[2026-07-07 16:54:31.502] [miter_logger] [info] normalizeInputs: starting
+[2026-07-07 16:54:31.636] [miter_logger] [info] size of common inputs: 46611
+[2026-07-07 16:54:31.636] [miter_logger] [info] size of diff0 inputs: 0
+[2026-07-07 16:54:31.636] [miter_logger] [info] size of diff1 inputs: 0
+[2026-07-07 16:54:31.654] [miter_logger] [info] normalizeOutputs: starting
+[2026-07-07 16:54:31.830] [miter_logger] [info] size of common outputs: 67812
+[2026-07-07 16:54:31.830] [miter_logger] [info] size of diff0 outputs: 0
+[2026-07-07 16:54:31.830] [miter_logger] [info] size of diff1 outputs: 0
+[2026-07-07 16:54:31.850] [miter_logger] [info] size of PIs in circuit 0: 46611
+[2026-07-07 16:54:31.850] [miter_logger] [info] size of PIs in circuit 1: 46611
+[2026-07-07 16:54:31.850] [miter_logger] [info] size of POs in circuit 0: 67812
+[2026-07-07 16:54:31.850] [miter_logger] [info] size of POs in circuit 1: 67812
+[2026-07-07 16:54:36.589] [miter_logger] [info] Building miter expression
+[2026-07-07 16:54:36.602] [miter_logger] [info] Finished building miter expression
+[2026-07-07 16:54:37.565] [miter_logger] [info] SAT solver starting
+[2026-07-07 16:56:42.475] [miter_logger] [info] SAT solver finished: UNSAT
+[2026-07-07 16:56:42.475] [miter_logger] [info] Circuits are IDENTICAL

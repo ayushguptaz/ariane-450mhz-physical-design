@@ -27,10 +27,10 @@ export MACRO_PLACE_HALO    = 10 10
 export MACRO_PLACE_CHANNEL = 20 20
 export MACRO_PLACEMENT_TCL = /work/runs/run7_floorplan_density_450mhz/constraints/macro_placement.tcl
 
-# Pin placement: assignment exclusions + clock port centered on left edge
-# (self-contained copies live in this run's constraints/ folder)
+# Pin placement: assignment exclusions + clk_i centered, both in io.tcl
+# (ADDITIONAL_IO_CONSTRAINTS is NOT supported by this ORFS version — the
+# clk_i constraint is merged into io.tcl, which floorplan.tcl sources)
 export IO_CONSTRAINTS = /work/runs/run7_floorplan_density_450mhz/constraints/io.tcl
-export ADDITIONAL_IO_CONSTRAINTS = /work/runs/run7_floorplan_density_450mhz/constraints/clock_placement.tcl
 
 # Routing layers: metal2 through metal10
 export MIN_ROUTING_LAYER = metal2
@@ -44,20 +44,19 @@ export TNS_END_PERCENT = 100
 # --- MORE BUFFERING in the placement stage (resizer repair_design) ---
 # Extra cell padding opens room so the resizer can insert more repair buffers,
 # and positive slack margins push it to buffer more aggressively.
-export GPL_CELL_PADDING = 4
+# (GPL_CELL_PADDING removed: not a variable in this ORFS; padding is
+# CELL_PAD_IN_SITES_GLOBAL_PLACEMENT.)
 export CELL_PAD_IN_SITES_GLOBAL_PLACEMENT = 4
 export CELL_PAD_IN_SITES_DETAIL_PLACEMENT = 2
 export SETUP_SLACK_MARGIN = 0.05
 export HOLD_SLACK_MARGIN  = 0.05
 
 # --- BALANCED CLOCK TREE (TritonCTS) ---
-# Tight, uniform sink clustering + level balancing => symmetric H-tree, low skew.
-export CTS_BALANCE_LEVELS = 1
+# Sink clustering is always on in this ORFS; CTS_CLUSTER_SIZE/DIAMETER are the
+# only supported clustering knobs (CTS_BALANCE_LEVELS / CTS_SINK_CLUSTERING_*
+# removed: dead variables in this version).
 export CTS_CLUSTER_SIZE = 30
 export CTS_CLUSTER_DIAMETER = 100
-export CTS_SINK_CLUSTERING_ENABLE = 1
-export CTS_SINK_CLUSTERING_SIZE = 30
-export CTS_SINK_CLUSTERING_MAX_DIAMETER = 100
 
 # Global route — allow congestion, more iterations for the denser layout
 export GLOBAL_ROUTE_ARGS = -allow_congestion -verbose -congestion_iterations 10
