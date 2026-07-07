@@ -1,0 +1,1336 @@
+OpenROAD 26Q1-2900-gdf79404cd8 
+Features included (+) or not (-): +GPU +GUI +Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 8 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/nangate45/lib/NangateOpenCellLibrary_typical.lib
+read_liberty /OpenROAD-flow-scripts/flow/platforms/nangate45/lib/fakeram45_256x16.lib
+read_db ./results/nangate45/ariane133/base/3_place.odb
+read_sdc ./results/nangate45/ariane133/base/3_place.sdc
+source /OpenROAD-flow-scripts/flow/platforms/nangate45/setRC.tcl
+clock_tree_synthesis -sink_clustering_enable -repair_clock_nets -sink_clustering_size 30 -sink_clustering_max_diameter 100
+[INFO CTS-0050] Root buffer is CLKBUF_X3.
+[INFO CTS-0051] Sink buffer is CLKBUF_X3.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    CLKBUF_X3
+[INFO CTS-0049] Characterization buffer is CLKBUF_X3.
+[INFO CTS-0007] Net "clk_i" found for clock "core_clock".
+[INFO CTS-0011]  Clock net "clk_i" for macros has 132 sinks.
+[INFO CTS-0011]  Clock net "clk_i_regs" for registers has 20618 sinks.
+[INFO CTS-0008] TritonCTS found 2 clock nets.
+[INFO CTS-0097] Characterization used 1 buffer(s) types.
+[INFO CTS-0201] 132 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net clk_i.
+[INFO CTS-0028]  Total number of sinks: 132.
+[INFO CTS-0029]  Macro  sinks will be clustered in groups of up to 4 and with maximum cluster diameter of 155.4 um.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 14000  dbu (7 um).
+[INFO CTS-0204] A clustering solution was found from clustering size of 4 and clustering diameter of 155.
+[INFO CTS-0205] Better solution may be possible if either -sink_clustering_size, -sink_clustering_max_diameter, or both options are omitted to enable automatic clustering.
+[INFO CTS-0019]  Total number of sinks after clustering: 47.
+[INFO CTS-0024]  Normalized sink region: [(16.69, 9.035), (187.351, 204.47)].
+[INFO CTS-0025]     Width:  170.6614.
+[INFO CTS-0026]     Height: 195.4350.
+ Level 1
+    Direction: Vertical
+    Sinks per sub-region: 24
+    Sub-region size: 170.6614 X 97.7175
+[INFO CTS-0034]     Segment length (rounded): 48.
+ Level 2
+    Direction: Horizontal
+    Sinks per sub-region: 12
+    Sub-region size: 85.3307 X 97.7175
+[INFO CTS-0034]     Segment length (rounded): 42.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 47.
+[INFO CTS-0201] 132 blockages from hard placement blockages and placed macros will be used.
+[INFO CTS-0027] Generating H-Tree topology for net clk_i_regs.
+[INFO CTS-0028]  Total number of sinks: 20618.
+[INFO CTS-0029]  Register sinks will be clustered in groups of up to 30 and with maximum cluster diameter of 100.0 um.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 14000  dbu (7 um).
+[INFO CTS-0204] A clustering solution was found from clustering size of 30 and clustering diameter of 100.
+[INFO CTS-0205] Better solution may be possible if either -sink_clustering_size, -sink_clustering_max_diameter, or both options are omitted to enable automatic clustering.
+[INFO CTS-0019]  Total number of sinks after clustering: 715.
+[INFO CTS-0024]  Normalized sink region: [(2.82436, 4.04867), (205.103, 204.879)].
+[INFO CTS-0025]     Width:  202.2791.
+[INFO CTS-0026]     Height: 200.8307.
+ Level 1
+    Direction: Horizontal
+    Sinks per sub-region: 358
+    Sub-region size: 101.1395 X 200.8307
+[INFO CTS-0034]     Segment length (rounded): 50.
+ Level 2
+    Direction: Vertical
+    Sinks per sub-region: 179
+    Sub-region size: 101.1395 X 100.4153
+[INFO CTS-0034]     Segment length (rounded): 50.
+ Level 3
+    Direction: Horizontal
+    Sinks per sub-region: 90
+    Sub-region size: 50.5698 X 100.4153
+[INFO CTS-0034]     Segment length (rounded): 26.
+ Level 4
+    Direction: Vertical
+    Sinks per sub-region: 45
+    Sub-region size: 50.5698 X 50.2077
+[INFO CTS-0034]     Segment length (rounded): 26.
+ Level 5
+    Direction: Horizontal
+    Sinks per sub-region: 23
+    Sub-region size: 25.2849 X 50.2077
+[INFO CTS-0034]     Segment length (rounded): 12.
+ Level 6
+    Direction: Vertical
+    Sinks per sub-region: 12
+    Sub-region size: 25.2849 X 25.1038
+[INFO CTS-0034]     Segment length (rounded): 12.
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 715.
+[INFO CTS-0018]     Created 53 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 4.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 5.
+[INFO CTS-0015]     Created 53 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 2:9, 3:23, 4:10, 8:1, 11:1, 12:1, 16:1..
+[INFO CTS-0017]     Max level of the clock tree: 2.
+[INFO CTS-0018]     Created 846 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 9.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 9.
+[INFO CTS-0015]     Created 846 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 2:2, 5:5, 6:4, 7:5, 8:6, 9:11, 10:10, 11:10, 12:2, 13:9, 14:11, 15:8, 16:3, 17:5, 18:4, 19:4, 20:4, 21:2, 22:2, 23:6, 24:3, 25:4, 26:5, 27:5, 28:6, 29:7, 30:636..
+[INFO CTS-0017]     Max level of the clock tree: 6.
+[INFO CTS-0098] Clock net "clk_i"
+[INFO CTS-0099]  Sinks 132
+[INFO CTS-0100]  Leaf buffers 42
+[INFO CTS-0101]  Average sink wire length 1897.22 um
+[INFO CTS-0102]  Path depth 4 - 5
+[INFO CTS-0207]  Dummy loads inserted 32
+[INFO CTS-0098] Clock net "clk_i_regs"
+[INFO CTS-0099]  Sinks 20764
+[INFO CTS-0100]  Leaf buffers 715
+[INFO CTS-0101]  Average sink wire length 1238.17 um
+[INFO CTS-0102]  Path depth 8 - 9
+[INFO CTS-0207]  Dummy loads inserted 146
+[INFO RSZ-0047] Found 4 long wires.
+[INFO RSZ-0048] Inserted 7 buffers in 4 nets.
+[INFO CTS-0033] Balancing latency for clock core_clock
+[INFO CTS-0036]  inserted 2 delay buffers
+[INFO CTS-0037] Total number of delay buffers: 2
+Took 23 seconds: clock_tree_synthesis -sink_clustering_enable -repair_clock_nets -sink_clustering_size 30 -sink_clustering_max_diameter 100
+estimate_parasitics -placement
+Took 9 seconds: estimate_parasitics -placement
+[INFO DPL-0005] Max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+Movements Summary
+---------------------------------------
+Total cells:                  172976
+Diamond Move Success:         172976 (100.00%)
+Diamond Move Failure:              0
+Rip-up and replace Success:        0 (  0.00% of diamond failures)
+Rip-up and replace Failure:        0
+Total Placement Failures:          0
+---------------------------------------
+Placement Analysis
+---------------------------------
+total displacement       1699.7 u
+average displacement        0.0 u
+max displacement           11.7 u
+original HPWL         7356409.7 u
+legalized HPWL        7403441.0 u
+delta HPWL                    1 %
+
+estimate_parasitics -placement
+Took 9 seconds: estimate_parasitics -placement
+repair_timing -setup_margin 0.05 -hold_margin 0.05 -repair_tns 100 -skip_gate_cloning -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove SplitLoadMove 
+[INFO RSZ-0094] Found 7760 endpoints with setup violations.
+[INFO RSZ-0099] Repairing 7760 out of 7760 (100.00%) violating endpoints...
+   Iter   | Removed | Resized | Inserted | Cloned |  Pin  |   Area   |    WNS   |   StTNS    |   EnTNS    |  Viol  |  Worst  
+          | Buffers |  Gates  | Buffers  |  Gates | Swaps |          |          |            |            | Endpts | St/EnPt 
+------------------------------------------------------------------------------------------------------------------------------
+       0* |       0 |       0 |        0 |      0 |     0 |    +0.0% |   -1.561 |     -701.7 |    -4767.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1508\]$_DFF_PN0_/D
+      10* |       0 |       6 |        0 |      0 |     3 |    +0.0% |   -1.524 |     -692.3 |    -4627.8 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+      20* |       0 |      10 |        2 |      0 |     7 |    +0.0% |   -1.511 |     -671.2 |    -4649.4 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+      30* |       0 |      13 |        5 |      0 |    11 |    +0.0% |   -1.489 |     -659.7 |    -4591.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[2608\]$_DFF_PN0_/D
+      40* |       0 |      22 |        5 |      0 |    12 |    +0.0% |   -1.485 |     -656.5 |    -4578.4 |   7760 | issue_stage_i.i_scoreboard/mem_q\[866\]$_DFF_PN0_/D
+      50* |       0 |      25 |        8 |      0 |    16 |    +0.0% |   -1.493 |     -651.7 |    -4641.3 |   7760 | issue_stage_i.i_scoreboard/mem_q\[2687\]$_DFF_PN0_/D
+      60* |       0 |      29 |       11 |      0 |    20 |    +0.0% |   -1.492 |     -645.1 |    -4642.7 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1993\]$_DFF_PN0_/D
+      68* |       0 |      10 |        2 |      0 |     5 |    +0.0% |   -1.473 |     -664.1 |    -4496.2 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+      70* |       0 |      10 |        3 |      0 |     5 |    +0.0% |   -1.471 |     -662.5 |    -4490.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+      80* |       0 |      20 |        3 |      0 |     5 |    +0.0% |   -1.471 |     -661.0 |    -4464.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+      90* |       0 |      24 |        8 |      0 |     6 |    +0.0% |   -1.464 |     -660.5 |    -4424.5 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     100* |       0 |      30 |       11 |      0 |     7 |    +0.0% |   -1.460 |     -659.5 |    -4400.8 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     110* |       0 |      33 |       13 |      0 |    12 |    +0.0% |   -1.455 |     -659.1 |    -4367.7 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     120* |       0 |      39 |       14 |      0 |    15 |    +0.0% |   -1.447 |     -656.9 |    -4338.7 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     130* |       0 |      42 |       17 |      0 |    19 |    +0.0% |   -1.447 |     -656.5 |    -4324.7 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     140* |       0 |      48 |       18 |      0 |    22 |    +0.0% |   -1.441 |     -655.8 |    -4285.3 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     150* |       0 |      52 |       23 |      0 |    24 |    +0.0% |   -1.444 |     -657.7 |    -4299.5 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     160* |       0 |      61 |       23 |      0 |    25 |    +0.0% |   -1.442 |     -654.4 |    -4290.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     170* |       0 |      68 |       25 |      0 |    26 |    +0.0% |   -1.436 |     -653.0 |    -4266.9 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     180* |       0 |      74 |       28 |      0 |    28 |    +0.0% |   -1.432 |     -654.3 |    -4262.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     190* |       0 |      80 |       32 |      0 |    29 |    +0.0% |   -1.437 |     -654.8 |    -4281.9 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     200* |       0 |      85 |       35 |      0 |    31 |    +0.0% |   -1.436 |     -654.7 |    -4275.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     210* |       0 |      91 |       36 |      0 |    34 |    +0.0% |   -1.439 |     -654.9 |    -4287.8 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     220* |       0 |      96 |       37 |      0 |    38 |    +0.0% |   -1.460 |     -657.7 |    -4368.2 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     230* |       0 |     101 |       48 |      0 |    40 |    +0.0% |   -1.467 |     -658.8 |    -4398.6 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     240* |       0 |     109 |       53 |      0 |    40 |    +0.0% |   -1.455 |     -656.7 |    -4352.2 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     247* |       0 |      85 |       34 |      0 |    29 |    +0.0% |   -1.426 |     -653.8 |    -4240.9 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     250* |       0 |      85 |       36 |      0 |    29 |    +0.0% |   -1.456 |     -657.5 |    -4350.3 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     260* |       0 |      94 |       37 |      0 |    29 |    +0.0% |   -1.434 |     -654.0 |    -4269.3 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     270* |       0 |     102 |       37 |      0 |    31 |    +0.0% |   -1.446 |     -658.8 |    -4309.5 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     280* |       0 |     107 |       42 |      0 |    31 |    +0.0% |   -1.442 |     -657.4 |    -4297.2 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     290* |       0 |     116 |       42 |      0 |    32 |    +0.0% |   -1.434 |     -656.3 |    -4268.9 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     299* |       0 |      85 |       35 |      0 |    29 |    +0.0% |   -1.426 |     -653.7 |    -4240.6 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     300* |       0 |      85 |       35 |      0 |    29 |    +0.0% |   -1.426 |     -653.7 |    -4240.6 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     310* |       0 |      93 |       37 |      0 |    29 |    +0.0% |   -1.439 |     -655.2 |    -4286.9 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     320* |       0 |     103 |       37 |      0 |    29 |    +0.0% |   -1.424 |     -651.9 |    -4234.2 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     330* |       0 |     110 |       41 |      0 |    29 |    +0.0% |   -1.423 |     -650.1 |    -4233.2 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     340* |       0 |     116 |       43 |      0 |    31 |    +0.0% |   -1.427 |     -650.2 |    -4245.7 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     350* |       0 |     126 |       43 |      0 |    31 |    +0.0% |   -1.422 |     -649.6 |    -4227.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     360* |       0 |     135 |       43 |      0 |    32 |    +0.0% |   -1.418 |     -648.7 |    -4216.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     370* |       0 |     143 |       43 |      0 |    34 |    +0.0% |   -1.434 |     -652.9 |    -4268.6 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     380* |       0 |     149 |       48 |      0 |    36 |    +0.0% |   -1.417 |     -651.7 |    -4208.8 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     390* |       0 |     152 |       51 |      0 |    40 |    +0.0% |   -1.427 |     -659.9 |    -4239.9 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     400* |       0 |     159 |       56 |      0 |    41 |    +0.0% |   -1.412 |     -648.1 |    -4187.8 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     410* |       0 |     164 |       58 |      0 |    44 |    +0.0% |   -1.412 |     -647.3 |    -4185.5 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     420* |       0 |     170 |       63 |      0 |    44 |    +0.0% |   -1.412 |     -647.3 |    -4194.3 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     430* |       0 |     174 |       65 |      0 |    48 |    +0.0% |   -1.413 |     -647.2 |    -4204.3 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     440* |       0 |     179 |       70 |      0 |    49 |    +0.0% |   -1.414 |     -647.1 |    -4210.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     450* |       0 |     187 |       70 |      0 |    51 |    +0.0% |   -1.418 |     -647.2 |    -4222.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     451* |       0 |     160 |       56 |      0 |    41 |    +0.0% |   -1.411 |     -646.9 |    -4184.9 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     460* |       0 |     164 |       60 |      0 |    41 |    +0.0% |   -1.412 |     -647.5 |    -4186.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     470* |       0 |     172 |       62 |      0 |    41 |    +0.0% |   -1.412 |     -647.5 |    -4190.5 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     480* |       0 |     180 |       63 |      0 |    42 |    +0.0% |   -1.414 |     -647.3 |    -4198.2 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     490* |       0 |     188 |       63 |      0 |    44 |    +0.0% |   -1.416 |     -649.8 |    -4205.8 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     500* |       0 |     194 |       63 |      0 |    48 |    +0.0% |   -1.415 |     -648.1 |    -4205.3 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     510* |       0 |     201 |       64 |      0 |    50 |    +0.0% |   -1.415 |     -646.4 |    -4203.4 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     520* |       0 |     203 |       70 |      0 |    53 |    +0.0% |   -1.438 |     -664.9 |    -4278.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     524* |       0 |     175 |       63 |      0 |    41 |    +0.0% |   -1.409 |     -647.4 |    -4181.7 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     530* |       0 |     180 |       63 |      0 |    41 |    +0.0% |   -1.410 |     -647.3 |    -4186.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     540* |       0 |     188 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     550* |       0 |     196 |       68 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4174.3 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     554* |       0 |     188 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     560* |       0 |     192 |       66 |      0 |    41 |    +0.0% |   -1.407 |     -645.7 |    -4174.2 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     570* |       0 |     199 |       70 |      0 |    41 |    +0.0% |   -1.408 |     -646.6 |    -4179.3 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     580* |       0 |     203 |       77 |      0 |    42 |    +0.0% |   -1.408 |     -646.4 |    -4200.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     585* |       0 |     188 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     590* |       0 |     192 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4174.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     600* |       0 |     199 |       69 |      0 |    41 |    +0.0% |   -1.408 |     -646.3 |    -4178.3 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     600* |       0 |     188 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     610* |       0 |     195 |       68 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4174.2 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     615* |       0 |     188 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     620* |       0 |     192 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4174.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     630* |       0 |     198 |       70 |      0 |    41 |    +0.0% |   -1.408 |     -646.5 |    -4179.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     640* |       0 |     203 |       77 |      0 |    41 |    +0.0% |   -1.408 |     -646.4 |    -4199.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     644* |       0 |     188 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     650* |       0 |     193 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4173.8 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     658* |       0 |     188 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     660* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4175.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     670* |       0 |     196 |       68 |      0 |    41 |    +0.0% |   -1.407 |     -645.7 |    -4174.3 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     680* |       0 |     201 |       75 |      0 |    41 |    +0.0% |   -1.408 |     -646.4 |    -4204.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     687* |       0 |     188 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     690* |       0 |     190 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4174.9 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     700* |       0 |     196 |       70 |      0 |    41 |    +0.0% |   -1.407 |     -645.6 |    -4174.6 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     710* |       0 |     201 |       77 |      0 |    41 |    +0.0% |   -1.408 |     -646.3 |    -4203.6 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     716* |       0 |     188 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     720* |       0 |     191 |       65 |      0 |    41 |    +0.0% |   -1.408 |     -645.6 |    -4176.5 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     730* |       0 |     199 |       68 |      0 |    41 |    +0.0% |   -1.408 |     -646.4 |    -4178.9 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     731* |       0 |     188 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     740* |       0 |     195 |       66 |      0 |    41 |    +0.0% |   -1.407 |     -645.6 |    -4174.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     745* |       0 |     188 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     750* |       0 |     192 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4174.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     760* |       0 |     199 |       69 |      0 |    41 |    +0.0% |   -1.408 |     -646.5 |    -4179.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     762* |       0 |     188 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     770* |       0 |     194 |       66 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4174.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     778* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     780* |       0 |     190 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4175.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     790* |       0 |     198 |       68 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4174.3 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     796* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     800* |       0 |     192 |       65 |      0 |    41 |    +0.0% |   -1.408 |     -645.6 |    -4176.5 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     810* |       0 |     199 |       69 |      0 |    41 |    +0.0% |   -1.407 |     -645.7 |    -4174.6 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     813* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     820* |       0 |     195 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4173.8 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     828* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     830* |       0 |     190 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4175.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     840* |       0 |     198 |       68 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4174.6 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     842* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     850* |       0 |     195 |       66 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4174.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     860* |       0 |     202 |       70 |      0 |    41 |    +0.0% |   -1.408 |     -646.2 |    -4178.4 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     860* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     870* |       0 |     196 |       68 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4174.4 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     878* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     880* |       0 |     190 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4175.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     890* |       0 |     197 |       69 |      0 |    41 |    +0.0% |   -1.408 |     -646.3 |    -4178.9 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     896* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     900* |       0 |     192 |       65 |      0 |    41 |    +0.0% |   -1.408 |     -645.6 |    -4176.5 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     910* |       0 |     199 |       69 |      0 |    41 |    +0.0% |   -1.407 |     -645.7 |    -4174.6 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     913* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     920* |       0 |     194 |       66 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4174.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     930* |       0 |     201 |       70 |      0 |    41 |    +0.0% |   -1.408 |     -646.4 |    -4179.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     931* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     940* |       0 |     196 |       67 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4174.5 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     945* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     950* |       0 |     193 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4174.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     960* |       0 |     200 |       69 |      0 |    41 |    +0.0% |   -1.408 |     -646.6 |    -4179.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     962* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     970* |       0 |     196 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.6 |    -4174.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     977* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     980* |       0 |     191 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4174.9 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     990* |       0 |     198 |       69 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4174.3 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+     995* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1000* |       0 |     193 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4174.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1010* |       0 |     201 |       68 |      0 |    41 |    +0.0% |   -1.408 |     -646.4 |    -4179.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1011* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1020* |       0 |     196 |       66 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4174.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1029* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1030* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1040* |       0 |     197 |       68 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4174.4 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1045* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1050* |       0 |     193 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4174.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1060* |       0 |     201 |       68 |      0 |    41 |    +0.0% |   -1.408 |     -646.4 |    -4179.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1061* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1070* |       0 |     197 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4173.9 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1077* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1080* |       0 |     191 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4174.9 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1090* |       0 |     199 |       68 |      0 |    41 |    +0.0% |   -1.408 |     -646.4 |    -4179.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1093* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1100* |       0 |     194 |       66 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4174.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1100* |       0 |     189 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4173.1 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1110* |       0 |     196 |       67 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4174.3 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1120* |       0 |     203 |       71 |      0 |    41 |    +0.0% |   -1.408 |     -646.6 |    -4184.9 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1130* |       0 |     209 |       76 |      0 |    41 |    +0.0% |   -1.408 |     -646.2 |    -4192.2 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1134* |       0 |     190 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4172.9 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1140* |       0 |     194 |       66 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4174.2 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1150* |       0 |     201 |       69 |      0 |    41 |    +0.0% |   -1.408 |     -646.5 |    -4179.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1160* |       0 |     206 |       76 |      0 |    41 |    +0.0% |   -1.408 |     -646.4 |    -4199.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1167* |       0 |     190 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4172.9 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1170* |       0 |     192 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.5 |    -4174.7 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1180* |       0 |     199 |       68 |      0 |    41 |    +0.0% |   -1.407 |     -645.6 |    -4174.2 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1190* |       0 |     204 |       74 |      0 |    41 |    +0.0% |   -1.408 |     -646.4 |    -4204.0 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1200* |       0 |     211 |       78 |      0 |    41 |    +0.0% |   -1.408 |     -646.0 |    -4191.7 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1200* |       0 |     190 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4172.9 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1200* |       0 |     190 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4172.9 |   7760 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1200+ |       0 |     190 |       65 |      0 |    41 |    +0.0% |   -1.407 |     -645.4 |    -4172.9 |   6416 | issue_stage_i.i_scoreboard/mem_q\[1234\]$_DFF_PN0_/D
+    1204+ |       0 |     193 |       65 |      0 |    41 |    +0.0% |   -1.393 |     -634.5 |    -4172.1 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1208+ |       0 |     195 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4167.4 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1209+ |       0 |     195 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4167.4 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1210+ |       0 |     195 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4167.4 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1210+ |       0 |     195 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4167.4 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1211+ |       0 |     195 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4167.4 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1212+ |       0 |     195 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4167.4 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1213+ |       0 |     195 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4167.4 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1214+ |       0 |     195 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4167.4 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1215+ |       0 |     195 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4167.4 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1216+ |       0 |     195 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4167.4 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1217+ |       0 |     195 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4167.4 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1218+ |       0 |     195 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4167.4 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1219+ |       0 |     195 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4167.4 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1220+ |       0 |     195 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4167.4 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1221+ |       0 |     196 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4167.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1222+ |       0 |     196 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4167.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1227+ |       0 |     200 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4166.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1228+ |       0 |     200 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4166.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1229+ |       0 |     200 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4166.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1230+ |       0 |     200 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4166.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1230+ |       0 |     200 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4166.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1232+ |       0 |     201 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4166.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1233+ |       0 |     201 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4166.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1234+ |       0 |     201 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4166.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1237+ |       0 |     203 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4166.0 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1238+ |       0 |     203 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4166.0 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1239+ |       0 |     203 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4166.0 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1240+ |       0 |     203 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4166.0 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1240+ |       0 |     203 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4166.0 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1241+ |       0 |     203 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4166.0 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1242+ |       0 |     203 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4166.0 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1243+ |       0 |     203 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4166.0 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1244+ |       0 |     203 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4166.0 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1245+ |       0 |     203 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4166.0 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1246+ |       0 |     203 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4166.0 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1247+ |       0 |     203 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4166.0 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1249+ |       0 |     204 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1250+ |       0 |     204 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1250+ |       0 |     204 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1251+ |       0 |     204 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1252+ |       0 |     204 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1254+ |       0 |     205 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1256+ |       0 |     206 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1258+ |       0 |     207 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1259+ |       0 |     207 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1260+ |       0 |     207 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1260+ |       0 |     207 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1263+ |       0 |     209 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1264+ |       0 |     209 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1266+ |       0 |     210 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1268+ |       0 |     211 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1269+ |       0 |     211 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1270+ |       0 |     211 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1271+ |       0 |     212 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1272+ |       0 |     212 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1273+ |       0 |     212 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1274+ |       0 |     212 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1275+ |       0 |     212 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1276+ |       0 |     212 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1277+ |       0 |     212 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1278+ |       0 |     212 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1279+ |       0 |     212 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1280+ |       0 |     212 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1280+ |       0 |     212 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1281+ |       0 |     212 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1282+ |       0 |     212 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1283+ |       0 |     212 |       65 |      0 |    42 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1285+ |       0 |     212 |       65 |      0 |    43 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1286+ |       0 |     212 |       65 |      0 |    43 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1287+ |       0 |     212 |       65 |      0 |    43 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1290+ |       0 |     213 |       65 |      0 |    44 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1290+ |       0 |     213 |       65 |      0 |    44 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1291+ |       0 |     213 |       65 |      0 |    44 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1292+ |       0 |     213 |       65 |      0 |    44 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1294+ |       0 |     214 |       65 |      0 |    44 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1295+ |       0 |     214 |       65 |      0 |    44 |    +0.0% |   -1.385 |     -627.8 |    -4165.8 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1297+ |       0 |     214 |       65 |      0 |    45 |    +0.0% |   -1.385 |     -627.8 |    -4165.7 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1300+ |       0 |     215 |       65 |      0 |    46 |    +0.0% |   -1.385 |     -627.8 |    -4165.7 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1301+ |       0 |     215 |       65 |      0 |    46 |    +0.0% |   -1.385 |     -627.8 |    -4165.7 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1303+ |       0 |     216 |       65 |      0 |    46 |    +0.0% |   -1.385 |     -627.8 |    -4165.7 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1304+ |       0 |     216 |       65 |      0 |    46 |    +0.0% |   -1.385 |     -627.8 |    -4165.7 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1305+ |       0 |     216 |       65 |      0 |    46 |    +0.0% |   -1.385 |     -627.8 |    -4165.7 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1306+ |       0 |     216 |       65 |      0 |    46 |    +0.0% |   -1.385 |     -627.8 |    -4165.7 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1307+ |       0 |     216 |       65 |      0 |    46 |    +0.0% |   -1.385 |     -627.8 |    -4165.7 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1308+ |       0 |     216 |       65 |      0 |    46 |    +0.0% |   -1.385 |     -627.8 |    -4165.7 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1309+ |       0 |     216 |       65 |      0 |    46 |    +0.0% |   -1.385 |     -627.8 |    -4165.7 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1310+ |       0 |     216 |       65 |      0 |    46 |    +0.0% |   -1.385 |     -627.8 |    -4165.7 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1310+ |       0 |     216 |       65 |      0 |    46 |    +0.0% |   -1.385 |     -627.8 |    -4165.7 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1311+ |       0 |     216 |       65 |      0 |    46 |    +0.0% |   -1.385 |     -627.8 |    -4165.7 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1312+ |       0 |     216 |       65 |      0 |    46 |    +0.0% |   -1.385 |     -627.8 |    -4165.7 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1313+ |       0 |     216 |       65 |      0 |    46 |    +0.0% |   -1.385 |     -627.8 |    -4165.7 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1317+ |       0 |     219 |       65 |      0 |    46 |    +0.0% |   -1.385 |     -627.8 |    -4165.5 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1318+ |       0 |     219 |       65 |      0 |    46 |    +0.0% |   -1.385 |     -627.8 |    -4165.5 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1319+ |       0 |     219 |       65 |      0 |    46 |    +0.0% |   -1.385 |     -627.8 |    -4165.5 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1320+ |       0 |     219 |       65 |      0 |    46 |    +0.0% |   -1.385 |     -627.8 |    -4165.5 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1320+ |       0 |     219 |       65 |      0 |    46 |    +0.0% |   -1.385 |     -627.8 |    -4165.5 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1322+ |       0 |     220 |       65 |      0 |    46 |    +0.0% |   -1.385 |     -627.8 |    -4165.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1323+ |       0 |     220 |       65 |      0 |    46 |    +0.0% |   -1.385 |     -627.8 |    -4165.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1324+ |       0 |     220 |       65 |      0 |    46 |    +0.0% |   -1.385 |     -627.8 |    -4165.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1327+ |       0 |     221 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1328+ |       0 |     221 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1329+ |       0 |     221 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1330+ |       0 |     221 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1330+ |       0 |     221 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1331+ |       0 |     221 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1332+ |       0 |     221 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1333+ |       0 |     221 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1334+ |       0 |     221 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1335+ |       0 |     221 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1336+ |       0 |     221 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1339+ |       0 |     223 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1340+ |       0 |     223 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1341+ |       0 |     224 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1342+ |       0 |     224 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1343+ |       0 |     224 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1344+ |       0 |     224 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1345+ |       0 |     224 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1346+ |       0 |     224 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1347+ |       0 |     224 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1348+ |       0 |     224 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1349+ |       0 |     224 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1350+ |       0 |     224 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1350+ |       0 |     224 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1351+ |       0 |     224 |       65 |      0 |    47 |    +0.0% |   -1.385 |     -627.8 |    -4165.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1353+ |       0 |     224 |       65 |      0 |    48 |    +0.0% |   -1.385 |     -627.8 |    -4165.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1354+ |       0 |     224 |       65 |      0 |    48 |    +0.0% |   -1.385 |     -627.8 |    -4165.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1355+ |       0 |     224 |       65 |      0 |    48 |    +0.0% |   -1.385 |     -627.8 |    -4165.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1356+ |       0 |     224 |       65 |      0 |    48 |    +0.0% |   -1.385 |     -627.8 |    -4165.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1357+ |       0 |     224 |       65 |      0 |    48 |    +0.0% |   -1.385 |     -627.8 |    -4165.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1358+ |       0 |     224 |       65 |      0 |    48 |    +0.0% |   -1.385 |     -627.8 |    -4165.2 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1360+ |       0 |     225 |       65 |      0 |    48 |    +0.0% |   -1.385 |     -627.8 |    -4165.1 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1364+ |       0 |     229 |       65 |      0 |    48 |    +0.0% |   -1.385 |     -627.8 |    -4165.1 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1365+ |       0 |     229 |       65 |      0 |    48 |    +0.0% |   -1.385 |     -627.8 |    -4165.1 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1366+ |       0 |     229 |       65 |      0 |    48 |    +0.0% |   -1.385 |     -627.8 |    -4165.1 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1367+ |       0 |     229 |       65 |      0 |    48 |    +0.0% |   -1.385 |     -627.8 |    -4165.1 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1370+ |       0 |     230 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.9 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1371+ |       0 |     231 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.5 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1372+ |       0 |     231 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.5 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1374+ |       0 |     232 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.5 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1375+ |       0 |     232 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.5 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1376+ |       0 |     232 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.5 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1377+ |       0 |     232 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.5 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1378+ |       0 |     232 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.5 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1379+ |       0 |     232 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.5 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1380+ |       0 |     232 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.5 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1380+ |       0 |     232 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.5 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1381+ |       0 |     232 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.5 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1382+ |       0 |     232 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.5 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1383+ |       0 |     232 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.5 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1385+ |       0 |     233 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1389+ |       0 |     236 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1390+ |       0 |     236 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1390+ |       0 |     236 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1391+ |       0 |     236 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1392+ |       0 |     236 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1393+ |       0 |     236 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1394+ |       0 |     236 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1395+ |       0 |     236 |       65 |      0 |    49 |    +0.0% |   -1.385 |     -627.8 |    -4164.3 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1399+ |       0 |     238 |       65 |      0 |    50 |    +0.0% |   -1.385 |     -627.8 |    -4164.0 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    1400+ |       0 |     238 |       65 |      0 |    50 |    +0.0% |   -1.385 |     -627.8 |    -4164.0 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+    final |       0 |     238 |       65 |      0 |    50 |    +0.0% |   -1.385 |     -627.8 |    -4164.0 |   6416 | issue_stage_i.i_scoreboard/mem_q\[166\]$_DFF_PN0_/D
+------------------------------------------------------------------------------------------------------------------------------
+[INFO RSZ-0045] Inserted 65 buffers, 4 to split loads.
+[INFO RSZ-0051] Resized 238 instances: 238 up, 0 up match, 0 down, 0 VT
+[INFO RSZ-0043] Swapped pins on 50 instances.
+[WARNING RSZ-0062] Unable to repair all setup violations.
+[INFO RSZ-0046] Found 8180 endpoints with hold violations.
+Iteration | Resized | Buffers | Cloned Gates |   Area   |   WNS   |   TNS   | Endpoint
+--------------------------------------------------------------------------------------
+        0 |       0 |       0 |            0 |    +0.0% |  -0.405 | -430.478 | ex_stage_i/lsu_i.i_store_unit.store_buffer_i.commit_queue_q_4__address__31_$_DFFE_PN0N_/RN
+       10 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+       20 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+       30 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+       40 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+       50 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+       60 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+       70 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+       80 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+       90 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      100 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      110 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      120 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      130 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      140 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      150 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      160 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      170 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      180 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      190 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      200 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      210 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      220 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      230 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      240 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      250 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      260 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      270 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      280 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      290 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      300 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      310 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      320 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      330 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      340 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      350 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      360 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      370 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      380 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      390 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      400 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      410 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      420 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      430 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      440 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      450 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      460 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      470 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      480 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      490 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      500 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      510 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      520 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      530 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      540 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      550 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      560 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      570 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      580 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      590 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      600 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      610 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      620 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      630 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      640 |       2 |      15 |            0 |    +0.0% |  -0.166 | -14.602 | i_cache_subsystem.i_stream_arbiter_aw.i_arbiter.lock_q$_DFF_PN0_/D
+      650 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      660 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      670 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      680 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      690 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      700 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      710 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      720 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      730 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      740 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      750 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      760 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      770 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      780 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      790 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      800 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      810 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      820 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      830 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      840 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      850 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      860 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      870 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      880 |       2 |      19 |            0 |    +0.0% |  -0.140 | -13.755 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      890 |       2 |      24 |            0 |    +0.0% |  -0.140 | -13.579 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      900 |       2 |      24 |            0 |    +0.0% |  -0.140 | -13.579 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      910 |       2 |      24 |            0 |    +0.0% |  -0.140 | -13.579 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      920 |       2 |      24 |            0 |    +0.0% |  -0.140 | -13.579 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      930 |       2 |      24 |            0 |    +0.0% |  -0.140 | -13.579 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      940 |       2 |      24 |            0 |    +0.0% |  -0.140 | -13.579 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      950 |       2 |      24 |            0 |    +0.0% |  -0.140 | -13.579 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      960 |       2 |      24 |            0 |    +0.0% |  -0.140 | -13.579 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      970 |       2 |      24 |            0 |    +0.0% |  -0.140 | -13.579 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      980 |       2 |      24 |            0 |    +0.0% |  -0.140 | -13.579 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+      990 |       2 |      24 |            0 |    +0.0% |  -0.140 | -13.579 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+     1000 |       2 |      24 |            0 |    +0.0% |  -0.140 | -13.579 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+     1010 |       2 |      24 |            0 |    +0.0% |  -0.140 | -13.579 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+     1020 |       2 |      24 |            0 |    +0.0% |  -0.140 | -13.579 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[9]
+     1030 |       2 |      27 |            0 |    +0.0% |  -0.139 | -13.235 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[4]
+     1040 |       2 |      30 |            0 |    +0.0% |  -0.137 | -12.932 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[0]
+     1050 |       2 |      30 |            0 |    +0.0% |  -0.137 | -12.932 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[0]
+     1060 |       2 |      30 |            0 |    +0.0% |  -0.137 | -12.932 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[0]
+     1070 |       2 |      30 |            0 |    +0.0% |  -0.137 | -12.932 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[0]
+     1080 |       2 |      33 |            0 |    +0.0% |  -0.129 | -12.498 | i_cache_subsystem.i_stream_arbiter_ar.i_arbiter.lock_q$_DFF_PN0_/D
+     1090 |       2 |      33 |            0 |    +0.0% |  -0.129 | -12.498 | i_cache_subsystem.i_stream_arbiter_ar.i_arbiter.lock_q$_DFF_PN0_/D
+     1100 |       2 |      33 |            0 |    +0.0% |  -0.129 | -12.498 | i_cache_subsystem.i_stream_arbiter_ar.i_arbiter.lock_q$_DFF_PN0_/D
+     1110 |       2 |      33 |            0 |    +0.0% |  -0.129 | -12.498 | i_cache_subsystem.i_stream_arbiter_ar.i_arbiter.lock_q$_DFF_PN0_/D
+     1120 |       2 |      33 |            0 |    +0.0% |  -0.129 | -12.498 | i_cache_subsystem.i_stream_arbiter_ar.i_arbiter.lock_q$_DFF_PN0_/D
+     1130 |       2 |      33 |            0 |    +0.0% |  -0.129 | -12.498 | i_cache_subsystem.i_stream_arbiter_ar.i_arbiter.lock_q$_DFF_PN0_/D
+     1140 |       2 |      33 |            0 |    +0.0% |  -0.129 | -12.498 | i_cache_subsystem.i_stream_arbiter_ar.i_arbiter.lock_q$_DFF_PN0_/D
+     1150 |       2 |      33 |            0 |    +0.0% |  -0.129 | -12.498 | i_cache_subsystem.i_stream_arbiter_ar.i_arbiter.lock_q$_DFF_PN0_/D
+     1160 |       2 |      33 |            0 |    +0.0% |  -0.129 | -12.498 | i_cache_subsystem.i_stream_arbiter_ar.i_arbiter.lock_q$_DFF_PN0_/D
+     1170 |       2 |      33 |            0 |    +0.0% |  -0.129 | -12.498 | i_cache_subsystem.i_stream_arbiter_ar.i_arbiter.lock_q$_DFF_PN0_/D
+     1180 |       2 |      33 |            0 |    +0.0% |  -0.129 | -12.498 | i_cache_subsystem.i_stream_arbiter_ar.i_arbiter.lock_q$_DFF_PN0_/D
+     1190 |       2 |      33 |            0 |    +0.0% |  -0.129 | -12.498 | i_cache_subsystem.i_stream_arbiter_ar.i_arbiter.lock_q$_DFF_PN0_/D
+     1200 |       2 |      33 |            0 |    +0.0% |  -0.129 | -12.498 | i_cache_subsystem.i_stream_arbiter_ar.i_arbiter.lock_q$_DFF_PN0_/D
+     1210 |       2 |      39 |            0 |    +0.0% |  -0.129 | -12.494 | i_cache_subsystem.i_stream_arbiter_ar.i_arbiter.lock_q$_DFF_PN0_/D
+     1220 |       2 |      43 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1230 |       2 |      43 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1240 |       2 |      43 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1250 |       2 |      43 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1260 |       2 |      45 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1270 |       2 |      45 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1280 |       2 |      45 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1290 |       2 |      45 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1300 |       2 |      45 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1310 |       2 |      45 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1320 |       2 |      45 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1330 |       2 |      45 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1340 |       2 |      45 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1350 |       2 |      45 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1360 |       2 |      45 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1370 |       2 |      45 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1380 |       2 |      45 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1390 |       2 |      45 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1400 |       2 |      45 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1410 |       2 |      45 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1420 |       2 |      45 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1430 |       2 |      45 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1440 |       2 |      45 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1450 |       2 |      45 |            0 |    +0.0% |  -0.118 | -12.141 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[3]
+     1460 |       2 |      48 |            0 |    +0.0% |  -0.116 | -11.931 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[1]
+     1470 |       2 |      48 |            0 |    +0.0% |  -0.116 | -11.931 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[1]
+     1480 |       2 |      48 |            0 |    +0.0% |  -0.116 | -11.931 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[1]
+     1490 |       2 |      48 |            0 |    +0.0% |  -0.116 | -11.931 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[1]
+     1500 |       2 |      48 |            0 |    +0.0% |  -0.116 | -11.931 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[1]
+     1510 |       2 |      48 |            0 |    +0.0% |  -0.116 | -11.931 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[1]
+     1520 |       3 |      51 |            0 |    +0.0% |  -0.114 | -11.654 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[8]
+     1530 |       3 |      51 |            0 |    +0.0% |  -0.114 | -11.654 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[8]
+     1540 |       3 |      51 |            0 |    +0.0% |  -0.114 | -11.654 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[8]
+     1550 |       3 |      51 |            0 |    +0.0% |  -0.114 | -11.654 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[8]
+     1560 |       3 |      51 |            0 |    +0.0% |  -0.114 | -11.654 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[8]
+     1570 |       4 |      54 |            0 |    +0.0% |  -0.114 | -11.389 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[47]$_DFFE_PN0P_/D
+     1580 |       4 |      57 |            0 |    +0.0% |  -0.112 | -11.120 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[109]$_DFFE_PN0P_/D
+     1590 |       4 |      63 |            0 |    +0.0% |  -0.109 | -10.826 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_1__i_ram/macro_mem_1/wd_in[7]
+     1600 |       4 |      69 |            0 |    +0.0% |  -0.109 | -10.767 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_1__i_ram/macro_mem_1/wd_in[7]
+     1610 |       5 |      75 |            0 |    +0.0% |  -0.106 | -10.558 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_3/wd_in[3]
+     1620 |       5 |      80 |            0 |    +0.0% |  -0.103 | -10.273 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_3/wd_in[6]
+     1630 |       5 |      80 |            0 |    +0.0% |  -0.103 | -10.273 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_3/wd_in[6]
+     1640 |       5 |      80 |            0 |    +0.0% |  -0.103 | -10.273 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_3/wd_in[6]
+     1650 |       5 |      80 |            0 |    +0.0% |  -0.103 | -10.273 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_3/wd_in[6]
+     1660 |       5 |      80 |            0 |    +0.0% |  -0.103 | -10.273 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_3/wd_in[6]
+     1670 |       5 |      82 |            0 |    +0.0% |  -0.100 | -10.013 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[8]
+     1680 |       5 |      87 |            0 |    +0.0% |  -0.097 |  -9.806 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[0]
+     1690 |       5 |      87 |            0 |    +0.0% |  -0.097 |  -9.806 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[0]
+     1700 |       5 |      87 |            0 |    +0.0% |  -0.097 |  -9.806 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[0]
+     1710 |       5 |      87 |            0 |    +0.0% |  -0.097 |  -9.806 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[0]
+     1720 |       5 |      87 |            0 |    +0.0% |  -0.097 |  -9.806 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[0]
+     1730 |       5 |      87 |            0 |    +0.0% |  -0.097 |  -9.806 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[0]
+     1740 |       6 |      90 |            0 |    +0.0% |  -0.095 |  -9.606 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     1750 |       6 |      90 |            0 |    +0.0% |  -0.095 |  -9.606 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     1760 |       6 |      90 |            0 |    +0.0% |  -0.095 |  -9.606 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     1770 |       6 |      90 |            0 |    +0.0% |  -0.095 |  -9.606 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     1780 |       6 |      90 |            0 |    +0.0% |  -0.095 |  -9.606 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     1790 |       6 |      93 |            0 |    +0.0% |  -0.093 |  -9.511 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[6]
+     1800 |       6 |      93 |            0 |    +0.0% |  -0.093 |  -9.511 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[6]
+     1810 |       7 |      96 |            0 |    +0.0% |  -0.093 |  -9.302 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[6]
+     1820 |       7 |     100 |            0 |    +0.0% |  -0.086 |  -9.091 | i_cache_subsystem.i_fifo_w_channel.read_pointer_q[0]$_DFFE_PN0P_/D
+     1830 |       7 |     100 |            0 |    +0.0% |  -0.086 |  -9.091 | i_cache_subsystem.i_fifo_w_channel.read_pointer_q[0]$_DFFE_PN0P_/D
+     1840 |       7 |     100 |            0 |    +0.0% |  -0.086 |  -9.091 | i_cache_subsystem.i_fifo_w_channel.read_pointer_q[0]$_DFFE_PN0P_/D
+     1850 |       7 |     100 |            0 |    +0.0% |  -0.086 |  -9.091 | i_cache_subsystem.i_fifo_w_channel.read_pointer_q[0]$_DFFE_PN0P_/D
+     1860 |       7 |     100 |            0 |    +0.0% |  -0.086 |  -9.091 | i_cache_subsystem.i_fifo_w_channel.read_pointer_q[0]$_DFFE_PN0P_/D
+     1870 |       7 |     100 |            0 |    +0.0% |  -0.086 |  -9.091 | i_cache_subsystem.i_fifo_w_channel.read_pointer_q[0]$_DFFE_PN0P_/D
+     1880 |       7 |     100 |            0 |    +0.0% |  -0.086 |  -9.091 | i_cache_subsystem.i_fifo_w_channel.read_pointer_q[0]$_DFFE_PN0P_/D
+     1890 |       7 |     100 |            0 |    +0.0% |  -0.086 |  -9.091 | i_cache_subsystem.i_fifo_w_channel.read_pointer_q[0]$_DFFE_PN0P_/D
+     1900 |       7 |     100 |            0 |    +0.0% |  -0.086 |  -9.091 | i_cache_subsystem.i_fifo_w_channel.read_pointer_q[0]$_DFFE_PN0P_/D
+     1910 |       7 |     100 |            0 |    +0.0% |  -0.086 |  -9.091 | i_cache_subsystem.i_fifo_w_channel.read_pointer_q[0]$_DFFE_PN0P_/D
+     1920 |       7 |     100 |            0 |    +0.0% |  -0.086 |  -9.091 | i_cache_subsystem.i_fifo_w_channel.read_pointer_q[0]$_DFFE_PN0P_/D
+     1930 |       7 |     111 |            0 |    +0.0% |  -0.086 |  -8.527 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[11]
+     1940 |       7 |     118 |            0 |    +0.0% |  -0.086 |  -7.903 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[98]$_DFFE_PN0P_/D
+     1950 |       8 |     124 |            0 |    +0.0% |  -0.084 |  -7.594 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[69]$_DFFE_PN0P_/D
+     1960 |       8 |     124 |            0 |    +0.0% |  -0.084 |  -7.594 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[69]$_DFFE_PN0P_/D
+     1970 |       8 |     126 |            0 |    +0.0% |  -0.084 |  -7.594 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[69]$_DFFE_PN0P_/D
+     1980 |       8 |     126 |            0 |    +0.0% |  -0.084 |  -7.594 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[69]$_DFFE_PN0P_/D
+     1990 |       8 |     131 |            0 |    +0.0% |  -0.082 |  -7.407 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[13]
+     2000 |       8 |     131 |            0 |    +0.0% |  -0.082 |  -7.407 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[13]
+     2010 |       8 |     135 |            0 |    +0.0% |  -0.082 |  -7.007 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.state_q[3]$_DFFE_PN0P_/D
+     2020 |       8 |     141 |            0 |    +0.0% |  -0.081 |  -6.816 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[8]
+     2030 |       8 |     141 |            0 |    +0.0% |  -0.081 |  -6.816 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[8]
+     2040 |       8 |     142 |            0 |    +0.0% |  -0.081 |  -6.816 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[8]
+     2050 |       8 |     142 |            0 |    +0.0% |  -0.081 |  -6.816 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[8]
+     2060 |       8 |     142 |            0 |    +0.0% |  -0.081 |  -6.816 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[8]
+     2070 |       9 |     149 |            0 |    +0.0% |  -0.079 |  -6.244 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[10]
+     2080 |       9 |     151 |            0 |    +0.0% |  -0.079 |  -6.244 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[10]
+     2090 |       9 |     153 |            0 |    +0.0% |  -0.079 |  -6.243 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[10]
+     2100 |       9 |     155 |            0 |    +0.0% |  -0.079 |  -6.243 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[10]
+     2110 |       9 |     155 |            0 |    +0.0% |  -0.079 |  -6.243 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[10]
+     2120 |       9 |     155 |            0 |    +0.0% |  -0.079 |  -6.243 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[10]
+     2130 |       9 |     159 |            0 |    +0.0% |  -0.079 |  -5.874 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[14]
+     2140 |       9 |     163 |            0 |    +0.0% |  -0.076 |  -5.477 | csr_regfile_i/mip_q_3$_DFF_PN0_/D
+     2150 |       9 |     163 |            0 |    +0.0% |  -0.076 |  -5.477 | csr_regfile_i/mip_q_3$_DFF_PN0_/D
+     2160 |       9 |     163 |            0 |    +0.0% |  -0.076 |  -5.477 | csr_regfile_i/mip_q_3$_DFF_PN0_/D
+     2170 |       9 |     167 |            0 |    +0.0% |  -0.076 |  -5.477 | csr_regfile_i/mip_q_3$_DFF_PN0_/D
+     2180 |       9 |     167 |            0 |    +0.0% |  -0.076 |  -5.477 | csr_regfile_i/mip_q_3$_DFF_PN0_/D
+     2190 |       9 |     167 |            0 |    +0.0% |  -0.076 |  -5.477 | csr_regfile_i/mip_q_3$_DFF_PN0_/D
+     2200 |       9 |     167 |            0 |    +0.0% |  -0.076 |  -5.477 | csr_regfile_i/mip_q_3$_DFF_PN0_/D
+     2210 |       9 |     170 |            0 |    +0.0% |  -0.075 |  -5.402 | csr_regfile_i/mip_q_7$_DFF_PN0_/D
+     2220 |       9 |     173 |            0 |    +0.0% |  -0.075 |  -5.327 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[9]
+     2230 |       9 |     179 |            0 |    +0.0% |  -0.074 |  -4.616 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[1]
+     2240 |       9 |     179 |            0 |    +0.0% |  -0.074 |  -4.616 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[1]
+     2250 |       9 |     184 |            0 |    +0.0% |  -0.073 |  -4.284 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_3/wd_in[12]
+     2260 |       9 |     184 |            0 |    +0.0% |  -0.073 |  -4.284 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_3/wd_in[12]
+     2270 |       9 |     184 |            0 |    +0.0% |  -0.073 |  -4.284 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_3/wd_in[12]
+     2280 |       9 |     186 |            0 |    +0.0% |  -0.073 |  -4.284 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_3/wd_in[12]
+     2290 |       9 |     186 |            0 |    +0.0% |  -0.073 |  -4.284 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_3/wd_in[12]
+     2300 |       9 |     189 |            0 |    +0.0% |  -0.072 |  -4.069 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_3/wd_in[1]
+     2310 |       9 |     195 |            0 |    +0.0% |  -0.071 |  -3.733 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[5]
+     2320 |       9 |     198 |            0 |    +0.0% |  -0.071 |  -3.733 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[5]
+     2330 |       9 |     201 |            0 |    +0.0% |  -0.071 |  -3.598 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[15]
+     2340 |       9 |     204 |            0 |    +0.0% |  -0.069 |  -3.404 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[4]
+     2350 |       9 |     204 |            0 |    +0.0% |  -0.069 |  -3.404 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[4]
+     2360 |       9 |     204 |            0 |    +0.0% |  -0.069 |  -3.404 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[4]
+     2370 |       9 |     205 |            0 |    +0.0% |  -0.069 |  -3.404 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[4]
+     2380 |       9 |     205 |            0 |    +0.0% |  -0.069 |  -3.404 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[4]
+     2390 |       9 |     205 |            0 |    +0.0% |  -0.069 |  -3.404 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[4]
+     2400 |       9 |     208 |            0 |    +0.0% |  -0.069 |  -3.284 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_1__i_ram/macro_mem_3/wd_in[0]
+     2410 |       9 |     211 |            0 |    +0.0% |  -0.068 |  -3.102 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.cnt_q$_DFFE_PN0P_/D
+     2420 |       9 |     211 |            0 |    +0.0% |  -0.068 |  -3.102 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.cnt_q$_DFFE_PN0P_/D
+     2430 |       9 |     211 |            0 |    +0.0% |  -0.068 |  -3.102 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.cnt_q$_DFFE_PN0P_/D
+     2440 |       9 |     216 |            0 |    +0.0% |  -0.067 |  -3.023 | csr_regfile_i/mtvec_q[6]$_DFF_PN0_/D
+     2450 |       9 |     216 |            0 |    +0.0% |  -0.067 |  -3.023 | csr_regfile_i/mtvec_q[6]$_DFF_PN0_/D
+     2460 |       9 |     216 |            0 |    +0.0% |  -0.067 |  -3.023 | csr_regfile_i/mtvec_q[6]$_DFF_PN0_/D
+     2470 |       9 |     216 |            0 |    +0.0% |  -0.067 |  -3.023 | csr_regfile_i/mtvec_q[6]$_DFF_PN0_/D
+     2480 |       9 |     219 |            0 |    +0.0% |  -0.066 |  -2.956 | csr_regfile_i/mtvec_q[19]$_DFF_PN0_/D
+     2490 |       9 |     219 |            0 |    +0.0% |  -0.066 |  -2.956 | csr_regfile_i/mtvec_q[19]$_DFF_PN0_/D
+     2500 |       9 |     219 |            0 |    +0.0% |  -0.066 |  -2.956 | csr_regfile_i/mtvec_q[19]$_DFF_PN0_/D
+     2510 |       9 |     219 |            0 |    +0.0% |  -0.066 |  -2.956 | csr_regfile_i/mtvec_q[19]$_DFF_PN0_/D
+     2520 |       9 |     224 |            0 |    +0.0% |  -0.064 |  -2.890 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[15]
+     2530 |       9 |     224 |            0 |    +0.0% |  -0.064 |  -2.890 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[15]
+     2540 |       9 |     224 |            0 |    +0.0% |  -0.064 |  -2.890 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[15]
+     2550 |       9 |     224 |            0 |    +0.0% |  -0.064 |  -2.890 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[15]
+     2560 |       9 |     224 |            0 |    +0.0% |  -0.064 |  -2.890 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[15]
+     2570 |       9 |     224 |            0 |    +0.0% |  -0.064 |  -2.890 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[15]
+     2580 |       9 |     230 |            0 |    +0.0% |  -0.062 |  -2.532 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[4]
+     2590 |       9 |     230 |            0 |    +0.0% |  -0.062 |  -2.532 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[4]
+     2600 |       9 |     230 |            0 |    +0.0% |  -0.062 |  -2.532 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[4]
+     2610 |       9 |     230 |            0 |    +0.0% |  -0.062 |  -2.532 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[4]
+     2620 |       9 |     230 |            0 |    +0.0% |  -0.062 |  -2.532 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[4]
+     2630 |       9 |     230 |            0 |    +0.0% |  -0.062 |  -2.532 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[4]
+     2640 |       9 |     230 |            0 |    +0.0% |  -0.062 |  -2.532 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[4]
+     2650 |       9 |     230 |            0 |    +0.0% |  -0.062 |  -2.532 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[4]
+     2660 |       9 |     233 |            0 |    +0.0% |  -0.061 |  -2.350 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[13]
+     2670 |       9 |     233 |            0 |    +0.0% |  -0.061 |  -2.350 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[13]
+     2680 |       9 |     233 |            0 |    +0.0% |  -0.061 |  -2.350 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[13]
+     2690 |       9 |     233 |            0 |    +0.0% |  -0.061 |  -2.350 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[13]
+     2700 |       9 |     233 |            0 |    +0.0% |  -0.061 |  -2.350 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[13]
+     2710 |       9 |     233 |            0 |    +0.0% |  -0.061 |  -2.350 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[13]
+     2720 |       9 |     236 |            0 |    +0.0% |  -0.060 |  -2.230 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[5]
+     2730 |       9 |     236 |            0 |    +0.0% |  -0.060 |  -2.230 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[5]
+     2740 |       9 |     236 |            0 |    +0.0% |  -0.060 |  -2.230 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[5]
+     2750 |       9 |     239 |            0 |    +0.0% |  -0.055 |  -2.059 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[3]
+     2760 |       9 |     239 |            0 |    +0.0% |  -0.055 |  -2.059 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[3]
+     2770 |       9 |     239 |            0 |    +0.0% |  -0.055 |  -2.059 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[3]
+     2780 |       9 |     239 |            0 |    +0.0% |  -0.055 |  -2.059 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[3]
+     2790 |       9 |     239 |            0 |    +0.0% |  -0.055 |  -2.059 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[3]
+     2800 |       9 |     239 |            0 |    +0.0% |  -0.055 |  -2.059 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[3]
+     2810 |       9 |     239 |            0 |    +0.0% |  -0.055 |  -2.059 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[3]
+     2820 |       9 |     239 |            0 |    +0.0% |  -0.055 |  -2.059 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[3]
+     2830 |       9 |     239 |            0 |    +0.0% |  -0.055 |  -2.059 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[3]
+     2840 |       9 |     239 |            0 |    +0.0% |  -0.055 |  -2.059 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[3]
+     2850 |       9 |     239 |            0 |    +0.0% |  -0.055 |  -2.059 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[3]
+     2860 |       9 |     243 |            0 |    +0.0% |  -0.055 |  -2.004 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[14]
+     2870 |       9 |     246 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     2880 |       9 |     246 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     2890 |       9 |     246 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     2900 |       9 |     246 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     2910 |       9 |     246 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     2920 |       9 |     246 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     2930 |       9 |     247 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     2940 |       9 |     248 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     2950 |       9 |     248 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     2960 |       9 |     248 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     2970 |       9 |     248 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     2980 |       9 |     248 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     2990 |       9 |     248 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     3000 |       9 |     248 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     3010 |       9 |     248 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     3020 |       9 |     248 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     3030 |       9 |     248 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     3040 |       9 |     248 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     3050 |       9 |     248 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     3060 |       9 |     248 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     3070 |       9 |     248 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     3080 |       9 |     248 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     3090 |       9 |     248 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     3100 |       9 |     248 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     3110 |       9 |     248 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     3120 |       9 |     248 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     3130 |       9 |     248 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     3140 |       9 |     248 |            0 |    +0.0% |  -0.046 |  -1.857 | csr_regfile_i/mtvec_q[40]$_DFF_PN0_/D
+     3150 |       9 |     251 |            0 |    +0.0% |  -0.044 |  -1.765 | csr_regfile_i/mtvec_q[43]$_DFF_PN0_/D
+     3160 |       9 |     255 |            0 |    +0.0% |  -0.044 |  -1.765 | csr_regfile_i/mtvec_q[43]$_DFF_PN0_/D
+     3170 |       9 |     255 |            0 |    +0.0% |  -0.044 |  -1.765 | csr_regfile_i/mtvec_q[43]$_DFF_PN0_/D
+     3180 |       9 |     256 |            0 |    +0.0% |  -0.044 |  -1.765 | csr_regfile_i/mtvec_q[43]$_DFF_PN0_/D
+     3190 |       9 |     256 |            0 |    +0.0% |  -0.044 |  -1.765 | csr_regfile_i/mtvec_q[43]$_DFF_PN0_/D
+     3200 |       9 |     261 |            0 |    +0.0% |  -0.044 |  -1.720 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[2]
+     3210 |       9 |     263 |            0 |    +0.0% |  -0.042 |  -1.596 | ex_stage_i/lsu_i.i_mmu/i_ptw.itlb_update_o[15]$_DFF_PN0_/D
+     3220 |       9 |     263 |            0 |    +0.0% |  -0.042 |  -1.596 | ex_stage_i/lsu_i.i_mmu/i_ptw.itlb_update_o[15]$_DFF_PN0_/D
+     3230 |       9 |     263 |            0 |    +0.0% |  -0.042 |  -1.596 | ex_stage_i/lsu_i.i_mmu/i_ptw.itlb_update_o[15]$_DFF_PN0_/D
+     3240 |       9 |     264 |            0 |    +0.0% |  -0.042 |  -1.596 | ex_stage_i/lsu_i.i_mmu/i_ptw.itlb_update_o[15]$_DFF_PN0_/D
+     3250 |       9 |     264 |            0 |    +0.0% |  -0.042 |  -1.596 | ex_stage_i/lsu_i.i_mmu/i_ptw.itlb_update_o[15]$_DFF_PN0_/D
+     3260 |       9 |     264 |            0 |    +0.0% |  -0.042 |  -1.596 | ex_stage_i/lsu_i.i_mmu/i_ptw.itlb_update_o[15]$_DFF_PN0_/D
+     3270 |       9 |     266 |            0 |    +0.0% |  -0.042 |  -1.439 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[10]
+     3280 |       9 |     266 |            0 |    +0.0% |  -0.042 |  -1.439 | i_cache_subsystem.i_icache.sram_block_1__data_sram.genblk1_1__i_ram/macro_mem_2/wd_in[10]
+     3290 |       9 |     268 |            0 |    +0.0% |  -0.041 |  -1.371 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[11]
+     3300 |       9 |     268 |            0 |    +0.0% |  -0.041 |  -1.371 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[11]
+     3310 |       9 |     268 |            0 |    +0.0% |  -0.041 |  -1.371 | i_cache_subsystem.i_icache.sram_block_0__data_sram.genblk1_0__i_ram/macro_mem_1/wd_in[11]
+     3320 |       9 |     270 |            0 |    +0.0% |  -0.039 |  -1.230 | ex_stage_i/lsu_i.i_mmu/i_ptw.itlb_update_o[2]$_DFF_PN0_/D
+     3330 |       9 |     270 |            0 |    +0.0% |  -0.039 |  -1.230 | ex_stage_i/lsu_i.i_mmu/i_ptw.itlb_update_o[2]$_DFF_PN0_/D
+     3340 |       9 |     270 |            0 |    +0.0% |  -0.039 |  -1.230 | ex_stage_i/lsu_i.i_mmu/i_ptw.itlb_update_o[2]$_DFF_PN0_/D
+     3350 |       9 |     270 |            0 |    +0.0% |  -0.039 |  -1.230 | ex_stage_i/lsu_i.i_mmu/i_ptw.itlb_update_o[2]$_DFF_PN0_/D
+     3360 |       9 |     270 |            0 |    +0.0% |  -0.039 |  -1.230 | ex_stage_i/lsu_i.i_mmu/i_ptw.itlb_update_o[2]$_DFF_PN0_/D
+     3370 |       9 |     276 |            0 |    +0.0% |  -0.039 |  -1.055 | csr_regfile_i/mtvec_q[16]$_DFF_PN0_/D
+     3380 |       9 |     276 |            0 |    +0.0% |  -0.039 |  -1.055 | csr_regfile_i/mtvec_q[16]$_DFF_PN0_/D
+     3390 |       9 |     281 |            0 |    +0.0% |  -0.039 |  -1.015 | csr_regfile_i/mtvec_q[14]$_DFF_PN0_/D
+     3400 |       9 |     285 |            0 |    +0.0% |  -0.036 |  -0.976 | csr_regfile_i/mtvec_q[4]$_DFF_PN0_/D
+     3410 |       9 |     285 |            0 |    +0.0% |  -0.036 |  -0.976 | csr_regfile_i/mtvec_q[4]$_DFF_PN0_/D
+     3420 |       9 |     285 |            0 |    +0.0% |  -0.036 |  -0.976 | csr_regfile_i/mtvec_q[4]$_DFF_PN0_/D
+     3430 |       9 |     285 |            0 |    +0.0% |  -0.036 |  -0.976 | csr_regfile_i/mtvec_q[4]$_DFF_PN0_/D
+     3440 |       9 |     285 |            0 |    +0.0% |  -0.036 |  -0.976 | csr_regfile_i/mtvec_q[4]$_DFF_PN0_/D
+     3450 |       9 |     285 |            0 |    +0.0% |  -0.036 |  -0.976 | csr_regfile_i/mtvec_q[4]$_DFF_PN0_/D
+     3460 |       9 |     285 |            0 |    +0.0% |  -0.036 |  -0.976 | csr_regfile_i/mtvec_q[4]$_DFF_PN0_/D
+     3470 |       9 |     285 |            0 |    +0.0% |  -0.036 |  -0.976 | csr_regfile_i/mtvec_q[4]$_DFF_PN0_/D
+     3480 |       9 |     285 |            0 |    +0.0% |  -0.036 |  -0.976 | csr_regfile_i/mtvec_q[4]$_DFF_PN0_/D
+     3490 |       9 |     285 |            0 |    +0.0% |  -0.036 |  -0.976 | csr_regfile_i/mtvec_q[4]$_DFF_PN0_/D
+     3500 |       9 |     285 |            0 |    +0.0% |  -0.036 |  -0.976 | csr_regfile_i/mtvec_q[4]$_DFF_PN0_/D
+     3510 |       9 |     285 |            0 |    +0.0% |  -0.036 |  -0.976 | csr_regfile_i/mtvec_q[4]$_DFF_PN0_/D
+     3520 |       9 |     285 |            0 |    +0.0% |  -0.036 |  -0.976 | csr_regfile_i/mtvec_q[4]$_DFF_PN0_/D
+     3530 |       9 |     285 |            0 |    +0.0% |  -0.036 |  -0.976 | csr_regfile_i/mtvec_q[4]$_DFF_PN0_/D
+     3540 |       9 |     287 |            0 |    +0.0% |  -0.036 |  -0.940 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.rdata_o[37]$_DFFE_PN0P_/D
+     3550 |       9 |     289 |            0 |    +0.0% |  -0.036 |  -0.889 | ex_stage_i/lsu_i.i_mmu/i_ptw.itlb_update_o[4]$_DFF_PN0_/D
+     3560 |       9 |     289 |            0 |    +0.0% |  -0.036 |  -0.889 | ex_stage_i/lsu_i.i_mmu/i_ptw.itlb_update_o[4]$_DFF_PN0_/D
+     3570 |       9 |     289 |            0 |    +0.0% |  -0.036 |  -0.889 | ex_stage_i/lsu_i.i_mmu/i_ptw.itlb_update_o[4]$_DFF_PN0_/D
+     3580 |       9 |     291 |            0 |    +0.0% |  -0.034 |  -0.765 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.rdata_o[0]$_DFFE_PN0P_/D
+     3590 |       9 |     291 |            0 |    +0.0% |  -0.034 |  -0.765 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.rdata_o[0]$_DFFE_PN0P_/D
+     3600 |       9 |     291 |            0 |    +0.0% |  -0.034 |  -0.765 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.rdata_o[0]$_DFFE_PN0P_/D
+     3610 |       9 |     291 |            0 |    +0.0% |  -0.034 |  -0.765 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.rdata_o[0]$_DFFE_PN0P_/D
+     3620 |       9 |     291 |            0 |    +0.0% |  -0.034 |  -0.765 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.rdata_o[0]$_DFFE_PN0P_/D
+     3630 |       9 |     291 |            0 |    +0.0% |  -0.034 |  -0.765 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.rdata_o[0]$_DFFE_PN0P_/D
+     3640 |       9 |     291 |            0 |    +0.0% |  -0.034 |  -0.765 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.rdata_o[0]$_DFFE_PN0P_/D
+     3650 |       9 |     291 |            0 |    +0.0% |  -0.034 |  -0.765 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.rdata_o[0]$_DFFE_PN0P_/D
+     3660 |       9 |     291 |            0 |    +0.0% |  -0.034 |  -0.765 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.rdata_o[0]$_DFFE_PN0P_/D
+     3670 |       9 |     291 |            0 |    +0.0% |  -0.034 |  -0.765 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.rdata_o[0]$_DFFE_PN0P_/D
+     3680 |       9 |     293 |            0 |    +0.0% |  -0.032 |  -0.645 | csr_regfile_i/mtvec_q[35]$_DFF_PN0_/D
+     3690 |       9 |     293 |            0 |    +0.0% |  -0.032 |  -0.645 | csr_regfile_i/mtvec_q[35]$_DFF_PN0_/D
+     3700 |       9 |     293 |            0 |    +0.0% |  -0.032 |  -0.645 | csr_regfile_i/mtvec_q[35]$_DFF_PN0_/D
+     3710 |       9 |     293 |            0 |    +0.0% |  -0.032 |  -0.645 | csr_regfile_i/mtvec_q[35]$_DFF_PN0_/D
+     3720 |       9 |     293 |            0 |    +0.0% |  -0.032 |  -0.645 | csr_regfile_i/mtvec_q[35]$_DFF_PN0_/D
+     3730 |       9 |     293 |            0 |    +0.0% |  -0.032 |  -0.645 | csr_regfile_i/mtvec_q[35]$_DFF_PN0_/D
+     3740 |       9 |     293 |            0 |    +0.0% |  -0.032 |  -0.645 | csr_regfile_i/mtvec_q[35]$_DFF_PN0_/D
+     3750 |       9 |     296 |            0 |    +0.0% |  -0.031 |  -0.613 | csr_regfile_i/mtvec_q[2]$_DFF_PN0_/D
+     3760 |       9 |     296 |            0 |    +0.0% |  -0.031 |  -0.613 | csr_regfile_i/mtvec_q[2]$_DFF_PN0_/D
+     3770 |       9 |     296 |            0 |    +0.0% |  -0.031 |  -0.613 | csr_regfile_i/mtvec_q[2]$_DFF_PN0_/D
+     3780 |       9 |     296 |            0 |    +0.0% |  -0.031 |  -0.613 | csr_regfile_i/mtvec_q[2]$_DFF_PN0_/D
+     3790 |       9 |     296 |            0 |    +0.0% |  -0.031 |  -0.613 | csr_regfile_i/mtvec_q[2]$_DFF_PN0_/D
+     3800 |       9 |     296 |            0 |    +0.0% |  -0.031 |  -0.613 | csr_regfile_i/mtvec_q[2]$_DFF_PN0_/D
+     3810 |       9 |     296 |            0 |    +0.0% |  -0.031 |  -0.613 | csr_regfile_i/mtvec_q[2]$_DFF_PN0_/D
+     3820 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     3830 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     3840 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     3850 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     3860 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     3870 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     3880 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     3890 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     3900 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     3910 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     3920 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     3930 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     3940 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     3950 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     3960 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     3970 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     3980 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     3990 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     4000 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     4010 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     4020 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     4030 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     4040 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     4050 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     4060 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     4070 |       9 |     298 |            0 |    +0.0% |  -0.028 |  -0.582 | csr_regfile_i/mtvec_q[27]$_DFF_PN0_/D
+     4080 |       9 |     300 |            0 |    +0.0% |  -0.027 |  -0.555 | csr_regfile_i/mtvec_q[15]$_DFF_PN0_/D
+     4090 |       9 |     302 |            0 |    +0.0% |  -0.027 |  -0.527 | csr_regfile_i/mtvec_q[20]$_DFF_PN0_/D
+     4100 |       9 |     302 |            0 |    +0.0% |  -0.027 |  -0.527 | csr_regfile_i/mtvec_q[20]$_DFF_PN0_/D
+     4110 |       9 |     302 |            0 |    +0.0% |  -0.027 |  -0.527 | csr_regfile_i/mtvec_q[20]$_DFF_PN0_/D
+     4120 |       9 |     302 |            0 |    +0.0% |  -0.027 |  -0.527 | csr_regfile_i/mtvec_q[20]$_DFF_PN0_/D
+     4130 |       9 |     302 |            0 |    +0.0% |  -0.027 |  -0.527 | csr_regfile_i/mtvec_q[20]$_DFF_PN0_/D
+     4140 |       9 |     302 |            0 |    +0.0% |  -0.027 |  -0.527 | csr_regfile_i/mtvec_q[20]$_DFF_PN0_/D
+     4150 |       9 |     302 |            0 |    +0.0% |  -0.027 |  -0.527 | csr_regfile_i/mtvec_q[20]$_DFF_PN0_/D
+     4160 |       9 |     302 |            0 |    +0.0% |  -0.027 |  -0.527 | csr_regfile_i/mtvec_q[20]$_DFF_PN0_/D
+     4170 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4180 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4190 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4200 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4210 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4220 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4230 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4240 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4250 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4260 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4270 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4280 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4290 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4300 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4310 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4320 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4330 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4340 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4350 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4360 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4370 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4380 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4390 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4400 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4410 |       9 |     304 |            0 |    +0.0% |  -0.022 |  -0.501 | csr_regfile_i/mtvec_q[53]$_DFF_PN0_/D
+     4420 |       9 |     308 |            0 |    +0.0% |  -0.022 |  -0.478 | csr_regfile_i/mtvec_q[42]$_DFF_PN0_/D
+     4430 |       9 |     308 |            0 |    +0.0% |  -0.022 |  -0.478 | csr_regfile_i/mtvec_q[42]$_DFF_PN0_/D
+     4440 |       9 |     308 |            0 |    +0.0% |  -0.022 |  -0.478 | csr_regfile_i/mtvec_q[42]$_DFF_PN0_/D
+     4450 |       9 |     308 |            0 |    +0.0% |  -0.022 |  -0.478 | csr_regfile_i/mtvec_q[42]$_DFF_PN0_/D
+     4460 |       9 |     309 |            0 |    +0.0% |  -0.021 |  -0.456 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[103]$_DFFE_PN0P_/D
+     4470 |       9 |     309 |            0 |    +0.0% |  -0.021 |  -0.456 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[103]$_DFFE_PN0P_/D
+     4480 |       9 |     309 |            0 |    +0.0% |  -0.021 |  -0.456 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[103]$_DFFE_PN0P_/D
+     4490 |       9 |     309 |            0 |    +0.0% |  -0.021 |  -0.456 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[103]$_DFFE_PN0P_/D
+     4500 |       9 |     309 |            0 |    +0.0% |  -0.021 |  -0.456 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[103]$_DFFE_PN0P_/D
+     4510 |       9 |     309 |            0 |    +0.0% |  -0.021 |  -0.456 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[103]$_DFFE_PN0P_/D
+     4520 |       9 |     311 |            0 |    +0.0% |  -0.020 |  -0.415 | csr_regfile_i/mtvec_q[17]$_DFF_PN0_/D
+     4530 |       9 |     311 |            0 |    +0.0% |  -0.020 |  -0.415 | csr_regfile_i/mtvec_q[17]$_DFF_PN0_/D
+     4540 |       9 |     311 |            0 |    +0.0% |  -0.020 |  -0.415 | csr_regfile_i/mtvec_q[17]$_DFF_PN0_/D
+     4550 |       9 |     311 |            0 |    +0.0% |  -0.020 |  -0.415 | csr_regfile_i/mtvec_q[17]$_DFF_PN0_/D
+     4560 |       9 |     311 |            0 |    +0.0% |  -0.020 |  -0.415 | csr_regfile_i/mtvec_q[17]$_DFF_PN0_/D
+     4570 |       9 |     312 |            0 |    +0.0% |  -0.020 |  -0.395 | csr_regfile_i/mtvec_q[3]$_DFF_PN0_/D
+     4580 |       9 |     312 |            0 |    +0.0% |  -0.020 |  -0.395 | csr_regfile_i/mtvec_q[3]$_DFF_PN0_/D
+     4590 |       9 |     313 |            0 |    +0.0% |  -0.019 |  -0.375 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[105]$_DFFE_PN0P_/D
+     4600 |       9 |     313 |            0 |    +0.0% |  -0.019 |  -0.375 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[105]$_DFFE_PN0P_/D
+     4610 |       9 |     313 |            0 |    +0.0% |  -0.019 |  -0.375 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[105]$_DFFE_PN0P_/D
+     4620 |       9 |     315 |            0 |    +0.0% |  -0.019 |  -0.337 | csr_regfile_i/mtvec_q[29]$_DFF_PN0_/D
+     4630 |       9 |     316 |            0 |    +0.0% |  -0.019 |  -0.318 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.rdata_o[8]$_DFFE_PN0P_/D
+     4640 |       9 |     318 |            0 |    +0.0% |  -0.017 |  -0.262 | csr_regfile_i/mtvec_q[22]$_DFF_PN0_/D
+     4650 |       9 |     318 |            0 |    +0.0% |  -0.017 |  -0.262 | csr_regfile_i/mtvec_q[22]$_DFF_PN0_/D
+     4660 |       9 |     318 |            0 |    +0.0% |  -0.017 |  -0.262 | csr_regfile_i/mtvec_q[22]$_DFF_PN0_/D
+     4670 |       9 |     318 |            0 |    +0.0% |  -0.017 |  -0.262 | csr_regfile_i/mtvec_q[22]$_DFF_PN0_/D
+     4680 |       9 |     318 |            0 |    +0.0% |  -0.017 |  -0.262 | csr_regfile_i/mtvec_q[22]$_DFF_PN0_/D
+     4690 |       9 |     318 |            0 |    +0.0% |  -0.017 |  -0.262 | csr_regfile_i/mtvec_q[22]$_DFF_PN0_/D
+     4700 |       9 |     318 |            0 |    +0.0% |  -0.017 |  -0.262 | csr_regfile_i/mtvec_q[22]$_DFF_PN0_/D
+     4710 |       9 |     318 |            0 |    +0.0% |  -0.017 |  -0.262 | csr_regfile_i/mtvec_q[22]$_DFF_PN0_/D
+     4720 |       9 |     321 |            0 |    +0.0% |  -0.017 |  -0.245 | csr_regfile_i/mtvec_q[25]$_DFF_PN0_/D
+     4730 |       9 |     326 |            0 |    +0.0% |  -0.015 |  -0.210 | csr_regfile_i/mtvec_q[28]$_DFF_PN0_/D
+     4740 |       9 |     326 |            0 |    +0.0% |  -0.015 |  -0.210 | csr_regfile_i/mtvec_q[28]$_DFF_PN0_/D
+     4750 |       9 |     326 |            0 |    +0.0% |  -0.015 |  -0.210 | csr_regfile_i/mtvec_q[28]$_DFF_PN0_/D
+     4760 |       9 |     326 |            0 |    +0.0% |  -0.015 |  -0.210 | csr_regfile_i/mtvec_q[28]$_DFF_PN0_/D
+     4770 |       9 |     326 |            0 |    +0.0% |  -0.015 |  -0.210 | csr_regfile_i/mtvec_q[28]$_DFF_PN0_/D
+     4780 |       9 |     326 |            0 |    +0.0% |  -0.015 |  -0.210 | csr_regfile_i/mtvec_q[28]$_DFF_PN0_/D
+     4790 |       9 |     326 |            0 |    +0.0% |  -0.015 |  -0.210 | csr_regfile_i/mtvec_q[28]$_DFF_PN0_/D
+     4800 |       9 |     326 |            0 |    +0.0% |  -0.015 |  -0.210 | csr_regfile_i/mtvec_q[28]$_DFF_PN0_/D
+     4810 |       9 |     326 |            0 |    +0.0% |  -0.015 |  -0.210 | csr_regfile_i/mtvec_q[28]$_DFF_PN0_/D
+     4820 |       9 |     327 |            0 |    +0.0% |  -0.014 |  -0.196 | csr_regfile_i/mtvec_q[24]$_DFF_PN0_/D
+     4830 |       9 |     327 |            0 |    +0.0% |  -0.014 |  -0.196 | csr_regfile_i/mtvec_q[24]$_DFF_PN0_/D
+     4840 |       9 |     327 |            0 |    +0.0% |  -0.014 |  -0.196 | csr_regfile_i/mtvec_q[24]$_DFF_PN0_/D
+     4850 |       9 |     327 |            0 |    +0.0% |  -0.014 |  -0.196 | csr_regfile_i/mtvec_q[24]$_DFF_PN0_/D
+     4860 |       9 |     329 |            0 |    +0.0% |  -0.013 |  -0.182 | csr_regfile_i/mtvec_q[58]$_DFF_PN0_/D
+     4870 |       9 |     332 |            0 |    +0.0% |  -0.013 |  -0.133 | csr_regfile_i/mtvec_q[18]$_DFF_PN0_/D
+     4880 |       9 |     335 |            0 |    +0.0% |  -0.012 |  -0.120 | csr_regfile_i/mtvec_q[13]$_DFF_PN0_/D
+     4890 |       9 |     335 |            0 |    +0.0% |  -0.012 |  -0.120 | csr_regfile_i/mtvec_q[13]$_DFF_PN0_/D
+     4900 |       9 |     343 |            0 |    +0.0% |  -0.012 |  -0.072 | csr_regfile_i/mtvec_q[38]$_DFF_PN0_/D
+     4910 |       9 |     344 |            0 |    +0.0% |  -0.009 |  -0.060 | csr_regfile_i/mtvec_q[36]$_DFF_PN0_/D
+     4920 |       9 |     344 |            0 |    +0.0% |  -0.009 |  -0.060 | csr_regfile_i/mtvec_q[36]$_DFF_PN0_/D
+     4930 |       9 |     344 |            0 |    +0.0% |  -0.009 |  -0.060 | csr_regfile_i/mtvec_q[36]$_DFF_PN0_/D
+     4940 |       9 |     344 |            0 |    +0.0% |  -0.009 |  -0.060 | csr_regfile_i/mtvec_q[36]$_DFF_PN0_/D
+     4950 |       9 |     344 |            0 |    +0.0% |  -0.009 |  -0.060 | csr_regfile_i/mtvec_q[36]$_DFF_PN0_/D
+     4960 |       9 |     345 |            0 |    +0.0% |  -0.009 |  -0.060 | csr_regfile_i/mtvec_q[36]$_DFF_PN0_/D
+     4970 |       9 |     346 |            0 |    +0.0% |  -0.007 |  -0.050 | i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_0/wd_in[11]
+     4980 |       9 |     346 |            0 |    +0.0% |  -0.007 |  -0.050 | i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_0/wd_in[11]
+     4990 |       9 |     346 |            0 |    +0.0% |  -0.007 |  -0.050 | i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_0/wd_in[11]
+     5000 |       9 |     346 |            0 |    +0.0% |  -0.007 |  -0.050 | i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_0/wd_in[11]
+     5010 |       9 |     346 |            0 |    +0.0% |  -0.007 |  -0.050 | i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_0/wd_in[11]
+     5020 |       9 |     346 |            0 |    +0.0% |  -0.007 |  -0.050 | i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_0/wd_in[11]
+     5030 |       9 |     346 |            0 |    +0.0% |  -0.007 |  -0.050 | i_cache_subsystem.i_icache.sram_block_3__data_sram.genblk1_0__i_ram/macro_mem_0/wd_in[11]
+     5040 |       9 |     347 |            0 |    +0.0% |  -0.006 |  -0.043 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[7]$_DFFE_PN0P_/D
+     5050 |       9 |     347 |            0 |    +0.0% |  -0.006 |  -0.043 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[7]$_DFFE_PN0P_/D
+     5060 |       9 |     347 |            0 |    +0.0% |  -0.006 |  -0.043 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[7]$_DFFE_PN0P_/D
+     5070 |       9 |     347 |            0 |    +0.0% |  -0.006 |  -0.043 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[7]$_DFFE_PN0P_/D
+     5080 |       9 |     351 |            0 |    +0.0% |  -0.005 |  -0.019 | csr_regfile_i/mtvec_q[12]$_DFF_PN0_/D
+     5090 |       9 |     351 |            0 |    +0.0% |  -0.005 |  -0.019 | csr_regfile_i/mtvec_q[12]$_DFF_PN0_/D
+     5100 |       9 |     351 |            0 |    +0.0% |  -0.005 |  -0.019 | csr_regfile_i/mtvec_q[12]$_DFF_PN0_/D
+     5110 |       9 |     351 |            0 |    +0.0% |  -0.005 |  -0.019 | csr_regfile_i/mtvec_q[12]$_DFF_PN0_/D
+     5120 |       9 |     354 |            0 |    +0.0% |  -0.004 |  -0.014 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[1]$_DFFE_PN0P_/D
+     5130 |       9 |     354 |            0 |    +0.0% |  -0.004 |  -0.014 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[1]$_DFFE_PN0P_/D
+     5140 |       9 |     354 |            0 |    +0.0% |  -0.004 |  -0.014 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[1]$_DFFE_PN0P_/D
+     5150 |       9 |     354 |            0 |    +0.0% |  -0.004 |  -0.014 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[1]$_DFFE_PN0P_/D
+     5160 |       9 |     354 |            0 |    +0.0% |  -0.004 |  -0.014 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_miss_axi_adapter.rdata_o[1]$_DFFE_PN0P_/D
+     5170 |       9 |     355 |            0 |    +0.0% |  -0.003 |  -0.006 | csr_regfile_i/mtvec_q[37]$_DFF_PN0_/D
+     5180 |       9 |     355 |            0 |    +0.0% |  -0.003 |  -0.006 | csr_regfile_i/mtvec_q[37]$_DFF_PN0_/D
+     5190 |       9 |     355 |            0 |    +0.0% |  -0.003 |  -0.006 | csr_regfile_i/mtvec_q[37]$_DFF_PN0_/D
+     5200 |       9 |     355 |            0 |    +0.0% |  -0.003 |  -0.006 | csr_regfile_i/mtvec_q[37]$_DFF_PN0_/D
+     5210 |       9 |     355 |            0 |    +0.0% |  -0.003 |  -0.006 | csr_regfile_i/mtvec_q[37]$_DFF_PN0_/D
+     5220 |       9 |     356 |            0 |    +0.0% |  -0.003 |  -0.003 | csr_regfile_i/mtvec_q[7]$_DFF_PN0_/D
+     5230 |       9 |     356 |            0 |    +0.0% |  -0.003 |  -0.003 | csr_regfile_i/mtvec_q[7]$_DFF_PN0_/D
+     5240 |       9 |     357 |            0 |    +0.0% |  -0.000 |  -0.000 | csr_regfile_i/mtvec_q[8]$_DFF_PN0_/D
+     5250 |       9 |     357 |            0 |    +0.0% |  -0.000 |  -0.000 | csr_regfile_i/mtvec_q[8]$_DFF_PN0_/D
+     5260 |       9 |     357 |            0 |    +0.0% |  -0.000 |  -0.000 | csr_regfile_i/mtvec_q[8]$_DFF_PN0_/D
+     5270 |       9 |     357 |            0 |    +0.0% |  -0.000 |  -0.000 | csr_regfile_i/mtvec_q[8]$_DFF_PN0_/D
+     5280 |       9 |     357 |            0 |    +0.0% |  -0.000 |  -0.000 | csr_regfile_i/mtvec_q[8]$_DFF_PN0_/D
+     5290 |       9 |     357 |            0 |    +0.0% |  -0.000 |  -0.000 | csr_regfile_i/mtvec_q[8]$_DFF_PN0_/D
+     5300 |       9 |     357 |            0 |    +0.0% |  -0.000 |  -0.000 | csr_regfile_i/mtvec_q[8]$_DFF_PN0_/D
+     5310 |       9 |     357 |            0 |    +0.0% |  -0.000 |  -0.000 | csr_regfile_i/mtvec_q[8]$_DFF_PN0_/D
+     5320 |       9 |     357 |            0 |    +0.0% |  -0.000 |  -0.000 | csr_regfile_i/mtvec_q[8]$_DFF_PN0_/D
+     5330 |       9 |     358 |            0 |    +0.0% |   0.000 |   0.000 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.rdata_o[6]$_DFFE_PN0P_/D
+     5340 |       9 |     358 |            0 |    +0.0% |   0.000 |   0.000 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.rdata_o[6]$_DFFE_PN0P_/D
+     5350 |       9 |     358 |            0 |    +0.0% |   0.000 |   0.000 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.rdata_o[6]$_DFFE_PN0P_/D
+     5360 |       9 |     362 |            0 |    +0.0% |   0.001 |   0.000 | csr_regfile_i/mtvec_q[9]$_DFF_PN0_/D
+     5370 |       9 |     363 |            0 |    +0.0% |   0.001 |   0.000 | ex_stage_i/lsu_i.i_mmu/i_ptw.itlb_update_o[3]$_DFF_PN0_/D
+     5380 |       9 |     363 |            0 |    +0.0% |   0.001 |   0.000 | ex_stage_i/lsu_i.i_mmu/i_ptw.itlb_update_o[3]$_DFF_PN0_/D
+     5390 |       9 |     363 |            0 |    +0.0% |   0.001 |   0.000 | ex_stage_i/lsu_i.i_mmu/i_ptw.itlb_update_o[3]$_DFF_PN0_/D
+     5400 |       9 |     365 |            0 |    +0.0% |   0.002 |   0.000 | csr_regfile_i/mtvec_q[33]$_DFF_PN0_/D
+     5410 |       9 |     365 |            0 |    +0.0% |   0.002 |   0.000 | csr_regfile_i/mtvec_q[33]$_DFF_PN0_/D
+     5420 |       9 |     366 |            0 |    +0.0% |   0.004 |   0.000 | csr_regfile_i/mtvec_q[23]$_DFF_PN0_/D
+     5430 |       9 |     366 |            0 |    +0.0% |   0.004 |   0.000 | csr_regfile_i/mtvec_q[23]$_DFF_PN0_/D
+     5440 |       9 |     366 |            0 |    +0.0% |   0.004 |   0.000 | csr_regfile_i/mtvec_q[23]$_DFF_PN0_/D
+     5450 |       9 |     366 |            0 |    +0.0% |   0.004 |   0.000 | csr_regfile_i/mtvec_q[23]$_DFF_PN0_/D
+     5460 |       9 |     366 |            0 |    +0.0% |   0.004 |   0.000 | csr_regfile_i/mtvec_q[23]$_DFF_PN0_/D
+     5470 |       9 |     367 |            0 |    +0.0% |   0.005 |   0.000 | csr_regfile_i/mtvec_q[45]$_DFF_PN0_/D
+     5480 |       9 |     367 |            0 |    +0.0% |   0.005 |   0.000 | csr_regfile_i/mtvec_q[45]$_DFF_PN0_/D
+     5490 |       9 |     367 |            0 |    +0.0% |   0.005 |   0.000 | csr_regfile_i/mtvec_q[45]$_DFF_PN0_/D
+     5500 |       9 |     368 |            0 |    +0.0% |   0.006 |   0.000 | csr_regfile_i/mtvec_q[10]$_DFF_PN0_/D
+     5510 |       9 |     368 |            0 |    +0.0% |   0.006 |   0.000 | csr_regfile_i/mtvec_q[10]$_DFF_PN0_/D
+     5520 |       9 |     368 |            0 |    +0.0% |   0.006 |   0.000 | csr_regfile_i/mtvec_q[10]$_DFF_PN0_/D
+     5530 |       9 |     368 |            0 |    +0.0% |   0.006 |   0.000 | csr_regfile_i/mtvec_q[10]$_DFF_PN0_/D
+     5540 |       9 |     369 |            0 |    +0.0% |   0.007 |   0.000 | csr_regfile_i/mtvec_q[54]$_DFF_PN0_/D
+     5550 |       9 |     369 |            0 |    +0.0% |   0.007 |   0.000 | csr_regfile_i/mtvec_q[54]$_DFF_PN0_/D
+     5560 |       9 |     369 |            0 |    +0.0% |   0.007 |   0.000 | csr_regfile_i/mtvec_q[54]$_DFF_PN0_/D
+     5570 |       9 |     372 |            0 |    +0.0% |   0.009 |   0.000 | csr_regfile_i/mtvec_q[59]$_DFF_PN0_/D
+     5580 |       9 |     372 |            0 |    +0.0% |   0.009 |   0.000 | csr_regfile_i/mtvec_q[59]$_DFF_PN0_/D
+     5590 |       9 |     372 |            0 |    +0.0% |   0.009 |   0.000 | csr_regfile_i/mtvec_q[59]$_DFF_PN0_/D
+     5600 |       9 |     372 |            0 |    +0.0% |   0.009 |   0.000 | csr_regfile_i/mtvec_q[59]$_DFF_PN0_/D
+     5610 |       9 |     372 |            0 |    +0.0% |   0.009 |   0.000 | csr_regfile_i/mtvec_q[59]$_DFF_PN0_/D
+     5620 |       9 |     372 |            0 |    +0.0% |   0.009 |   0.000 | csr_regfile_i/mtvec_q[59]$_DFF_PN0_/D
+     5630 |       9 |     372 |            0 |    +0.0% |   0.009 |   0.000 | csr_regfile_i/mtvec_q[59]$_DFF_PN0_/D
+     5640 |       9 |     372 |            0 |    +0.0% |   0.009 |   0.000 | csr_regfile_i/mtvec_q[59]$_DFF_PN0_/D
+     5650 |       9 |     372 |            0 |    +0.0% |   0.009 |   0.000 | csr_regfile_i/mtvec_q[59]$_DFF_PN0_/D
+     5660 |       9 |     374 |            0 |    +0.0% |   0.010 |   0.000 | csr_regfile_i/mtvec_q[5]$_DFF_PN0_/D
+     5670 |       9 |     374 |            0 |    +0.0% |   0.010 |   0.000 | csr_regfile_i/mtvec_q[5]$_DFF_PN0_/D
+     5680 |       9 |     374 |            0 |    +0.0% |   0.010 |   0.000 | csr_regfile_i/mtvec_q[5]$_DFF_PN0_/D
+     5690 |       9 |     374 |            0 |    +0.0% |   0.010 |   0.000 | csr_regfile_i/mtvec_q[5]$_DFF_PN0_/D
+     5700 |       9 |     377 |            0 |    +0.0% |   0.010 |   0.000 | csr_regfile_i/mtvec_q[55]$_DFF_PN0_/D
+     5710 |       9 |     379 |            0 |    +0.0% |   0.011 |   0.000 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.rdata_o[10]$_DFFE_PN0P_/D
+     5720 |       9 |     379 |            0 |    +0.0% |   0.011 |   0.000 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.rdata_o[10]$_DFFE_PN0P_/D
+     5730 |       9 |     379 |            0 |    +0.0% |   0.011 |   0.000 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.rdata_o[10]$_DFFE_PN0P_/D
+     5740 |       9 |     379 |            0 |    +0.0% |   0.011 |   0.000 | i_cache_subsystem.i_nbdcache/i_miss_handler/i_bypass_axi_adapter.rdata_o[10]$_DFFE_PN0P_/D
+     5750 |       9 |     380 |            0 |    +0.0% |   0.014 |   0.000 | csr_regfile_i/mtvec_q[39]$_DFF_PN0_/D
+     5760 |       9 |     380 |            0 |    +0.0% |   0.014 |   0.000 | csr_regfile_i/mtvec_q[39]$_DFF_PN0_/D
+     5770 |       9 |     380 |            0 |    +0.0% |   0.014 |   0.000 | csr_regfile_i/mtvec_q[39]$_DFF_PN0_/D
+     5780 |       9 |     380 |            0 |    +0.0% |   0.014 |   0.000 | csr_regfile_i/mtvec_q[39]$_DFF_PN0_/D
+     5790 |       9 |     380 |            0 |    +0.0% |   0.014 |   0.000 | csr_regfile_i/mtvec_q[39]$_DFF_PN0_/D
+     5800 |       9 |     380 |            0 |    +0.0% |   0.014 |   0.000 | csr_regfile_i/mtvec_q[39]$_DFF_PN0_/D
+     5810 |       9 |     380 |            0 |    +0.0% |   0.014 |   0.000 | csr_regfile_i/mtvec_q[39]$_DFF_PN0_/D
+     5820 |       9 |     380 |            0 |    +0.0% |   0.014 |   0.000 | csr_regfile_i/mtvec_q[39]$_DFF_PN0_/D
+     5830 |       9 |     380 |            0 |    +0.0% |   0.014 |   0.000 | csr_regfile_i/mtvec_q[39]$_DFF_PN0_/D
+     5840 |       9 |     380 |            0 |    +0.0% |   0.014 |   0.000 | csr_regfile_i/mtvec_q[39]$_DFF_PN0_/D
+     5850 |       9 |     380 |            0 |    +0.0% |   0.014 |   0.000 | csr_regfile_i/mtvec_q[39]$_DFF_PN0_/D
+     5860 |       9 |     380 |            0 |    +0.0% |   0.014 |   0.000 | csr_regfile_i/mtvec_q[39]$_DFF_PN0_/D
+     5870 |       9 |     380 |            0 |    +0.0% |   0.014 |   0.000 | csr_regfile_i/mtvec_q[39]$_DFF_PN0_/D
+     5880 |       9 |     381 |            0 |    +0.0% |   0.016 |   0.000 | csr_regfile_i/mtvec_q[50]$_DFF_PN0_/D
+     5890 |       9 |     381 |            0 |    +0.0% |   0.016 |   0.000 | csr_regfile_i/mtvec_q[50]$_DFF_PN0_/D
+     5900 |       9 |     381 |            0 |    +0.0% |   0.016 |   0.000 | csr_regfile_i/mtvec_q[50]$_DFF_PN0_/D
+     5910 |       9 |     381 |            0 |    +0.0% |   0.016 |   0.000 | csr_regfile_i/mtvec_q[50]$_DFF_PN0_/D
+     5920 |       9 |     381 |            0 |    +0.0% |   0.016 |   0.000 | csr_regfile_i/mtvec_q[50]$_DFF_PN0_/D
+     5930 |       9 |     381 |            0 |    +0.0% |   0.016 |   0.000 | csr_regfile_i/mtvec_q[50]$_DFF_PN0_/D
+     5940 |       9 |     381 |            0 |    +0.0% |   0.016 |   0.000 | csr_regfile_i/mtvec_q[50]$_DFF_PN0_/D
+     5950 |       9 |     381 |            0 |    +0.0% |   0.016 |   0.000 | csr_regfile_i/mtvec_q[50]$_DFF_PN0_/D
+     5960 |       9 |     381 |            0 |    +0.0% |   0.016 |   0.000 | csr_regfile_i/mtvec_q[50]$_DFF_PN0_/D
+     5970 |       9 |     381 |            0 |    +0.0% |   0.016 |   0.000 | csr_regfile_i/mtvec_q[50]$_DFF_PN0_/D
+     5980 |       9 |     381 |            0 |    +0.0% |   0.016 |   0.000 | csr_regfile_i/mtvec_q[50]$_DFF_PN0_/D
+     5990 |       9 |     381 |            0 |    +0.0% |   0.016 |   0.000 | csr_regfile_i/mtvec_q[50]$_DFF_PN0_/D
+     6000 |       9 |     381 |            0 |    +0.0% |   0.016 |   0.000 | csr_regfile_i/mtvec_q[50]$_DFF_PN0_/D
+     6010 |       9 |     382 |            0 |    +0.0% |   0.017 |   0.000 | csr_regfile_i/mtvec_q[11]$_DFF_PN0_/D
+     6020 |       9 |     382 |            0 |    +0.0% |   0.017 |   0.000 | csr_regfile_i/mtvec_q[11]$_DFF_PN0_/D
+     6030 |       9 |     382 |            0 |    +0.0% |   0.017 |   0.000 | csr_regfile_i/mtvec_q[11]$_DFF_PN0_/D
+     6040 |       9 |     382 |            0 |    +0.0% |   0.017 |   0.000 | csr_regfile_i/mtvec_q[11]$_DFF_PN0_/D
+     6050 |       9 |     382 |            0 |    +0.0% |   0.017 |   0.000 | csr_regfile_i/mtvec_q[11]$_DFF_PN0_/D
+     6060 |       9 |     382 |            0 |    +0.0% |   0.017 |   0.000 | csr_regfile_i/mtvec_q[11]$_DFF_PN0_/D
+     6070 |       9 |     383 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6080 |       9 |     383 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6090 |       9 |     383 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6100 |       9 |     383 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6110 |       9 |     383 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6120 |       9 |     383 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6130 |       9 |     383 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6140 |       9 |     383 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6150 |       9 |     383 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6160 |       9 |     383 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6170 |       9 |     383 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6180 |       9 |     383 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6190 |       9 |     383 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6200 |       9 |     384 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6210 |       9 |     384 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6220 |       9 |     385 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6230 |       9 |     385 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6240 |       9 |     385 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6250 |       9 |     386 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6260 |       9 |     386 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6270 |       9 |     386 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6280 |       9 |     386 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6290 |       9 |     386 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6300 |       9 |     386 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6310 |       9 |     386 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6320 |       9 |     386 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6330 |       9 |     386 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6340 |       9 |     386 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6350 |       9 |     386 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6360 |       9 |     386 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6370 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6380 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6390 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6400 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6410 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6420 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6430 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6440 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6450 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6460 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6470 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6480 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6490 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6500 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6510 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6520 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6530 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6540 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6550 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6560 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6570 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6580 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6590 |       9 |     387 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6600 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6610 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6620 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6630 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6640 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6650 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6660 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6670 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6680 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6690 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6700 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6710 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6720 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6730 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6740 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6750 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6760 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6770 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6780 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6790 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6800 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6810 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6820 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6830 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6840 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6850 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6860 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6870 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6880 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6890 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6900 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6910 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6920 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6930 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6940 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6950 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6960 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6970 |       9 |     388 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6980 |       9 |     389 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     6990 |       9 |     389 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7000 |       9 |     389 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7010 |       9 |     389 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7020 |       9 |     389 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7030 |       9 |     389 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7040 |       9 |     390 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7050 |       9 |     390 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7060 |       9 |     390 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7070 |       9 |     390 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7080 |       9 |     390 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7090 |       9 |     390 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7100 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7110 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7120 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7130 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7140 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7150 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7160 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7170 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7180 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7190 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7200 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7210 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7220 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7230 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7240 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7250 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7260 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7270 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7280 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7290 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7300 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7310 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7320 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7330 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7340 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7350 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7360 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7370 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7380 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7390 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7400 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7410 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7420 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7430 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7440 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7450 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7460 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7470 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7480 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7490 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7500 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7510 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7520 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7530 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7540 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7550 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7560 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7570 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7580 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7590 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7600 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7610 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7620 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7630 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7640 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7650 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7660 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7670 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7680 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7690 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7700 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7710 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7720 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7730 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7740 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7750 |       9 |     391 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7760 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7770 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7780 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7790 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7800 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7810 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7820 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7830 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7840 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7850 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7860 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7870 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7880 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7890 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7900 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7910 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7920 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7930 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7940 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7950 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7960 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7970 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7980 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     7990 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     8000 |       9 |     392 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     8010 |       9 |     393 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     8020 |       9 |     393 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     8030 |       9 |     393 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     8040 |       9 |     393 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     8050 |       9 |     393 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     8060 |       9 |     393 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     8070 |       9 |     394 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     8080 |       9 |     394 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     8090 |       9 |     394 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     8100 |       9 |     394 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     8110 |       9 |     394 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     8120 |       9 |     394 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     8130 |       9 |     394 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     8140 |       9 |     394 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     8150 |       9 |     394 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     8160 |       9 |     394 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     8170 |       9 |     394 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+     8180 |       9 |     394 |            0 |    +0.0% |   0.019 |   0.000 | csr_regfile_i/mip_q$_DFF_PN0_/D
+    final |       9 |     398 |            0 |    +0.0% |   0.051 |   0.000 | i_cache_subsystem.i_icache.sram_block_2__data_sram.genblk1_0__i_ram/macro_mem_3/wd_in[2]
+--------------------------------------------------------------------------------------
+[INFO RSZ-0032] Inserted 398 hold buffers.
+Took 654 seconds: repair_timing -setup_margin 0.05 -hold_margin 0.05 -repair_tns 100 -skip_gate_cloning -verbose
+Repair timing output passed lec test
+[INFO DPL-0005] Max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+Movements Summary
+---------------------------------------
+Total cells:                  173439
+Diamond Move Success:         173439 (100.00%)
+Diamond Move Failure:              0
+Rip-up and replace Success:        0 (  0.00% of diamond failures)
+Rip-up and replace Failure:        0
+Total Placement Failures:          0
+---------------------------------------
+Placement Analysis
+---------------------------------
+total displacement       1371.9 u
+average displacement        0.0 u
+max displacement           23.2 u
+original HPWL         7413344.7 u
+legalized HPWL        7413984.0 u
+delta HPWL                    0 %
+
+Report metrics stage 4, cts final...
+
+==========================================================================
+cts final report_design_area
+--------------------------------------------------------------------------
+Design area 740913 um^2 36% utilization.
+write_db ./results/nangate45/ariane133/base/4_1_cts.odb
+write_sdc -no_timestamp ./results/nangate45/ariane133/base/4_cts.sdc
+Elapsed time: 17:45.83[h:]min:sec. CPU time: user 2724.94 sys 342.86 (287%). Peak memory: 1679252KB.
+Log                        Elapsed/s Peak Memory/MB  sha1sum .odb [0:20)
+4_1_cts                         1065           1639 4b2f6f90e6cb42776f68
